@@ -32,7 +32,7 @@ brew install ffmpeg node          # macOS; use your package manager elsewhere
 # 3. Pipeline (about 5 minutes in total on a laptop)
 .venv/bin/python extract.py          # fingerprints, cached in outputs/features.csv (~20 s)
 .venv/bin/python pilot.py            # optional: pilot checks vs Praat, first plot
-.venv/bin/python analysis.py         # classifiers, neighbours, validation, figures (~1.5 min)
+.venv/bin/python analysis.py         # classifiers, neighbors, validation, figures (~1.5 min)
 .venv/bin/python export_site.py      # website data into site/data (~25 s)
 .venv/bin/python verify_js.py 20     # JS fingerprint vs Python on 20 clips (must print 0 mismatches)
 ```

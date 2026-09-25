@@ -26,7 +26,7 @@ PY = sys.executable
 NAMES = {"tt": "Tatar", "ba": "Bashkir", "sah": "Sakha", "kk": "Kazakh", "tr": "Turkish",
          "fan": "Fang", "ewo": "Ewondo", "ksf": "Bafia", "bnm": "Batanga", "hem": "Kihemba",
          "bci": "Baoule", "kab": "Kabyle", "trw": "Torwali", "bft": "Balti",
-         "phr": "Pahari-Pothwari", "mki": "Dhatki", "haz": "Hazargi", "oru": "Ormuri",
+         "phr": "Pahari-Pothwari", "mki": "Dhatki", "haz": "Hazaragi", "oru": "Ormuri",
          "tg": "Tajik", "fa": "Persian"}
 
 

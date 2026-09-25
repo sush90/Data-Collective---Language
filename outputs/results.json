@@ -5,7 +5,7 @@
   "Fang",
   "Ewondo",
   "Torwali",
-  "Hazargi (Dari)",
+  "Hazaragi",
   "Urdu"
  ],
  "families": {
@@ -14,7 +14,7 @@
   "Fang": "Bantu",
   "Ewondo": "Bantu",
   "Torwali": "Indo-Aryan",
-  "Hazargi (Dari)": "Iranian",
+  "Hazaragi": "Iranian",
   "Urdu": "Indo-Aryan"
  },
  "features": [
@@ -76,7 +76,7 @@
    "caveat": true
   },
   {
-   "language": "Hazargi (Dari)",
+   "language": "Hazaragi",
    "family": "Iranian",
    "clips": 129,
    "speakers": 7,
@@ -138,7 +138,7 @@
    "Fang",
    "Ewondo",
    "Torwali",
-   "Hazargi (Dari)",
+   "Hazaragi",
    "Urdu"
   ],
   "matrix": [
@@ -215,7 +215,7 @@
    "Fang",
    "Ewondo",
    "Torwali",
-   "Hazargi (Dari)",
+   "Hazaragi",
    "Urdu"
   ],
   "matrix": [
@@ -291,7 +291,7 @@
    "Fang": 2.3489,
    "Ewondo": 1.732,
    "Torwali": 1.0551,
-   "Hazargi (Dari)": 1.605,
+   "Hazaragi": 1.605,
    "Urdu": 1.1343
   },
   "Bashkir": {
@@ -300,7 +300,7 @@
    "Fang": 2.7714,
    "Ewondo": 1.9395,
    "Torwali": 1.0367,
-   "Hazargi (Dari)": 2.0679,
+   "Hazaragi": 2.0679,
    "Urdu": 1.159
   },
   "Fang": {
@@ -309,7 +309,7 @@
    "Fang": 0.0,
    "Ewondo": 1.3462,
    "Torwali": 2.4848,
-   "Hazargi (Dari)": 2.8286,
+   "Hazaragi": 2.8286,
    "Urdu": 3.1059
   },
   "Ewondo": {
@@ -318,7 +318,7 @@
    "Fang": 1.3462,
    "Ewondo": 0.0,
    "Torwali": 1.7108,
-   "Hazargi (Dari)": 2.7266,
+   "Hazaragi": 2.7266,
    "Urdu": 2.6201
   },
   "Torwali": {
@@ -327,16 +327,16 @@
    "Fang": 2.4848,
    "Ewondo": 1.7108,
    "Torwali": 0.0,
-   "Hazargi (Dari)": 2.2899,
+   "Hazaragi": 2.2899,
    "Urdu": 1.5313
   },
-  "Hazargi (Dari)": {
+  "Hazaragi": {
    "Tatar": 1.605,
    "Bashkir": 2.0679,
    "Fang": 2.8286,
    "Ewondo": 2.7266,
    "Torwali": 2.2899,
-   "Hazargi (Dari)": 0.0,
+   "Hazaragi": 0.0,
    "Urdu": 1.5093
   },
   "Urdu": {
@@ -345,7 +345,7 @@
    "Fang": 3.1059,
    "Ewondo": 2.6201,
    "Torwali": 1.5313,
-   "Hazargi (Dari)": 1.5093,
+   "Hazaragi": 1.5093,
    "Urdu": 0.0
   }
  },
@@ -367,7 +367,7 @@
     "similarity": 0.4685301437196386
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 1.6049522478963822,
     "similarity": 0.38388419626791453
    },
@@ -404,7 +404,7 @@
     "similarity": 0.340196406505897
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.0679213227043833,
     "similarity": 0.32595360011334856
    },
@@ -436,7 +436,7 @@
     "similarity": 0.26515057848815526
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.8286435790978484,
     "similarity": 0.26118910766711595
    },
@@ -473,7 +473,7 @@
     "similarity": 0.2762358801720307
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.726554558610981,
     "similarity": 0.2683443873615889
    }
@@ -500,7 +500,7 @@
     "similarity": 0.36889131283405774
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.289910812034925,
     "similarity": 0.3039596077625779
    },
@@ -510,7 +510,7 @@
     "similarity": 0.2869584078066429
    }
   ],
-  "Hazargi (Dari)": [
+  "Hazaragi": [
    {
     "language": "Urdu",
     "distance": 1.5093246197494938,
@@ -554,7 +554,7 @@
     "similarity": 0.4631873506455497
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 1.5093246197494938,
     "similarity": 0.39851360486784293
    },
@@ -612,7 +612,7 @@
    "Fang": 2.8335,
    "Ewondo": 2.0461,
    "Torwali": 1.2885,
-   "Hazargi (Dari)": 1.4695,
+   "Hazaragi": 1.4695,
    "Urdu": 0.8485
   },
   "Bashkir": {
@@ -621,7 +621,7 @@
    "Fang": 2.69,
    "Ewondo": 1.4968,
    "Torwali": 1.178,
-   "Hazargi (Dari)": 2.2771,
+   "Hazaragi": 2.2771,
    "Urdu": 1.3352
   },
   "Fang": {
@@ -630,7 +630,7 @@
    "Fang": 0.0,
    "Ewondo": 1.3934,
    "Torwali": 2.5028,
-   "Hazargi (Dari)": 3.0109,
+   "Hazaragi": 3.0109,
    "Urdu": 2.8062
   },
   "Ewondo": {
@@ -639,7 +639,7 @@
    "Fang": 1.3934,
    "Ewondo": 0.0,
    "Torwali": 1.574,
-   "Hazargi (Dari)": 2.5864,
+   "Hazaragi": 2.5864,
    "Urdu": 2.0372
   },
   "Torwali": {
@@ -648,16 +648,16 @@
    "Fang": 2.5028,
    "Ewondo": 1.574,
    "Torwali": 0.0,
-   "Hazargi (Dari)": 2.2065,
+   "Hazaragi": 2.2065,
    "Urdu": 1.4235
   },
-  "Hazargi (Dari)": {
+  "Hazaragi": {
    "Tatar": 1.4695,
    "Bashkir": 2.2771,
    "Fang": 3.0109,
    "Ewondo": 2.5864,
    "Torwali": 2.2065,
-   "Hazargi (Dari)": 0.0,
+   "Hazaragi": 0.0,
    "Urdu": 1.3334
   },
   "Urdu": {
@@ -666,7 +666,7 @@
    "Fang": 2.8062,
    "Ewondo": 2.0372,
    "Torwali": 1.4235,
-   "Hazargi (Dari)": 1.3334,
+   "Hazaragi": 1.3334,
    "Urdu": 0.0
   }
  },
@@ -688,7 +688,7 @@
     "similarity": 0.43696977606145176
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 1.4694995901950674,
     "similarity": 0.404940338508422
    },
@@ -725,7 +725,7 @@
     "similarity": 0.40050843201088804
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.277124080390375,
     "similarity": 0.3051456018964283
    },
@@ -762,7 +762,7 @@
     "similarity": 0.2608558139967418
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 3.010881635161187,
     "similarity": 0.24932174293889692
    }
@@ -794,7 +794,7 @@
     "similarity": 0.3282904250806945
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.5863680387519064,
     "similarity": 0.2788336247687537
    }
@@ -821,7 +821,7 @@
     "similarity": 0.3885060525544283
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 2.2064738406728672,
     "similarity": 0.3118690654248885
    },
@@ -831,7 +831,7 @@
     "similarity": 0.2854854854173061
    }
   ],
-  "Hazargi (Dari)": [
+  "Hazaragi": [
    {
     "language": "Urdu",
     "distance": 1.3333809476046887,
@@ -870,7 +870,7 @@
     "similarity": 0.5409860095208527
    },
    {
-    "language": "Hazargi (Dari)",
+    "language": "Hazaragi",
     "distance": 1.3333809476046887,
     "similarity": 0.4285626832714739
    },
@@ -947,13 +947,13 @@
    "Bashkir",
    "Ewondo"
   ],
-  "Hazargi (Dari)": [
+  "Hazaragi": [
    "Urdu",
    "Fang"
   ],
   "Urdu": [
    "Bashkir",
-   "Hazargi (Dari)"
+   "Hazaragi"
   ]
  },
  "sibling_chance": {
@@ -964,7 +964,7 @@
   "order": [
    "Fang",
    "Ewondo",
-   "Hazargi (Dari)",
+   "Hazaragi",
    "Urdu",
    "Torwali",
    "Tatar",
@@ -1013,7 +1013,7 @@
   "order": [
    "Fang",
    "Ewondo",
-   "Hazargi (Dari)",
+   "Hazaragi",
    "Tatar",
    "Urdu",
    "Bashkir",
@@ -1164,7 +1164,7 @@
     "Bashkir": 1.9644316125046075,
     "Fang": 1.3589837819203199,
     "Torwali": 1.7411020970912838,
-    "Hazargi (Dari)": 2.77479915233944,
+    "Hazaragi": 2.77479915233944,
     "Urdu": 2.665775164224487
    },
    "distances_2d": {
@@ -1172,7 +1172,7 @@
     "Bashkir": 2.1030423641204834,
     "Fang": 0.4806581735610962,
     "Torwali": 1.9745255708694458,
-    "Hazargi (Dari)": 2.866572856903076,
+    "Hazaragi": 2.866572856903076,
     "Urdu": 3.154911756515503
    },
    "knn_vote_share_expected": 0.20136518771331058,
@@ -1182,7 +1182,7 @@
     "Bashkir": 0.181,
     "Tatar": 0.113,
     "Urdu": 0.106,
-    "Hazargi (Dari)": 0.044
+    "Hazaragi": 0.044
    },
    "expected_share_of_training": 0.15253077975376197,
    "pass": true
@@ -1198,7 +1198,7 @@
     "Bashkir": 2.2187134939313196,
     "Fang": 1.9130744571567868,
     "Torwali": 2.5772341612424894,
-    "Hazargi (Dari)": 3.809249740709556,
+    "Hazaragi": 3.809249740709556,
     "Urdu": 3.1220419312609162
    },
    "distances_2d": {
@@ -1206,7 +1206,7 @@
     "Bashkir": 1.3913553953170776,
     "Fang": 0.6140754222869873,
     "Torwali": 2.0390124320983887,
-    "Hazargi (Dari)": 4.083725452423096,
+    "Hazaragi": 4.083725452423096,
     "Urdu": 2.718801259994507
    },
    "knn_vote_share_expected": 0.19047619047619047,
@@ -1230,7 +1230,7 @@
     "Fang": 2.7636304545665813,
     "Ewondo": 1.9253599569531745,
     "Torwali": 1.0359711837157943,
-    "Hazargi (Dari)": 2.03892960307305,
+    "Hazaragi": 2.03892960307305,
     "Urdu": 1.14224585438928
    },
    "distances_2d": {
@@ -1238,7 +1238,7 @@
     "Fang": 2.606949806213379,
     "Ewondo": 2.4020509719848633,
     "Torwali": 0.5435498952865601,
-    "Hazargi (Dari)": 1.7203083038330078,
+    "Hazaragi": 1.7203083038330078,
     "Urdu": 1.0033196210861206
    },
    "knn_vote_share_expected": 0.26394052044609667,
@@ -1247,7 +1247,7 @@
     "Ewondo": 0.23,
     "Urdu": 0.227,
     "Torwali": 0.212,
-    "Hazargi (Dari)": 0.045,
+    "Hazaragi": 0.045,
     "Fang": 0.022
    },
    "expected_share_of_training": 0.17631224764468373,
@@ -1264,7 +1264,7 @@
     "Fang": 3.67390550928279,
     "Ewondo": 2.166686811239062,
     "Torwali": 1.6872747108185597,
-    "Hazargi (Dari)": 3.3709220160702533,
+    "Hazaragi": 3.3709220160702533,
     "Urdu": 2.0320765800885243
    },
    "distances_2d": {
@@ -1272,7 +1272,7 @@
     "Fang": 2.4720075130462646,
     "Ewondo": 1.866746187210083,
     "Torwali": 0.7656658291816711,
-    "Hazargi (Dari)": 2.758237838745117,
+    "Hazaragi": 2.758237838745117,
     "Urdu": 1.4550737142562866
    },
    "knn_vote_share_expected": 0.38461538461538464,
@@ -1424,7 +1424,7 @@
    "Fang": 1.653,
    "Ewondo": 1.2009,
    "Torwali": 0.9784,
-   "Hazargi (Dari)": 1.406,
+   "Hazaragi": 1.406,
    "Urdu": 0.8625
   },
   "Bashkir": {
@@ -1433,7 +1433,7 @@
    "Fang": 2.1232,
    "Ewondo": 1.6075,
    "Torwali": 1.1712,
-   "Hazargi (Dari)": 1.8316,
+   "Hazaragi": 1.8316,
    "Urdu": 0.7613
   },
   "Fang": {
@@ -1442,7 +1442,7 @@
    "Fang": 0.0,
    "Ewondo": 1.0091,
    "Torwali": 1.5858,
-   "Hazargi (Dari)": 1.5434,
+   "Hazaragi": 1.5434,
    "Urdu": 2.0501
   },
   "Ewondo": {
@@ -1451,7 +1451,7 @@
    "Fang": 1.0091,
    "Ewondo": 0.0,
    "Torwali": 1.0422,
-   "Hazargi (Dari)": 1.709,
+   "Hazaragi": 1.709,
    "Urdu": 1.8062
   },
   "Torwali": {
@@ -1460,16 +1460,16 @@
    "Fang": 1.5858,
    "Ewondo": 1.0422,
    "Torwali": 0.0,
-   "Hazargi (Dari)": 1.982,
+   "Hazaragi": 1.982,
    "Urdu": 1.4824
   },
-  "Hazargi (Dari)": {
+  "Hazaragi": {
    "Tatar": 1.406,
    "Bashkir": 1.8316,
    "Fang": 1.5434,
    "Ewondo": 1.709,
    "Torwali": 1.982,
-   "Hazargi (Dari)": 0.0,
+   "Hazaragi": 0.0,
    "Urdu": 1.3954
   },
   "Urdu": {
@@ -1478,7 +1478,7 @@
    "Fang": 2.0501,
    "Ewondo": 1.8062,
    "Torwali": 1.4824,
-   "Hazargi (Dari)": 1.3954,
+   "Hazaragi": 1.3954,
    "Urdu": 0.0
   }
  },

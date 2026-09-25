@@ -64,7 +64,7 @@ const FingerprintView = {
           <div class="avg" style="left:calc(${pos(avg[k])}% - 1px)"></div></div>
         <span class="bar-val">${fmt(k, f[k])}</span></div>`;
     }).join("") +
-      `<p class="hint">Coloured bar: this clip. Black line: the ${PC.esc(L.name)} average. Scales span the range seen across all languages.</p>`;
+      `<p class="hint">Colored bar: this clip. Black line: the ${PC.esc(L.name)} average. Scales span the range seen across all languages.</p>`;
   },
 };
 window.FingerprintView = FingerprintView;

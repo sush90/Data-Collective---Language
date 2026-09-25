@@ -23,7 +23,7 @@ languages:
     code: trw
     folder: trw
     family: Indo-Aryan   # Dardic branch
-  - name: Hazargi (Dari)
+  - name: Hazaragi
     code: haz
     folder: haz
     family: Iranian

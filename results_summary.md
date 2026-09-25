@@ -4,8 +4,8 @@ All numbers come from `outputs/results.json` and `outputs/site_neighbours.json`,
 produced by `python analysis.py` and `python export_site.py`. Figures are in
 `outputs/`. Live site: https://prosodic-commons.netlify.app
 
-Current run: **7 languages** (Tatar, Bashkir, Fang, Ewondo, Torwali, Hazargi
-(Dari), Urdu), 1,755 clips and 190 speaker averages. With 7 languages, chance
+Current run: **7 languages** (Tatar, Bashkir, Fang, Ewondo, Torwali, Hazaragi,
+Urdu), 1,755 clips and 190 speaker averages. With 7 languages, chance
 is 14.3%.
 
 ## In one paragraph
@@ -34,22 +34,23 @@ to 5th depending on the view.
 | Fang | Bantu | 223 | 38 | 26 | |
 | Ewondo | Bantu | 293 | 26 | 21 | fewer than 30 speakers |
 | Torwali | Indo-Aryan (Dardic branch) | 291 | 26 | 18 | fewer than 30 speakers |
-| Hazargi (Dari) | Iranian | 129 | 7 | 7 | **only 7 speakers** |
+| Hazaragi | Iranian | 129 | 7 | 7 | **only 7 speakers** |
 | Urdu | Indo-Aryan | 288 | 288 | 40 | |
 
 * Source: Mozilla Common Voice Scripted Speech 27.0 (CC0), via Mozilla Data Collective.
 * Clip sample: up to 300 validated clips per language, at most 20 per speaker,
   spread over as many speakers as possible (frozen in `data/<code>/sample.tsv`).
-  Hazargi has only 7 speakers, so the cap allows 140 clips.
+  Hazaragi has only 7 speakers, so the cap allows 140 clips.
 * Quality gate (features.md section 6) dropped 185 of 1,940 clips: Tatar 38,
-  Bashkir 31, **Fang 77 (26%)**, Ewondo 7, Torwali 9, Hazargi 11, Urdu 12.
+  Bashkir 31, **Fang 77 (26%)**, Ewondo 7, Torwali 9, Hazaragi 11, Urdu 12.
   Fang clips often contain very little speech.
 * Speaker panel: up to 40 speakers with at least 8 clips; each speaker
   fingerprint is the mean of exactly 5 good clips, so speaker averages are
   comparable across languages.
 * **Dari:** Mozilla Data Collective has no separate Dari (Afghan Persian)
-  dataset. Hazargi (Hazaragi), a Dari variety spoken by the Hazara people, is
-  the closest available and is labelled "Hazargi (Dari)".
+  dataset. Hazaragi (listed as "Hazargi" in Common Voice), a Dari variety
+  spoken by the Hazara people, is the closest available and is labelled
+  "Hazaragi" throughout.
 * Not yet included: Nepali (dataset terms not yet accepted for API download),
   Tajik and Balti. Each is one `add_language.py` command.
 * Torwali was relabelled from "Indo-Aryan (Dardic)" to "Indo-Aryan" when Urdu
@@ -99,7 +100,7 @@ shuffled run exceeded 23.4% balanced accuracy.
 
 **Confusions (speaker averages, logistic regression, row = true language):**
 Fang is mistaken for Ewondo 27% of the time; Tatar for Bashkir 18% and for
-Urdu 15%; Bashkir for Tatar 15%. Hazargi is recognised 71% of the time, but
+Urdu 15%; Bashkir for Tatar 15%. Hazaragi is recognised 71% of the time, but
 with only 7 speakers this likely reflects those individuals and their
 recording setups as much as the language (`confusion_speakers.png`).
 
@@ -114,8 +115,8 @@ Top 2 neighbours by centroid distance (lower = closer), raw features:
 | Fang | Ewondo 1.35, Tatar 2.35 | Ewondo 1.39, Torwali 2.50 |
 | Ewondo | Fang 1.35, Torwali 1.71 | Fang 1.39, Bashkir 1.50 |
 | Torwali | Bashkir 1.04, Tatar 1.06 | Bashkir 1.18, Tatar 1.29 |
-| Hazargi (Dari) | Urdu 1.51, Tatar 1.60 | Urdu 1.33, Tatar 1.47 |
-| Urdu | Tatar 1.13, Bashkir 1.16 | Tatar 0.85, Hazargi 1.33 |
+| Hazaragi | Urdu 1.51, Tatar 1.60 | Urdu 1.33, Tatar 1.47 |
+| Urdu | Tatar 1.13, Bashkir 1.16 | Tatar 0.85, Hazaragi 1.33 |
 
 Noise-controlled ("Rhythm only", the site default), similarity scores:
 
@@ -123,15 +124,15 @@ Noise-controlled ("Rhythm only", the site default), similarity scores:
 |---|---|---|
 | Tatar | Bashkir 0.60, Urdu 0.54 | Urdu 0.54, Bashkir 0.52 |
 | Bashkir | Tatar 0.60, Urdu 0.57 | Tatar 0.52, Urdu 0.50 |
-| Fang | Ewondo 0.51, Hazargi 0.41 | Ewondo 0.54, Torwali 0.42 |
+| Fang | Ewondo 0.51, Hazaragi 0.41 | Ewondo 0.54, Torwali 0.42 |
 | Ewondo | Fang 0.51, Torwali 0.51 | Fang 0.54, Torwali 0.49 |
 | Torwali | Tatar 0.51, Ewondo 0.51 | Ewondo 0.49, Tatar 0.44 |
-| Hazargi (Dari) | Urdu 0.42, Tatar 0.42 | Urdu 0.44, Tatar 0.42 |
+| Hazaragi | Urdu 0.42, Tatar 0.42 | Urdu 0.44, Tatar 0.42 |
 | Urdu | Bashkir 0.57, Tatar 0.54 | Tatar 0.54, Bashkir 0.50 |
 
 **Dendrogram vs families** (`dendrogram_clips.png`, `dendrogram_speakers.png`):
 the first split separates the two Bantu languages from everything else, in
-both versions, matching the family tree. Hazargi (Iranian) joins the rest
+both versions, matching the family tree. Hazaragi (Iranian) joins the rest
 next, on its own. The remaining group mixes families: at the clip level Tatar
 and Bashkir join first (matching the Turkic family), then Torwali, then Urdu;
 at the speaker level Tatar pairs with Urdu and Bashkir pairs with Torwali, and the two pairs then merge. So the
@@ -145,10 +146,10 @@ Question: is Torwali's nearest rhythmic neighbour Urdu? **No.**
 
 | Map view | Torwali's neighbours, closest first | Urdu's rank |
 |---|---|---|
-| Rhythm only, clips | Tatar, Ewondo, Bashkir, Fang, Urdu, Hazargi | 5th of 6 |
-| Rhythm only, speaker averages | Ewondo, Tatar, Bashkir, Fang, Urdu, Hazargi | 5th of 6 |
-| Raw, clips | Bashkir, Tatar, Urdu, Ewondo, Hazargi, Fang | 3rd of 6 |
-| Raw, speaker averages | Bashkir, Tatar, Urdu, Ewondo, Hazargi, Fang | 3rd of 6 |
+| Rhythm only, clips | Tatar, Ewondo, Bashkir, Fang, Urdu, Hazaragi | 5th of 6 |
+| Rhythm only, speaker averages | Ewondo, Tatar, Bashkir, Fang, Urdu, Hazaragi | 5th of 6 |
+| Raw, clips | Bashkir, Tatar, Urdu, Ewondo, Hazaragi, Fang | 3rd of 6 |
+| Raw, speaker averages | Bashkir, Tatar, Urdu, Ewondo, Hazaragi, Fang | 3rd of 6 |
 
 Bootstrap over speakers (raw clips, 500 resamples): Torwali's nearest is
 Bashkir in 55% and Tatar in 44% of resamples; Urdu is never its nearest
@@ -235,7 +236,7 @@ devices and rooms, so language and recording setup are tangled together.
 Tempo and pitch range lead. Share of silence ranks fifth and is also the
 feature most affected by recording conditions. Final pitch slope: Tatar and
 Bashkir end utterances with a steep fall (about -6 semitones per second),
-and so does Torwali (about -5), while Fang, Ewondo, Urdu and Hazargi are
+and so does Torwali (about -5), while Fang, Ewondo, Urdu and Hazaragi are
 flatter (about -2 to -3). This shared final fall is one reason Torwali sits
 next to the Turkic pair. Pitch spread and pitch range are strongly correlated.
 
@@ -247,7 +248,7 @@ next to the Turkic pair. Pitch spread and pitch range are strongly correlated.
 * **Rhythm proxies.** Syllable-like nuclei come from intensity peaks, not
   phoneme alignment; nPVI and the voiced/unvoiced variability measures
   approximate %V, VarcoV and VarcoC without transcripts.
-* **Few speakers.** Hazargi has 7 speakers; Ewondo and Torwali 26; Fang 38.
+* **Few speakers.** Hazaragi has 7 speakers; Ewondo and Torwali 26; Fang 38.
   Results for these languages may reflect a handful of individuals.
 * **Recording conditions** predict language nearly as well as prosody (section 6).
 * **Seven languages and two sibling pairs.** The findings are a proof of
@@ -266,7 +267,7 @@ help build tools that sound native for the other? Can we find those
 neighbours from audio alone, without transcripts?
 
 **Dataset chosen:** Mozilla Common Voice Scripted Speech 27.0 (CC0) from the
-Mozilla Data Collective: Tatar, Bashkir, Fang, Ewondo, Torwali, Hazargi (Dari)
+Mozilla Data Collective: Tatar, Bashkir, Fang, Ewondo, Torwali, Hazaragi
 and Urdu; 1,755 clips plus a 190-speaker panel. Age and gender labels were
 never used.
 

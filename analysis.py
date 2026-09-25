@@ -508,7 +508,6 @@ print("  share of each prosody feature predictable from noise (R2):",
 fig, ax = plt.subplots(figsize=(12, 7))
 bars = [("Prosody, single clips", R["clip_classifier"][best_clip]["balanced_accuracy"], "#2a78d6"),
         ("Prosody, speaker averages", R["speaker_classifier"][best_spk]["balanced_accuracy"], "#184f95"),
-        ("Prosody minus pause and\nloudness features (clips)", R["prosody_no_pause_features"][best_clip]["balanced_accuracy"], "#86b6ef"),
         ("Prosody with noise-predictable\npart removed (clips)", R["prosody_residual_classifier"][best_clip]["balanced_accuracy"], "#5598e7"),
         ("Background noise only\n(recording check)", sb, "#9a9890"),
         ("Shuffled labels (clips)", R["clip_classifier"][best_clip]["shuffled_balanced_mean"], "#c9c8c1")]

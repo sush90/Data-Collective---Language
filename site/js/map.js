@@ -15,7 +15,7 @@ const MapView = {
     document.getElementById("play-self").addEventListener("click", () => Player.play(PC.randomClipOf(PC.state.lang)));
     document.getElementById("audio-note").textContent = (window.PC_CONFIG && PC_CONFIG.audio)
       ? "Playing the original Common Voice recordings (local demo build)."
-      : "You hear a rhythm sketch: a tone that follows each clip's pitch melody, with soft clicks on its syllable-like beats. Original recordings are not shared online, to respect the dataset licence and the speakers' privacy.";
+      : "You hear a rhythm sketch: a tone that follows each clip's pitch melody, with soft clicks on its syllable-like beats. Original recordings are not shared online, to respect the dataset license and the speakers' privacy.";
     this.buildSvg();
     this.renderSide();
     this.renderMap();
@@ -136,7 +136,7 @@ const MapView = {
       ? PC.data.languages.families.map(f => `<span><span class="swatch" style="background:${PC.familyColor(f.name)};border-radius:3px"></span>${PC.esc(f.name)}</span>`).join("")
       : langs.map((l, i) => `<span>${PC.swatchSVG(i)} ${PC.esc(l.name)}</span>`).join("");
     document.getElementById("legend").innerHTML = html +
-      `<span style="color:var(--muted)">Bright: the chosen language and its nearest neighbour. Faded: the rest.</span>`;
+      `<span style="color:var(--muted)">Bright: the chosen language and its nearest neighbor. Faded: the rest.</span>`;
   },
 
   tip(e, d) {
