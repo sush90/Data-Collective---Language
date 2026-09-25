@@ -24,7 +24,12 @@ def silence_features(path):
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         y, _ = librosa.load(path, sr=prosody.SR, mono=True)
-    x = y.astype(np.float64) - y.mean()
+    return silence_features_array(y)
+
+
+def silence_features_array(y):
+    y = np.asarray(y, dtype=np.float64)
+    x = y - y.mean()
     n = prosody.frame_grid(len(x))
     db = np.array([20 * np.log10(np.sqrt(np.mean(x[i * prosody.HOP: i * prosody.HOP + prosody.WIN] ** 2)) + 1e-10)
                    for i in range(n)])

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Prosodic Commons</title>
+<meta name="description" content="Hearing the world's languages by their rhythm: an interactive map of languages arranged by cadence, built from Mozilla Common Voice.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 16 Q6 4 10 16 T18 16 T26 16 T30 16' fill='none' stroke='%232a78d6' stroke-width='3'/></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script src="config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <h1>The Prosodic Commons</h1>
+    <p class="tagline">Hearing the world's languages by their rhythm</p>
+  </div>
+  <nav class="tabs" role="tablist">
+    <a href="#map" data-tab="map">Cadence Map</a>
+    <a href="#fingerprint" data-tab="fingerprint">Fingerprint</a>
+    <a href="#voice" data-tab="voice">Try Your Voice</a>
+    <a href="#validation" data-tab="validation">Validation</a>
+    <a href="#about" data-tab="about">About</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============================================================ MAP -->
+<section id="tab-map" class="tab">
+  <div class="map-layout">
+    <aside class="panel side">
+      <label class="field-label" for="lang-select">Choose a language</label>
+      <select id="lang-select"></select>
+      <p class="lang-meta" id="lang-meta"></p>
+      <h2 class="panel-title">Its rhythmic neighbours</h2>
+      <p class="hint">Closest first. Similarity = 1 / (1 + distance between the languages' average fingerprints).</p>
+      <ol id="neighbour-list" class="neighbours"></ol>
+      <div class="play-row">
+        <button id="play-self" class="btn">&#9654; Hear <span id="self-name"></span></button>
+      </div>
+      <p class="audio-note" id="audio-note"></p>
+    </aside>
+    <div class="map-area">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Feature space">
+          <button data-space="controlled" class="on" title="Prosody with the part predictable from background noise removed">Rhythm only</button>
+          <button data-space="raw" title="Prosody features as measured, including recording effects">Raw</button>
+        </div>
+        <div class="seg" role="group" aria-label="Level">
+          <button data-level="clips" class="on">Single clips</button>
+          <button data-level="speakers">Speaker averages</button>
+        </div>
+        <div class="seg" role="group" aria-label="Colour by">
+          <button data-color="language" class="on">By language</button>
+          <button data-color="family">By family</button>
+        </div>
+      </div>
+      <div id="map" class="map" aria-label="Map of clips arranged by prosodic similarity"></div>
+      <div id="legend" class="legend"></div>
+      <p class="hint" id="map-caption"></p>
+      <div id="now-playing" class="now-playing" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FINGERPRINT -->
+<section id="tab-fingerprint" class="tab" hidden>
+  <div class="panel wide">
+    <h2>Fingerprint view</h2>
+    <p class="lede">Every clip becomes a prosodic fingerprint: its pitch melody and its rhythm. Pick a clip (or click one on the map) and play it. The melody line is drawn as it plays.</p>
+    <div class="controls">
+      <select id="fp-lang"></select>
+      <button id="fp-random" class="btn secondary">Random clip</button>
+      <button id="fp-play" class="btn">&#9654; Play</button>
+    </div>
+    <p class="hint" id="fp-meta"></p>
+    <div id="fp-contour" class="contour"></div>
+    <h3>Rhythm and pauses compared with the language average</h3>
+    <div id="fp-bars" class="bars"></div>
+  </div>
+</section>
+
+<!-- ============================================================ VOICE -->
+<section id="tab-voice" class="tab" hidden>
+  <div class="panel wide">
+    <h2>Try your voice</h2>
+    <p class="lede">Read a sentence aloud in any language for about 5 seconds. We compute your prosodic fingerprint and place it on the map among the languages it sounds most like.</p>
+    <div class="privacy">
+      <strong>Your audio never leaves this device.</strong> Everything is computed in your browser and nothing is uploaded or stored. The tool measures only rhythm and melody. It does not identify who you are, and it does not guess age, gender or anything else about you.
+    </div>
+    <div class="controls">
+      <button id="rec-btn" class="btn big">&#9679; Record 5 seconds</button>
+      <span id="rec-status" class="status" aria-live="polite"></span>
+    </div>
+    <div id="voice-result"></div>
+  </div>
+</section>
+
+<!-- ============================================================ VALIDATION -->
+<section id="tab-validation" class="tab" hidden>
+  <div class="panel wide prose" id="validation-body"></div>
+</section>
+
+<!-- ============================================================ ABOUT -->
+<section id="tab-about" class="tab" hidden>
+  <div class="panel wide prose" id="about-body"></div>
+</section>
+</main>
+
+<footer class="site-footer">
+  Data: Mozilla Common Voice Scripted Speech 27.0 (CC0) via Mozilla Data Collective. Original recordings are not redistributed here.
+  Built for Design for Justice, Brown University.
+</footer>
+
+<div id="tooltip" class="tooltip" hidden></div>
+<script src="js/common.js"></script>
+<script src="js/player.js"></script>
+<script src="js/map.js"></script>
+<script src="js/fingerprint_view.js"></script>
+<script src="js/fingerprint.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

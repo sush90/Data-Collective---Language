@@ -1,0 +1,17 @@
+# Netlify: publish the static site folder. No build step.
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Microphone only for this site's own pages (Try Your Voice); audio never leaves the device.
+    Permissions-Policy = "microphone=(self), camera=(), geolocation=()"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

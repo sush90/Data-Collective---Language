@@ -8,3 +8,6 @@ outputs/features.csv
 outputs/silence.csv
 outputs/umap_*.csv
 outputs/analysis_log.txt
+.tools/
+site_local/
+.netlify/
