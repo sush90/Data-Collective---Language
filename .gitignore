@@ -3,3 +3,5 @@
 data/
 __pycache__/
 site/audio/
+outputs/features.csv
+*.pdf

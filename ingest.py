@@ -102,16 +102,57 @@ def ingest_dir(src, n_total, per_speaker):
     return got == len(wanted)
 
 
+def add_panel(src, code, n_speakers=40, per_speaker=8):
+    """Speaker panel for speaker-level fingerprints: up to n_speakers speakers with at
+    least per_speaker validated clips, per_speaker clips each. Writes data/<code>/panel.tsv
+    and copies any clips not already present. src is an extracted folder or a .tar.gz."""
+    out = os.path.join(DATA, code)
+    if os.path.exists(os.path.join(out, "panel.tsv")):
+        print(f"{code}: panel.tsv exists, keeping it")
+        return
+    val = pd.read_csv(os.path.join(out, "validated.tsv"), sep="\t", quoting=3,
+                      usecols=["client_id", "path"], dtype=str)
+    if os.path.abspath(src) == os.path.abspath(out):  # only clips already on disk
+        val = val[val["path"].isin(set(os.listdir(os.path.join(out, "clips"))))]
+    counts = val["client_id"].value_counts()
+    eligible = sorted(counts[counts >= per_speaker].index)
+    rng = pd.Series(eligible).sample(frac=1.0, random_state=SEED)
+    speakers = list(rng[:n_speakers])
+    panel = (val[val["client_id"].isin(speakers)]
+             .sample(frac=1.0, random_state=SEED)
+             .groupby("client_id").head(per_speaker)
+             .sort_values(["client_id", "path"]))
+    panel.to_csv(os.path.join(out, "panel.tsv"), sep="\t", index=False)
+    clips_dir = os.path.join(out, "clips")
+    need = set(panel["path"]) - set(os.listdir(clips_dir))
+    if need and os.path.isdir(src):
+        for base in need:
+            shutil.copy(os.path.join(src, "clips", base), os.path.join(clips_dir, base))
+    elif need:
+        with tarfile.open(src, "r|gz") as tf:
+            for member in tf:
+                base = os.path.basename(member.name)
+                if member.isfile() and base in need:
+                    with open(os.path.join(clips_dir, base), "wb") as f:
+                        f.write(tf.extractfile(member).read())
+    print(f"{code}: panel of {len(speakers)} speakers x {per_speaker} clips "
+          f"({len(need)} new clips copied)")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("archives", nargs="*")
     ap.add_argument("--n", type=int, default=300)
     ap.add_argument("--per-speaker", type=int, default=20)
     ap.add_argument("--delete-archive", action="store_true")
+    ap.add_argument("--panel-code", help="build a speaker panel for this data/<code> from the given source")
     a = ap.parse_args()
     paths = a.archives or sorted(
         glob.glob(os.path.join(DATA, "_archives", "*.tar.gz"))
         + glob.glob(os.path.expanduser("~/Downloads/*cv-corpus*.tar.gz")))
+    if a.panel_code:
+        add_panel(paths[0], a.panel_code)
+        raise SystemExit
     for p in paths:
         try:
             if os.path.isdir(p):

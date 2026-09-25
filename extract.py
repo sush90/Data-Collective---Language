@@ -32,8 +32,13 @@ def load_config():
 
 
 def choose_clips(folder, n_total):
-    """Round-robin over speakers: as many speakers as possible, max 20 clips each."""
+    """Round-robin over speakers: as many speakers as possible, max 20 clips each.
+    The first full-size choice is frozen in data/<folder>/sample.tsv for reproducibility."""
     d = os.path.join(ROOT, "data", folder)
+    frozen = os.path.join(d, "sample.tsv")
+    if os.path.exists(frozen):
+        s = pd.read_csv(frozen, sep="\t", dtype=str)
+        return list(zip(s["client_id"], s["path"]))[:n_total]
     val = pd.read_csv(os.path.join(d, "validated.tsv"), sep="\t", quoting=3,
                       usecols=["client_id", "path"], dtype=str)
     present = set(os.listdir(os.path.join(d, "clips")))
@@ -45,7 +50,18 @@ def choose_clips(folder, n_total):
         for c in order:
             if groups[c] and len(chosen) < n_total:
                 chosen.append((c, groups[c].pop(0)))
+    if n_total >= 300:
+        pd.DataFrame(chosen, columns=["client_id", "path"]).to_csv(frozen, sep="\t", index=False)
     return chosen
+
+
+def panel_clips(folder):
+    """(client_id, path) pairs from data/<folder>/panel.tsv, if a speaker panel exists."""
+    f = os.path.join(ROOT, "data", folder, "panel.tsv")
+    if not os.path.exists(f):
+        return []
+    pan = pd.read_csv(f, sep="\t", dtype=str)
+    return list(zip(pan["client_id"], pan["path"]))
 
 
 def process(lang, folder, client_id, path):
@@ -73,30 +89,43 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     cfg = load_config()
     cache = pd.read_csv(CACHE) if os.path.exists(CACHE) else pd.DataFrame(columns=["path"])
-    done = set(cache["path"])
+    done = set(zip(cache.get("language", []), cache["path"]))
 
     todo, wanted = [], []
     for L in cfg["languages"]:
-        for cid, p in choose_clips(L["folder"], a.per_lang):
+        seen = set()
+        for cid, p in choose_clips(L["folder"], a.per_lang) + panel_clips(L["folder"]):
+            if p in seen:
+                continue
+            seen.add(p)
             wanted.append(p)
-            if p not in done:
+            if (L["name"], p) not in done:
                 todo.append((L["name"], L["folder"], cid, p))
+                done.add((L["name"], p))
     print(f"{len(wanted)} clips requested, {len(todo)} new to process")
     if todo:
         rows = Parallel(n_jobs=a.jobs, verbose=5)(delayed(process)(*t) for t in todo)
         cache = pd.concat([cache, pd.DataFrame(rows)], ignore_index=True)
         cache.to_csv(CACHE, index=False)
 
-    df = cache[cache["path"].isin(wanted)]
+    sample = {(L["name"], p) for L in cfg["languages"] for _, p in choose_clips(L["folder"], a.per_lang)}
+    df = cache[[k in sample for k in zip(cache["language"], cache["path"])]]
     rep = df.groupby("language").agg(clips=("path", "size"), kept=("ok", "sum"),
                                       speakers_kept=("client_id", lambda s: s[df.loc[s.index, "ok"] == True].nunique()))
     rep["dropped"] = rep["clips"] - rep["kept"]
-    print("\nQuality gate per language:")
+    print("\nQuality gate per language (clip sample):")
     print(rep.to_string())
     drops = df[df["ok"] != True].groupby(["language", "reason"]).size()
     if len(drops):
         print("\nDrop reasons:")
         print(drops.to_string())
+    for L in cfg["languages"]:
+        pc = panel_clips(L["folder"])
+        if pc:
+            pan = cache[(cache["language"] == L["name"]) & cache["path"].isin({p for _, p in pc})
+                        & (cache["ok"] == True)]
+            full = (pan.groupby("client_id").size() >= 5).sum()
+            print(f"Speaker panel {L['name']}: {full} of {len(set(c for c, _ in pc))} speakers have >= 5 good clips")
 
 
 if __name__ == "__main__":
