@@ -40,3 +40,4 @@ held_out_sibling_tests:
 # Held-out family test: only run when the family has at least 2 languages
 # AND at least 2 other families are present.
 held_out_family: Turkic
+run_held_out_family: false   # set true once Tajik and Balti (more families) are added

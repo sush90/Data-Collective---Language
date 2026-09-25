@@ -1,0 +1,1070 @@
+{
+ "languages": [
+  "Tatar",
+  "Bashkir",
+  "Fang",
+  "Ewondo",
+  "Torwali"
+ ],
+ "families": {
+  "Tatar": "Turkic",
+  "Bashkir": "Turkic",
+  "Fang": "Bantu",
+  "Ewondo": "Bantu",
+  "Torwali": "Indo-Aryan (Dardic)"
+ },
+ "features": [
+  "f0_sd",
+  "f0_range",
+  "f0_slope",
+  "f0_reversal_rate",
+  "f0_final_slope",
+  "int_sd",
+  "int_peak_rate",
+  "npvi_nuclei",
+  "pct_voiced",
+  "voiced_cv",
+  "unvoiced_cv",
+  "nuclei_rate",
+  "pause_rate",
+  "pause_mean",
+  "silence_prop"
+ ],
+ "speakers": [
+  {
+   "language": "Tatar",
+   "family": "Turkic",
+   "clips": 262,
+   "speakers": 241,
+   "panel_speakers": 39,
+   "caveat": false
+  },
+  {
+   "language": "Bashkir",
+   "family": "Turkic",
+   "clips": 269,
+   "speakers": 269,
+   "panel_speakers": 39,
+   "caveat": false
+  },
+  {
+   "language": "Fang",
+   "family": "Bantu",
+   "clips": 223,
+   "speakers": 38,
+   "panel_speakers": 26,
+   "caveat": false
+  },
+  {
+   "language": "Ewondo",
+   "family": "Bantu",
+   "clips": 293,
+   "speakers": 26,
+   "panel_speakers": 21,
+   "caveat": true
+  },
+  {
+   "language": "Torwali",
+   "family": "Indo-Aryan (Dardic)",
+   "clips": 291,
+   "speakers": 26,
+   "panel_speakers": 18,
+   "caveat": true
+  }
+ ],
+ "clip_classifier": {
+  "n": 1338,
+  "chance_majority": 0.21898355754857998,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.4476831091180867,
+   "balanced_accuracy": 0.4490891210345345,
+   "shuffled_accuracy_mean": 0.18609865470852016,
+   "shuffled_balanced_mean": 0.2161734832661389,
+   "shuffled_balanced_max": 0.2553666884834202
+  },
+  "random_forest": {
+   "accuracy": 0.46860986547085204,
+   "balanced_accuracy": 0.47351631434029756,
+   "shuffled_accuracy_mean": 0.39424514200298943,
+   "shuffled_balanced_mean": 0.19982983095052562,
+   "shuffled_balanced_max": 0.21892388334219132
+  }
+ },
+ "speaker_classifier": {
+  "n": 143,
+  "chance_majority": 0.2727272727272727,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.5944055944055944,
+   "balanced_accuracy": 0.5885225885225885,
+   "shuffled_accuracy_mean": 0.21328671328671328,
+   "shuffled_balanced_mean": 0.20831501831501834,
+   "shuffled_balanced_max": 0.24493284493284495
+  },
+  "random_forest": {
+   "accuracy": 0.6153846153846154,
+   "balanced_accuracy": 0.578021978021978,
+   "shuffled_accuracy_mean": 0.21328671328671328,
+   "shuffled_balanced_mean": 0.19405372405372406,
+   "shuffled_balanced_max": 0.23479853479853477
+  }
+ },
+ "confusion_clips": {
+  "model": "random_forest",
+  "labels": [
+   "Tatar",
+   "Bashkir",
+   "Fang",
+   "Ewondo",
+   "Torwali"
+  ],
+  "matrix": [
+   [
+    0.3206,
+    0.2786,
+    0.1031,
+    0.1336,
+    0.1641
+   ],
+   [
+    0.2454,
+    0.4498,
+    0.0558,
+    0.1227,
+    0.1264
+   ],
+   [
+    0.0807,
+    0.0269,
+    0.6413,
+    0.1435,
+    0.1076
+   ],
+   [
+    0.116,
+    0.1331,
+    0.1911,
+    0.4164,
+    0.1433
+   ],
+   [
+    0.0928,
+    0.1753,
+    0.0653,
+    0.1271,
+    0.5395
+   ]
+  ]
+ },
+ "confusion_speakers": {
+  "model": "logistic_regression",
+  "labels": [
+   "Tatar",
+   "Bashkir",
+   "Fang",
+   "Ewondo",
+   "Torwali"
+  ],
+  "matrix": [
+   [
+    0.641,
+    0.2051,
+    0.0513,
+    0.0,
+    0.1026
+   ],
+   [
+    0.2308,
+    0.5897,
+    0.0,
+    0.1538,
+    0.0256
+   ],
+   [
+    0.0,
+    0.0,
+    0.5769,
+    0.3077,
+    0.1154
+   ],
+   [
+    0.0952,
+    0.0952,
+    0.1429,
+    0.5238,
+    0.1429
+   ],
+   [
+    0.1111,
+    0.0556,
+    0.1667,
+    0.0556,
+    0.6111
+   ]
+  ]
+ },
+ "centroid_distances_clips": {
+  "Tatar": {
+   "Tatar": 0.0,
+   "Bashkir": 0.713,
+   "Fang": 2.2748,
+   "Ewondo": 1.7004,
+   "Torwali": 1.0747
+  },
+  "Bashkir": {
+   "Tatar": 0.713,
+   "Bashkir": 0.0,
+   "Fang": 2.6908,
+   "Ewondo": 1.8809,
+   "Torwali": 1.0212
+  },
+  "Fang": {
+   "Tatar": 2.2748,
+   "Bashkir": 2.6908,
+   "Fang": 0.0,
+   "Ewondo": 1.3375,
+   "Torwali": 2.4203
+  },
+  "Ewondo": {
+   "Tatar": 1.7004,
+   "Bashkir": 1.8809,
+   "Fang": 1.3375,
+   "Ewondo": 0.0,
+   "Torwali": 1.6507
+  },
+  "Torwali": {
+   "Tatar": 1.0747,
+   "Bashkir": 1.0212,
+   "Fang": 2.4203,
+   "Ewondo": 1.6507,
+   "Torwali": 0.0
+  }
+ },
+ "neighbours_clips": {
+  "Tatar": [
+   {
+    "language": "Bashkir",
+    "distance": 0.7129840310230157,
+    "similarity": 0.5837766038033567
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.074711942374884,
+    "similarity": 0.48199462275968713
+   },
+   {
+    "language": "Ewondo",
+    "distance": 1.700438306121171,
+    "similarity": 0.370310255832643
+   },
+   {
+    "language": "Fang",
+    "distance": 2.274821463933741,
+    "similarity": 0.30536015810730405
+   }
+  ],
+  "Bashkir": [
+   {
+    "language": "Tatar",
+    "distance": 0.7129840310230157,
+    "similarity": 0.5837766038033567
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.021180429610522,
+    "similarity": 0.4947603812850584
+   },
+   {
+    "language": "Ewondo",
+    "distance": 1.8809099081368246,
+    "similarity": 0.34711255536856817
+   },
+   {
+    "language": "Fang",
+    "distance": 2.690837869491178,
+    "similarity": 0.2709411887924139
+   }
+  ],
+  "Fang": [
+   {
+    "language": "Ewondo",
+    "distance": 1.3374758220477359,
+    "similarity": 0.42781191170737076
+   },
+   {
+    "language": "Tatar",
+    "distance": 2.274821463933741,
+    "similarity": 0.30536015810730405
+   },
+   {
+    "language": "Torwali",
+    "distance": 2.4202516751819325,
+    "similarity": 0.2923761450820157
+   },
+   {
+    "language": "Bashkir",
+    "distance": 2.690837869491178,
+    "similarity": 0.2709411887924139
+   }
+  ],
+  "Ewondo": [
+   {
+    "language": "Fang",
+    "distance": 1.3374758220477359,
+    "similarity": 0.42781191170737076
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.6506543213021692,
+    "similarity": 0.3772653385858088
+   },
+   {
+    "language": "Tatar",
+    "distance": 1.700438306121171,
+    "similarity": 0.370310255832643
+   },
+   {
+    "language": "Bashkir",
+    "distance": 1.8809099081368246,
+    "similarity": 0.34711255536856817
+   }
+  ],
+  "Torwali": [
+   {
+    "language": "Bashkir",
+    "distance": 1.021180429610522,
+    "similarity": 0.4947603812850584
+   },
+   {
+    "language": "Tatar",
+    "distance": 1.074711942374884,
+    "similarity": 0.48199462275968713
+   },
+   {
+    "language": "Ewondo",
+    "distance": 1.6506543213021692,
+    "similarity": 0.3772653385858088
+   },
+   {
+    "language": "Fang",
+    "distance": 2.4202516751819325,
+    "similarity": 0.2923761450820157
+   }
+  ]
+ },
+ "siblings_clips": [
+  {
+   "pair": "Tatar-Bashkir",
+   "a_in_b_top2": true,
+   "b_in_a_top2": true,
+   "a_top1_is_b": true,
+   "b_top1_is_a": true,
+   "pass_top2": true,
+   "pass_top1": true
+  },
+  {
+   "pair": "Fang-Ewondo",
+   "a_in_b_top2": true,
+   "b_in_a_top2": true,
+   "a_top1_is_b": true,
+   "b_top1_is_a": true,
+   "pass_top2": true,
+   "pass_top1": true
+  }
+ ],
+ "siblings_bootstrap_clips": {
+  "Tatar-Bashkir": {
+   "top2": 1.0,
+   "top1": 0.96
+  },
+  "Fang-Ewondo": {
+   "top2": 0.858,
+   "top1": 0.736
+  }
+ },
+ "centroid_distances_speakers": {
+  "Tatar": {
+   "Tatar": 0.0,
+   "Bashkir": 1.1797,
+   "Fang": 2.7538,
+   "Ewondo": 2.0219,
+   "Torwali": 1.3094
+  },
+  "Bashkir": {
+   "Tatar": 1.1797,
+   "Bashkir": 0.0,
+   "Fang": 2.6152,
+   "Ewondo": 1.4535,
+   "Torwali": 1.1468
+  },
+  "Fang": {
+   "Tatar": 2.7538,
+   "Bashkir": 2.6152,
+   "Fang": 0.0,
+   "Ewondo": 1.3675,
+   "Torwali": 2.4265
+  },
+  "Ewondo": {
+   "Tatar": 2.0219,
+   "Bashkir": 1.4535,
+   "Fang": 1.3675,
+   "Ewondo": 0.0,
+   "Torwali": 1.5211
+  },
+  "Torwali": {
+   "Tatar": 1.3094,
+   "Bashkir": 1.1468,
+   "Fang": 2.4265,
+   "Ewondo": 1.5211,
+   "Torwali": 0.0
+  }
+ },
+ "neighbours_speakers": {
+  "Tatar": [
+   {
+    "language": "Bashkir",
+    "distance": 1.1796682522006465,
+    "similarity": 0.4587854133262598
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.3093598236524566,
+    "similarity": 0.433020436987776
+   },
+   {
+    "language": "Ewondo",
+    "distance": 2.021886049880037,
+    "similarity": 0.3309191622363451
+   },
+   {
+    "language": "Fang",
+    "distance": 2.7537941292317427,
+    "similarity": 0.26639713462513764
+   }
+  ],
+  "Bashkir": [
+   {
+    "language": "Torwali",
+    "distance": 1.146781370677625,
+    "similarity": 0.46581361924356224
+   },
+   {
+    "language": "Tatar",
+    "distance": 1.1796682522006465,
+    "similarity": 0.4587854133262598
+   },
+   {
+    "language": "Ewondo",
+    "distance": 1.4534939530503355,
+    "similarity": 0.40758201126060983
+   },
+   {
+    "language": "Fang",
+    "distance": 2.6151587539020813,
+    "similarity": 0.2766130253396572
+   }
+  ],
+  "Fang": [
+   {
+    "language": "Ewondo",
+    "distance": 1.3675443659082793,
+    "similarity": 0.4223785684440014
+   },
+   {
+    "language": "Torwali",
+    "distance": 2.426458231965604,
+    "similarity": 0.29184654599637283
+   },
+   {
+    "language": "Bashkir",
+    "distance": 2.6151587539020813,
+    "similarity": 0.2766130253396572
+   },
+   {
+    "language": "Tatar",
+    "distance": 2.7537941292317427,
+    "similarity": 0.26639713462513764
+   }
+  ],
+  "Ewondo": [
+   {
+    "language": "Fang",
+    "distance": 1.3675443659082793,
+    "similarity": 0.4223785684440014
+   },
+   {
+    "language": "Bashkir",
+    "distance": 1.4534939530503355,
+    "similarity": 0.40758201126060983
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.5210795677972562,
+    "similarity": 0.39665546965410947
+   },
+   {
+    "language": "Tatar",
+    "distance": 2.021886049880037,
+    "similarity": 0.3309191622363451
+   }
+  ],
+  "Torwali": [
+   {
+    "language": "Bashkir",
+    "distance": 1.146781370677625,
+    "similarity": 0.46581361924356224
+   },
+   {
+    "language": "Tatar",
+    "distance": 1.3093598236524566,
+    "similarity": 0.433020436987776
+   },
+   {
+    "language": "Ewondo",
+    "distance": 1.5210795677972562,
+    "similarity": 0.39665546965410947
+   },
+   {
+    "language": "Fang",
+    "distance": 2.426458231965604,
+    "similarity": 0.29184654599637283
+   }
+  ]
+ },
+ "siblings_speakers": [
+  {
+   "pair": "Tatar-Bashkir",
+   "a_in_b_top2": true,
+   "b_in_a_top2": true,
+   "a_top1_is_b": true,
+   "b_top1_is_a": false,
+   "pass_top2": true,
+   "pass_top1": false
+  },
+  {
+   "pair": "Fang-Ewondo",
+   "a_in_b_top2": true,
+   "b_in_a_top2": true,
+   "a_top1_is_b": true,
+   "b_top1_is_a": true,
+   "pass_top2": true,
+   "pass_top1": true
+  }
+ ],
+ "siblings_bootstrap_speakers": {
+  "Tatar-Bashkir": {
+   "top2": 0.842,
+   "top1": 0.428
+  },
+  "Fang-Ewondo": {
+   "top2": 0.644,
+   "top1": 0.474
+  }
+ },
+ "confusion_neighbours_clips": {
+  "Tatar": [
+   "Bashkir",
+   "Torwali"
+  ],
+  "Bashkir": [
+   "Tatar",
+   "Torwali"
+  ],
+  "Fang": [
+   "Ewondo",
+   "Tatar"
+  ],
+  "Ewondo": [
+   "Fang",
+   "Torwali"
+  ],
+  "Torwali": [
+   "Bashkir",
+   "Ewondo"
+  ]
+ },
+ "sibling_chance": {
+  "top2_one_direction": 0.5,
+  "top1_one_direction": 0.25
+ },
+ "dendrogram_clips": {
+  "order": [
+   "Torwali",
+   "Tatar",
+   "Bashkir",
+   "Fang",
+   "Ewondo"
+  ],
+  "linkage": [
+   [
+    0.0,
+    1.0,
+    0.713,
+    2.0
+   ],
+   [
+    4.0,
+    5.0,
+    1.048,
+    3.0
+   ],
+   [
+    2.0,
+    3.0,
+    1.3375,
+    2.0
+   ],
+   [
+    6.0,
+    7.0,
+    2.103,
+    5.0
+   ]
+  ]
+ },
+ "dendrogram_speakers": {
+  "order": [
+   "Tatar",
+   "Bashkir",
+   "Torwali",
+   "Fang",
+   "Ewondo"
+  ],
+  "linkage": [
+   [
+    1.0,
+    4.0,
+    1.1468,
+    2.0
+   ],
+   [
+    0.0,
+    5.0,
+    1.2445,
+    3.0
+   ],
+   [
+    2.0,
+    3.0,
+    1.3675,
+    2.0
+   ],
+   [
+    6.0,
+    7.0,
+    2.132,
+    5.0
+   ]
+  ]
+ },
+ "feature_importance": [
+  {
+   "feature": "int_peak_rate",
+   "permutation_importance": 0.0619,
+   "eta_squared_speakers": 0.5843
+  },
+  {
+   "feature": "nuclei_rate",
+   "permutation_importance": 0.0477,
+   "eta_squared_speakers": 0.4694
+  },
+  {
+   "feature": "silence_prop",
+   "permutation_importance": 0.0306,
+   "eta_squared_speakers": 0.282
+  },
+  {
+   "feature": "f0_range",
+   "permutation_importance": 0.0238,
+   "eta_squared_speakers": 0.1584
+  },
+  {
+   "feature": "f0_final_slope",
+   "permutation_importance": 0.0167,
+   "eta_squared_speakers": 0.0582
+  },
+  {
+   "feature": "f0_slope",
+   "permutation_importance": 0.0152,
+   "eta_squared_speakers": 0.1246
+  },
+  {
+   "feature": "int_sd",
+   "permutation_importance": 0.0104,
+   "eta_squared_speakers": 0.1417
+  },
+  {
+   "feature": "f0_sd",
+   "permutation_importance": 0.0103,
+   "eta_squared_speakers": 0.1577
+  },
+  {
+   "feature": "pause_rate",
+   "permutation_importance": 0.0097,
+   "eta_squared_speakers": 0.2675
+  },
+  {
+   "feature": "pause_mean",
+   "permutation_importance": 0.0074,
+   "eta_squared_speakers": 0.2174
+  },
+  {
+   "feature": "npvi_nuclei",
+   "permutation_importance": 0.0068,
+   "eta_squared_speakers": 0.0849
+  },
+  {
+   "feature": "unvoiced_cv",
+   "permutation_importance": 0.0049,
+   "eta_squared_speakers": 0.1844
+  },
+  {
+   "feature": "f0_reversal_rate",
+   "permutation_importance": 0.0016,
+   "eta_squared_speakers": 0.0282
+  },
+  {
+   "feature": "pct_voiced",
+   "permutation_importance": -0.0023,
+   "eta_squared_speakers": 0.1089
+  },
+  {
+   "feature": "voiced_cv",
+   "permutation_importance": -0.0058,
+   "eta_squared_speakers": 0.0373
+  }
+ ],
+ "feature_labels": {
+  "f0_sd": "Pitch spread (SD)",
+  "f0_range": "Pitch range (5-95%)",
+  "f0_slope": "Overall pitch slope",
+  "f0_reversal_rate": "Pitch reversals / s",
+  "f0_final_slope": "Final pitch slope",
+  "int_sd": "Loudness spread",
+  "int_peak_rate": "Loudness peaks / s",
+  "npvi_nuclei": "Rhythm variability (nPVI)",
+  "pct_voiced": "% voiced",
+  "voiced_cv": "Voiced-stretch variability",
+  "unvoiced_cv": "Unvoiced-stretch variability",
+  "nuclei_rate": "Syllable-like beats / s",
+  "pause_rate": "Pauses / s",
+  "pause_mean": "Mean pause length",
+  "silence_prop": "Share of silence"
+ },
+ "held_out_sibling": [
+  {
+   "held_out": "Ewondo",
+   "expect_nearest": "Fang",
+   "level": "clips",
+   "nearest_full": "Fang",
+   "nearest_2d": "Fang",
+   "distances_full": {
+    "Tatar": 1.7066785672661358,
+    "Bashkir": 1.876918002561684,
+    "Fang": 1.3385090814920448,
+    "Torwali": 1.6537957066301745
+   },
+   "distances_2d": {
+    "Tatar": 1.7259691953659058,
+    "Bashkir": 2.0608742237091064,
+    "Fang": 0.5057139992713928,
+    "Torwali": 2.0102434158325195
+   },
+   "knn_vote_share_expected": 0.2150170648464164,
+   "knn_vote_distribution": {
+    "Torwali": 0.416,
+    "Fang": 0.215,
+    "Bashkir": 0.208,
+    "Tatar": 0.16
+   },
+   "expected_share_of_training": 0.21339712918660286,
+   "pass": true
+  },
+  {
+   "held_out": "Ewondo",
+   "expect_nearest": "Fang",
+   "level": "speakers",
+   "nearest_full": "Fang",
+   "nearest_2d": "Fang",
+   "distances_full": {
+    "Tatar": 3.0510972425970095,
+    "Bashkir": 2.1010819671708183,
+    "Fang": 1.832772444868855,
+    "Torwali": 2.4634146161948114
+   },
+   "distances_2d": {
+    "Tatar": 2.127389669418335,
+    "Bashkir": 1.1184911727905273,
+    "Fang": 0.9733636975288391,
+    "Torwali": 1.97504460811615
+   },
+   "knn_vote_share_expected": 0.23809523809523808,
+   "knn_vote_distribution": {
+    "Bashkir": 0.667,
+    "Fang": 0.238,
+    "Torwali": 0.048,
+    "Tatar": 0.048
+   },
+   "expected_share_of_training": 0.21311475409836064,
+   "pass": true
+  },
+  {
+   "held_out": "Bashkir",
+   "expect_nearest": "Tatar",
+   "level": "clips",
+   "nearest_full": "Tatar",
+   "nearest_2d": "Tatar",
+   "distances_full": {
+    "Tatar": 0.7090320588096908,
+    "Fang": 2.7035179899769433,
+    "Ewondo": 1.8724603922653604,
+    "Torwali": 1.027843050169047
+   },
+   "distances_2d": {
+    "Tatar": 0.38411059975624084,
+    "Fang": 2.7392570972442627,
+    "Ewondo": 2.498385429382324,
+    "Torwali": 0.6561285257339478
+   },
+   "knn_vote_share_expected": 0.4163568773234201,
+   "knn_vote_distribution": {
+    "Tatar": 0.416,
+    "Torwali": 0.297,
+    "Ewondo": 0.268,
+    "Fang": 0.019
+   },
+   "expected_share_of_training": 0.245088868101029,
+   "pass": true
+  },
+  {
+   "held_out": "Bashkir",
+   "expect_nearest": "Tatar",
+   "level": "speakers",
+   "nearest_full": "Torwali",
+   "nearest_2d": "Tatar",
+   "distances_full": {
+    "Tatar": 1.7509987445473432,
+    "Fang": 3.4934968710105947,
+    "Ewondo": 2.0530970173891436,
+    "Torwali": 1.6151778389459308
+   },
+   "distances_2d": {
+    "Tatar": 1.0199289321899414,
+    "Fang": 2.4245831966400146,
+    "Ewondo": 1.6588153839111328,
+    "Torwali": 1.3737503290176392
+   },
+   "knn_vote_share_expected": 0.4358974358974359,
+   "knn_vote_distribution": {
+    "Ewondo": 0.487,
+    "Tatar": 0.436,
+    "Fang": 0.051,
+    "Torwali": 0.026
+   },
+   "expected_share_of_training": 0.375,
+   "pass": false
+  }
+ ],
+ "held_out_family": {
+  "family": "Turkic",
+  "skipped": true,
+  "reason": "deferred until more families are present (set run_held_out_family: true in languages.yaml once Tajik and Balti are added)"
+ },
+ "silence_classifier": {
+  "n": 1337,
+  "chance_majority": 0.21914734480179507,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.4113687359760658,
+   "balanced_accuracy": 0.41419250826282816,
+   "shuffled_accuracy_mean": 0.19468960359012716,
+   "shuffled_balanced_mean": 0.21013288531966898,
+   "shuffled_balanced_max": 0.29087821246852724
+  },
+  "random_forest": {
+   "accuracy": 0.44502617801047123,
+   "balanced_accuracy": 0.4489122586233131,
+   "shuffled_accuracy_mean": 0.3850411368735976,
+   "shuffled_balanced_mean": 0.19623395188572673,
+   "shuffled_balanced_max": 0.21159932383748434
+  }
+ },
+ "prosody_on_silence_subset": {
+  "n": 1337,
+  "chance_majority": 0.21914734480179507,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.45400149588631267,
+   "balanced_accuracy": 0.4571281699716655,
+   "shuffled_accuracy_mean": 0.1857142857142857,
+   "shuffled_balanced_mean": 0.21650027776413716,
+   "shuffled_balanced_max": 0.242450162435578
+  },
+  "random_forest": {
+   "accuracy": 0.4779356768885565,
+   "balanced_accuracy": 0.48312220320702304,
+   "shuffled_accuracy_mean": 0.3931937172774869,
+   "shuffled_balanced_mean": 0.2028785836308681,
+   "shuffled_balanced_max": 0.2162353677280588
+  }
+ },
+ "prosody_no_pause_features": {
+  "n": 1338,
+  "chance_majority": 0.21898355754857998,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.3804185351270553,
+   "balanced_accuracy": 0.3891068533102895,
+   "shuffled_accuracy_mean": 0.1834828101644245,
+   "shuffled_balanced_mean": 0.20821826711431002,
+   "shuffled_balanced_max": 0.24073510313501628
+  },
+  "random_forest": {
+   "accuracy": 0.42152466367713004,
+   "balanced_accuracy": 0.42867756884788993,
+   "shuffled_accuracy_mean": 0.3758594917787743,
+   "shuffled_balanced_mean": 0.19798562093634625,
+   "shuffled_balanced_max": 0.22243192977235532
+  },
+  "features": [
+   "f0_sd",
+   "f0_range",
+   "f0_slope",
+   "f0_reversal_rate",
+   "f0_final_slope",
+   "int_peak_rate",
+   "npvi_nuclei",
+   "pct_voiced",
+   "voiced_cv",
+   "nuclei_rate"
+  ]
+ },
+ "confound_flag": true,
+ "residual_r2_by_feature": {
+  "f0_sd": -0.007018237956547768,
+  "f0_range": 0.0028493772841108322,
+  "f0_slope": 0.0015185611441148605,
+  "f0_reversal_rate": -0.001311446500620761,
+  "f0_final_slope": -0.003759172490598317,
+  "int_sd": 0.1684632587940985,
+  "int_peak_rate": 0.09653888224517515,
+  "npvi_nuclei": -0.025714759229639617,
+  "pct_voiced": 0.09378007172547742,
+  "voiced_cv": 0.024667883163603466,
+  "unvoiced_cv": 0.012832481847226518,
+  "nuclei_rate": 0.07448380017801981,
+  "pause_rate": 0.2160990650903375,
+  "pause_mean": 0.13758973875096325,
+  "silence_prop": 0.39044085222300184
+ },
+ "prosody_residual_classifier": {
+  "n": 1337,
+  "chance_majority": 0.21914734480179507,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.3612565445026178,
+   "balanced_accuracy": 0.3648809916518012,
+   "shuffled_accuracy_mean": 0.18646222887060587,
+   "shuffled_balanced_mean": 0.20909070577155,
+   "shuffled_balanced_max": 0.2398708695784944
+  },
+  "random_forest": {
+   "accuracy": 0.3994016454749439,
+   "balanced_accuracy": 0.4051352905802868,
+   "shuffled_accuracy_mean": 0.39633507853403144,
+   "shuffled_balanced_mean": 0.19958020412559568,
+   "shuffled_balanced_max": 0.22044448545745898
+  }
+ },
+ "prosody_plus_silence_classifier": {
+  "n": 1337,
+  "chance_majority": 0.21914734480179507,
+  "chance_balanced": 0.2,
+  "logistic_regression": {
+   "accuracy": 0.5018698578908003,
+   "balanced_accuracy": 0.5036814915025513,
+   "shuffled_accuracy_mean": 0.21877337322363505,
+   "shuffled_balanced_mean": 0.2159585573181812,
+   "shuffled_balanced_max": 0.29062718256551157
+  },
+  "random_forest": {
+   "accuracy": 0.5302916978309649,
+   "balanced_accuracy": 0.5339059856387911,
+   "shuffled_accuracy_mean": 0.4100972326103216,
+   "shuffled_balanced_mean": 0.19863324799853493,
+   "shuffled_balanced_max": 0.21331485052415283
+  }
+ },
+ "centroid_distances_residual": {
+  "Tatar": {
+   "Tatar": 0.0,
+   "Bashkir": 0.6248,
+   "Fang": 1.4939,
+   "Ewondo": 1.2123,
+   "Torwali": 0.9898
+  },
+  "Bashkir": {
+   "Tatar": 0.6248,
+   "Bashkir": 0.0,
+   "Fang": 1.9217,
+   "Ewondo": 1.5427,
+   "Torwali": 1.1792
+  },
+  "Fang": {
+   "Tatar": 1.4939,
+   "Bashkir": 1.9217,
+   "Fang": 0.0,
+   "Ewondo": 0.9466,
+   "Torwali": 1.2761
+  },
+  "Ewondo": {
+   "Tatar": 1.2123,
+   "Bashkir": 1.5427,
+   "Fang": 0.9466,
+   "Ewondo": 0.0,
+   "Torwali": 0.8916
+  },
+  "Torwali": {
+   "Tatar": 0.9898,
+   "Bashkir": 1.1792,
+   "Fang": 1.2761,
+   "Ewondo": 0.8916,
+   "Torwali": 0.0
+  }
+ },
+ "siblings_residual": [
+  {
+   "pair": "Tatar-Bashkir",
+   "a_in_b_top2": true,
+   "b_in_a_top2": true,
+   "a_top1_is_b": true,
+   "b_top1_is_a": true,
+   "pass_top2": true,
+   "pass_top1": true
+  },
+  {
+   "pair": "Fang-Ewondo",
+   "a_in_b_top2": true,
+   "b_in_a_top2": true,
+   "a_top1_is_b": true,
+   "b_top1_is_a": false,
+   "pass_top2": true,
+   "pass_top1": false
+  }
+ ],
+ "siblings_bootstrap_residual": {
+  "Tatar-Bashkir": {
+   "top2": 0.996,
+   "top1": 0.968
+  },
+  "Fang-Ewondo": {
+   "top2": 0.768,
+   "top1": 0.376
+  }
+ },
+ "knn_placement_error": {
+  "clips": 0.11937084606874468,
+  "speakers": 0.22411484712582577
+ }
+}

@@ -5,3 +5,6 @@ __pycache__/
 site/audio/
 outputs/features.csv
 *.pdf
+outputs/silence.csv
+outputs/umap_*.csv
+outputs/analysis_log.txt
