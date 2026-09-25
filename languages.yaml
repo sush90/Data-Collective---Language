@@ -1,0 +1,42 @@
+# The Prosodic Commons: language configuration.
+# Add a language with:  python add_language.py --path data/<folder> --family "<family>"
+# `folder` is the directory under data/ holding clips/ and validated.tsv.
+
+languages:
+  - name: Tatar
+    code: tt
+    folder: tt
+    family: Turkic
+  - name: Bashkir
+    code: ba
+    folder: ba
+    family: Turkic
+  - name: Fang
+    code: fan
+    folder: fan
+    family: Bantu
+  - name: Ewondo
+    code: ewo
+    folder: ewo
+    family: Bantu
+  - name: Torwali
+    code: trw
+    folder: trw
+    family: Indo-Aryan (Dardic)
+
+# Pairs linguists consider close. Used for the known-sibling validation.
+sibling_pairs:
+  - [Tatar, Bashkir]
+  - [Fang, Ewondo]
+
+# Held-out sibling tests: fit the space without `held_out`, project it in,
+# and check whether its nearest language is `expect_nearest`.
+held_out_sibling_tests:
+  - held_out: Ewondo
+    expect_nearest: Fang
+  - held_out: Bashkir
+    expect_nearest: Tatar
+
+# Held-out family test: only run when the family has at least 2 languages
+# AND at least 2 other families are present.
+held_out_family: Turkic
