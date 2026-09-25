@@ -4,223 +4,451 @@
    "Tatar": [
     {
      "language": "Bashkir",
-     "distance": 0.632,
-     "similarity": 0.613
+     "distance": 0.654,
+     "similarity": 0.605
+    },
+    {
+     "language": "Urdu",
+     "distance": 0.869,
+     "similarity": 0.535
     },
     {
      "language": "Torwali",
-     "distance": 0.933,
-     "similarity": 0.517
+     "distance": 0.954,
+     "similarity": 0.512
     },
     {
      "language": "Ewondo",
-     "distance": 1.138,
-     "similarity": 0.468
+     "distance": 1.146,
+     "similarity": 0.466
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.401,
+     "similarity": 0.416
     },
     {
      "language": "Fang",
-     "distance": 1.4,
-     "similarity": 0.417
+     "distance": 1.522,
+     "similarity": 0.396
     }
    ],
    "Bashkir": [
     {
      "language": "Tatar",
-     "distance": 0.632,
-     "similarity": 0.613
+     "distance": 0.654,
+     "similarity": 0.605
+    },
+    {
+     "language": "Urdu",
+     "distance": 0.754,
+     "similarity": 0.57
     },
     {
      "language": "Torwali",
-     "distance": 1.111,
-     "similarity": 0.474
+     "distance": 1.166,
+     "similarity": 0.462
     },
     {
      "language": "Ewondo",
-     "distance": 1.491,
-     "similarity": 0.401
+     "distance": 1.551,
+     "similarity": 0.392
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.815,
+     "similarity": 0.355
     },
     {
      "language": "Fang",
-     "distance": 1.821,
-     "similarity": 0.355
+     "distance": 1.988,
+     "similarity": 0.335
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 0.871,
-     "similarity": 0.535
+     "distance": 0.978,
+     "similarity": 0.506
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.437,
+     "similarity": 0.41
     },
     {
      "language": "Torwali",
-     "distance": 1.229,
-     "similarity": 0.449
+     "distance": 1.456,
+     "similarity": 0.407
     },
     {
      "language": "Tatar",
-     "distance": 1.4,
-     "similarity": 0.417
+     "distance": 1.522,
+     "similarity": 0.396
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.905,
+     "similarity": 0.344
     },
     {
      "language": "Bashkir",
-     "distance": 1.821,
-     "similarity": 0.355
+     "distance": 1.988,
+     "similarity": 0.335
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 0.871,
-     "similarity": 0.535
+     "distance": 0.978,
+     "similarity": 0.506
     },
     {
      "language": "Torwali",
-     "distance": 0.892,
-     "similarity": 0.528
+     "distance": 0.979,
+     "similarity": 0.505
     },
     {
      "language": "Tatar",
-     "distance": 1.138,
-     "similarity": 0.468
+     "distance": 1.146,
+     "similarity": 0.466
     },
     {
      "language": "Bashkir",
-     "distance": 1.491,
-     "similarity": 0.401
+     "distance": 1.551,
+     "similarity": 0.392
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.69,
+     "similarity": 0.372
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.757,
+     "similarity": 0.363
     }
    ],
    "Torwali": [
     {
-     "language": "Ewondo",
-     "distance": 0.892,
-     "similarity": 0.528
+     "language": "Tatar",
+     "distance": 0.954,
+     "similarity": 0.512
     },
     {
-     "language": "Tatar",
-     "distance": 0.933,
-     "similarity": 0.517
+     "language": "Ewondo",
+     "distance": 0.979,
+     "similarity": 0.505
     },
     {
      "language": "Bashkir",
-     "distance": 1.111,
-     "similarity": 0.474
+     "distance": 1.166,
+     "similarity": 0.462
     },
     {
      "language": "Fang",
-     "distance": 1.229,
-     "similarity": 0.449
+     "distance": 1.456,
+     "similarity": 0.407
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.473,
+     "similarity": 0.404
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.953,
+     "similarity": 0.339
+    }
+   ],
+   "Hazargi (Dari)": [
+    {
+     "language": "Urdu",
+     "distance": 1.386,
+     "similarity": 0.419
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.401,
+     "similarity": 0.416
+    },
+    {
+     "language": "Fang",
+     "distance": 1.437,
+     "similarity": 0.41
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.69,
+     "similarity": 0.372
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.815,
+     "similarity": 0.355
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.953,
+     "similarity": 0.339
+    }
+   ],
+   "Urdu": [
+    {
+     "language": "Bashkir",
+     "distance": 0.754,
+     "similarity": 0.57
+    },
+    {
+     "language": "Tatar",
+     "distance": 0.869,
+     "similarity": 0.535
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.386,
+     "similarity": 0.419
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.473,
+     "similarity": 0.404
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.757,
+     "similarity": 0.363
+    },
+    {
+     "language": "Fang",
+     "distance": 1.905,
+     "similarity": 0.344
     }
    ]
   },
   "controlled_speakers": {
    "Tatar": [
     {
+     "language": "Urdu",
+     "distance": 0.841,
+     "similarity": 0.543
+    },
+    {
      "language": "Bashkir",
-     "distance": 0.932,
-     "similarity": 0.518
+     "distance": 0.914,
+     "similarity": 0.523
     },
     {
      "language": "Torwali",
-     "distance": 1.252,
-     "similarity": 0.444
+     "distance": 1.276,
+     "similarity": 0.439
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.393,
+     "similarity": 0.418
     },
     {
      "language": "Ewondo",
-     "distance": 1.591,
-     "similarity": 0.386
+     "distance": 1.583,
+     "similarity": 0.387
     },
     {
      "language": "Fang",
-     "distance": 1.863,
-     "similarity": 0.349
+     "distance": 1.941,
+     "similarity": 0.34
     }
    ],
    "Bashkir": [
     {
      "language": "Tatar",
-     "distance": 0.932,
-     "similarity": 0.518
+     "distance": 0.914,
+     "similarity": 0.523
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.003,
+     "similarity": 0.499
     },
     {
      "language": "Torwali",
-     "distance": 1.259,
-     "similarity": 0.443
+     "distance": 1.291,
+     "similarity": 0.436
     },
     {
      "language": "Ewondo",
-     "distance": 1.455,
-     "similarity": 0.407
+     "distance": 1.49,
+     "similarity": 0.402
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.982,
+     "similarity": 0.335
     },
     {
      "language": "Fang",
-     "distance": 1.978,
-     "similarity": 0.336
+     "distance": 2.128,
+     "similarity": 0.32
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 0.751,
-     "similarity": 0.571
+     "distance": 0.858,
+     "similarity": 0.538
     },
     {
      "language": "Torwali",
-     "distance": 1.145,
-     "similarity": 0.466
+     "distance": 1.364,
+     "similarity": 0.423
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.587,
+     "similarity": 0.387
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.875,
+     "similarity": 0.348
     },
     {
      "language": "Tatar",
-     "distance": 1.863,
-     "similarity": 0.349
+     "distance": 1.941,
+     "similarity": 0.34
     },
     {
      "language": "Bashkir",
-     "distance": 1.978,
-     "similarity": 0.336
+     "distance": 2.128,
+     "similarity": 0.32
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 0.751,
-     "similarity": 0.571
+     "distance": 0.858,
+     "similarity": 0.538
     },
     {
      "language": "Torwali",
-     "distance": 0.947,
-     "similarity": 0.514
+     "distance": 1.031,
+     "similarity": 0.492
     },
     {
      "language": "Bashkir",
-     "distance": 1.455,
-     "similarity": 0.407
+     "distance": 1.49,
+     "similarity": 0.402
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.494,
+     "similarity": 0.401
     },
     {
      "language": "Tatar",
-     "distance": 1.591,
-     "similarity": 0.386
+     "distance": 1.583,
+     "similarity": 0.387
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.666,
+     "similarity": 0.375
     }
    ],
    "Torwali": [
     {
      "language": "Ewondo",
-     "distance": 0.947,
-     "similarity": 0.514
-    },
-    {
-     "language": "Fang",
-     "distance": 1.145,
-     "similarity": 0.466
+     "distance": 1.031,
+     "similarity": 0.492
     },
     {
      "language": "Tatar",
-     "distance": 1.252,
-     "similarity": 0.444
+     "distance": 1.276,
+     "similarity": 0.439
     },
     {
      "language": "Bashkir",
-     "distance": 1.259,
-     "similarity": 0.443
+     "distance": 1.291,
+     "similarity": 0.436
+    },
+    {
+     "language": "Fang",
+     "distance": 1.364,
+     "similarity": 0.423
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.491,
+     "similarity": 0.401
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.856,
+     "similarity": 0.35
+    }
+   ],
+   "Hazargi (Dari)": [
+    {
+     "language": "Urdu",
+     "distance": 1.262,
+     "similarity": 0.442
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.393,
+     "similarity": 0.418
+    },
+    {
+     "language": "Fang",
+     "distance": 1.587,
+     "similarity": 0.387
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.666,
+     "similarity": 0.375
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.856,
+     "similarity": 0.35
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.982,
+     "similarity": 0.335
+    }
+   ],
+   "Urdu": [
+    {
+     "language": "Tatar",
+     "distance": 0.841,
+     "similarity": 0.543
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.003,
+     "similarity": 0.499
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.262,
+     "similarity": 0.442
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.491,
+     "similarity": 0.401
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.494,
+     "similarity": 0.401
+    },
+    {
+     "language": "Fang",
+     "distance": 1.875,
+     "similarity": 0.348
     }
    ]
   },
@@ -228,223 +456,451 @@
    "Tatar": [
     {
      "language": "Bashkir",
-     "distance": 0.713,
+     "distance": 0.711,
      "similarity": 0.584
     },
     {
      "language": "Torwali",
-     "distance": 1.075,
-     "similarity": 0.482
+     "distance": 1.056,
+     "similarity": 0.486
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.136,
+     "similarity": 0.468
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.609,
+     "similarity": 0.383
     },
     {
      "language": "Ewondo",
-     "distance": 1.701,
-     "similarity": 0.37
+     "distance": 1.733,
+     "similarity": 0.366
     },
     {
      "language": "Fang",
-     "distance": 2.281,
-     "similarity": 0.305
+     "distance": 2.357,
+     "similarity": 0.298
     }
    ],
    "Bashkir": [
     {
      "language": "Tatar",
-     "distance": 0.713,
+     "distance": 0.711,
      "similarity": 0.584
     },
     {
      "language": "Torwali",
-     "distance": 1.022,
-     "similarity": 0.495
+     "distance": 1.038,
+     "similarity": 0.491
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.154,
+     "similarity": 0.464
     },
     {
      "language": "Ewondo",
-     "distance": 1.882,
-     "similarity": 0.347
+     "distance": 1.941,
+     "similarity": 0.34
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.072,
+     "similarity": 0.326
     },
     {
      "language": "Fang",
-     "distance": 2.695,
-     "similarity": 0.271
+     "distance": 2.777,
+     "similarity": 0.265
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 1.336,
-     "similarity": 0.428
+     "distance": 1.345,
+     "similarity": 0.426
     },
     {
      "language": "Tatar",
-     "distance": 2.281,
-     "similarity": 0.305
+     "distance": 2.357,
+     "similarity": 0.298
     },
     {
      "language": "Torwali",
-     "distance": 2.43,
-     "similarity": 0.292
+     "distance": 2.498,
+     "similarity": 0.286
     },
     {
      "language": "Bashkir",
-     "distance": 2.695,
-     "similarity": 0.271
+     "distance": 2.777,
+     "similarity": 0.265
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.838,
+     "similarity": 0.261
+    },
+    {
+     "language": "Urdu",
+     "distance": 3.121,
+     "similarity": 0.243
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 1.336,
-     "similarity": 0.428
+     "distance": 1.345,
+     "similarity": 0.426
     },
     {
      "language": "Torwali",
-     "distance": 1.651,
-     "similarity": 0.377
+     "distance": 1.713,
+     "similarity": 0.369
     },
     {
      "language": "Tatar",
-     "distance": 1.701,
-     "similarity": 0.37
+     "distance": 1.733,
+     "similarity": 0.366
     },
     {
      "language": "Bashkir",
-     "distance": 1.882,
-     "similarity": 0.347
+     "distance": 1.941,
+     "similarity": 0.34
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.626,
+     "similarity": 0.276
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.728,
+     "similarity": 0.268
     }
    ],
    "Torwali": [
     {
      "language": "Bashkir",
-     "distance": 1.022,
-     "similarity": 0.495
+     "distance": 1.038,
+     "similarity": 0.491
     },
     {
      "language": "Tatar",
-     "distance": 1.075,
-     "similarity": 0.482
+     "distance": 1.056,
+     "similarity": 0.486
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.538,
+     "similarity": 0.394
     },
     {
      "language": "Ewondo",
-     "distance": 1.651,
-     "similarity": 0.377
+     "distance": 1.713,
+     "similarity": 0.369
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.295,
+     "similarity": 0.303
     },
     {
      "language": "Fang",
-     "distance": 2.43,
-     "similarity": 0.292
+     "distance": 2.498,
+     "similarity": 0.286
+    }
+   ],
+   "Hazargi (Dari)": [
+    {
+     "language": "Urdu",
+     "distance": 1.518,
+     "similarity": 0.397
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.609,
+     "similarity": 0.383
+    },
+    {
+     "language": "Bashkir",
+     "distance": 2.072,
+     "similarity": 0.326
+    },
+    {
+     "language": "Torwali",
+     "distance": 2.295,
+     "similarity": 0.303
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.728,
+     "similarity": 0.268
+    },
+    {
+     "language": "Fang",
+     "distance": 2.838,
+     "similarity": 0.261
+    }
+   ],
+   "Urdu": [
+    {
+     "language": "Tatar",
+     "distance": 1.136,
+     "similarity": 0.468
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.154,
+     "similarity": 0.464
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.518,
+     "similarity": 0.397
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.538,
+     "similarity": 0.394
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.626,
+     "similarity": 0.276
+    },
+    {
+     "language": "Fang",
+     "distance": 3.121,
+     "similarity": 0.243
     }
    ]
   },
   "raw_speakers": {
    "Tatar": [
     {
+     "language": "Urdu",
+     "distance": 0.906,
+     "similarity": 0.525
+    },
+    {
      "language": "Bashkir",
-     "distance": 1.18,
-     "similarity": 0.459
+     "distance": 1.165,
+     "similarity": 0.462
     },
     {
      "language": "Torwali",
-     "distance": 1.31,
-     "similarity": 0.433
+     "distance": 1.29,
+     "similarity": 0.437
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.472,
+     "similarity": 0.404
     },
     {
      "language": "Ewondo",
-     "distance": 2.022,
-     "similarity": 0.331
+     "distance": 2.048,
+     "similarity": 0.328
     },
     {
      "language": "Fang",
-     "distance": 2.756,
-     "similarity": 0.266
+     "distance": 2.836,
+     "similarity": 0.261
     }
    ],
    "Bashkir": [
     {
-     "language": "Torwali",
-     "distance": 1.147,
-     "similarity": 0.466
+     "language": "Tatar",
+     "distance": 1.165,
+     "similarity": 0.462
     },
     {
-     "language": "Tatar",
-     "distance": 1.18,
+     "language": "Torwali",
+     "distance": 1.179,
      "similarity": 0.459
     },
     {
+     "language": "Urdu",
+     "distance": 1.323,
+     "similarity": 0.431
+    },
+    {
      "language": "Ewondo",
-     "distance": 1.454,
-     "similarity": 0.407
+     "distance": 1.499,
+     "similarity": 0.4
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.28,
+     "similarity": 0.305
     },
     {
      "language": "Fang",
-     "distance": 2.617,
-     "similarity": 0.276
+     "distance": 2.693,
+     "similarity": 0.271
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 1.369,
-     "similarity": 0.422
+     "distance": 1.395,
+     "similarity": 0.418
     },
     {
      "language": "Torwali",
-     "distance": 2.428,
-     "similarity": 0.292
+     "distance": 2.506,
+     "similarity": 0.285
     },
     {
      "language": "Bashkir",
-     "distance": 2.617,
-     "similarity": 0.276
+     "distance": 2.693,
+     "similarity": 0.271
     },
     {
      "language": "Tatar",
-     "distance": 2.756,
-     "similarity": 0.266
+     "distance": 2.836,
+     "similarity": 0.261
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.856,
+     "similarity": 0.259
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 3.012,
+     "similarity": 0.249
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 1.369,
-     "similarity": 0.422
+     "distance": 1.395,
+     "similarity": 0.418
     },
     {
      "language": "Bashkir",
-     "distance": 1.454,
-     "similarity": 0.407
+     "distance": 1.499,
+     "similarity": 0.4
     },
     {
      "language": "Torwali",
-     "distance": 1.521,
-     "similarity": 0.397
+     "distance": 1.577,
+     "similarity": 0.388
     },
     {
      "language": "Tatar",
-     "distance": 2.022,
-     "similarity": 0.331
+     "distance": 2.048,
+     "similarity": 0.328
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.06,
+     "similarity": 0.327
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.587,
+     "similarity": 0.279
     }
    ],
    "Torwali": [
     {
      "language": "Bashkir",
-     "distance": 1.147,
-     "similarity": 0.466
+     "distance": 1.179,
+     "similarity": 0.459
     },
     {
      "language": "Tatar",
-     "distance": 1.31,
-     "similarity": 0.433
+     "distance": 1.29,
+     "similarity": 0.437
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.481,
+     "similarity": 0.403
     },
     {
      "language": "Ewondo",
-     "distance": 1.521,
-     "similarity": 0.397
+     "distance": 1.577,
+     "similarity": 0.388
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 2.211,
+     "similarity": 0.311
     },
     {
      "language": "Fang",
-     "distance": 2.428,
-     "similarity": 0.292
+     "distance": 2.506,
+     "similarity": 0.285
+    }
+   ],
+   "Hazargi (Dari)": [
+    {
+     "language": "Urdu",
+     "distance": 1.38,
+     "similarity": 0.42
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.472,
+     "similarity": 0.404
+    },
+    {
+     "language": "Torwali",
+     "distance": 2.211,
+     "similarity": 0.311
+    },
+    {
+     "language": "Bashkir",
+     "distance": 2.28,
+     "similarity": 0.305
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.587,
+     "similarity": 0.279
+    },
+    {
+     "language": "Fang",
+     "distance": 3.012,
+     "similarity": 0.249
+    }
+   ],
+   "Urdu": [
+    {
+     "language": "Tatar",
+     "distance": 0.906,
+     "similarity": 0.525
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.323,
+     "similarity": 0.431
+    },
+    {
+     "language": "Hazargi (Dari)",
+     "distance": 1.38,
+     "similarity": 0.42
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.481,
+     "similarity": 0.403
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.06,
+     "similarity": 0.327
+    },
+    {
+     "language": "Fang",
+     "distance": 2.856,
+     "similarity": 0.259
     }
    ]
   }

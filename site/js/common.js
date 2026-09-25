@@ -30,6 +30,7 @@ PC.familyColor = name => {
 PC.symbol = {
   circle: d3.symbolCircle, square: d3.symbolSquare, triangle: d3.symbolTriangle,
   diamond: d3.symbolDiamond, "triangle-down": d3.symbolTriangle,
+  star: d3.symbolStar, cross: d3.symbolCross, wye: d3.symbolWye,
 };
 PC.symbolPath = (marker, size) => {
   const p = d3.symbol(PC.symbol[marker] || d3.symbolCircle, size)();

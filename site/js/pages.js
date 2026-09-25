@@ -39,6 +39,11 @@ const Pages = {
     const topR2 = Object.entries(r2).sort((a, b) => b[1] - a[1]).slice(0, 3)
       .map(([f, v]) => `${lab[f].toLowerCase()} (${pct(v)})`).join(", ");
 
+    const survived = pairs.map(([a, b]) => {
+      const p = `${a}-${b}`, after = R.siblings_bootstrap_residual && R.siblings_bootstrap_residual[p],
+        before = R.siblings_bootstrap_clips && R.siblings_bootstrap_clips[p];
+      return after && before ? `${a} and ${b} remain each other's nearest neighbour in ${pct(after.top1)} of speaker resamples after the control (${pct(before.top1)} before it).` : "";
+    }).join(" ");
     const fam = R.held_out_family && R.held_out_family.skipped
       ? `<p>The held-out <em>family</em> test (build the map without all Turkic languages, then project them in) is deferred until more language families are added. With only three families it would say little.</p>` : "";
 
@@ -64,7 +69,7 @@ const Pages = {
       <div class="callout">
         <p><strong>What we found.</strong> We trained the same classifier on something that has nothing to do with speech: the background noise in the silent moments of each clip. It identified the language ${pct(noise.balanced_accuracy)} of the time, almost as well as rhythm (${pct(proSame.balanced_accuracy)} on the same clips). Each language in Common Voice was recorded by a small, separate community with its own phones, laptops and rooms, so language and recording setup are tangled together. Part of what separates these languages is microphones, not speech.</p>
         <p><strong>How we controlled for it.</strong> For every rhythm feature we removed the part that background noise can predict, then repeated the analysis on what was left. This control never looks at which language a clip is. The Cadence Map uses these noise-controlled features by default ("Rhythm only"); the "Raw" toggle shows the uncorrected version.</p>
-        <p><strong>What survived.</strong> Rhythm still identifies the language ${pct(resid.balanced_accuracy)} of the time with the noise-explainable part removed, about ${(resid.balanced_accuracy / chance).toFixed(1)} times chance. Rhythm plus noise together (${pct(both.balanced_accuracy)}) beat noise alone, so rhythm carries information the recording setup does not. Background noise explains almost none of the pitch features (at most ${pct(Math.max(pitchR2, 0))} of their variation); it mainly explains ${topR2}. The Tatar and Bashkir pairing survives the control at full strength. The Fang and Ewondo pairing gets weaker.</p>
+        <p><strong>What survived.</strong> Rhythm still identifies the language ${pct(resid.balanced_accuracy)} of the time with the noise-explainable part removed, about ${(resid.balanced_accuracy / chance).toFixed(1)} times chance. Rhythm plus noise together (${pct(both.balanced_accuracy)}) beat noise alone, so rhythm carries information the recording setup does not. Background noise explains almost none of the pitch features (at most ${pct(Math.max(pitchR2, 0))} of their variation); it mainly explains ${topR2}. ${survived}</p>
         <p><strong>What we cannot rule out.</strong> Recording situations that change how people read (for example reading from a phone in a noisy room) could still shape rhythm in ways this correction cannot remove. More speakers per language, recorded in varied settings, would settle it.</p>
       </div>
       <img src="img/accuracy_summary.png" alt="Bar chart of balanced accuracy: prosody on single clips ${pct(clip.balanced_accuracy)}, speaker averages ${pct(spk.balanced_accuracy)}, prosody with noise-predictable part removed ${pct(resid.balanced_accuracy)}, background noise only ${pct(noise.balanced_accuracy)}, shuffled labels about ${pct(clip.shuffled_balanced_mean)}; chance ${pct(chance)}.">
@@ -99,6 +104,9 @@ const Pages = {
   },
 
   about() {
+    const langs = PC.data.languages.languages, nL = langs.length;
+    const minSpk = Math.min(...langs.map(l => l.speakers));
+    const fewest = langs.filter(l => l.speakers === minSpk).map(l => l.name).join(", ");
     document.getElementById("about-body").innerHTML = `
       <h2>About the Prosodic Commons</h2>
       <p class="lede">Every language has a music: how its voice rises and falls, where it pauses, how its syllables march. We map languages by that music rather than by their family trees.</p>
@@ -118,15 +126,15 @@ const Pages = {
       <p>The method needs no transcripts, no dictionary and no writing system. It works from recordings alone, so it applies to languages that are mostly or entirely spoken, which are exactly the languages that text-based technology leaves behind.</p>
 
       <h3>What the prototype shows</h3>
-      <p>Using five Common Voice languages, rhythm alone identifies the language well above chance, and both pairs of known sibling languages (Tatar and Bashkir, Fang and Ewondo) come out as each other's nearest rhythmic neighbours. Part of the separation comes from recording conditions rather than speech, and we show that openly on the <a href="#validation">Validation</a> page.</p>
+      <p>Using ${nL} Common Voice languages, rhythm alone identifies the language well above chance, and both pairs of known sibling languages (Tatar and Bashkir, Fang and Ewondo) come out as each other's nearest rhythmic neighbours. Part of the separation comes from recording conditions rather than speech, and we show that openly on the <a href="#validation">Validation</a> page.</p>
 
       <h3>Honest limitations</h3>
       <ul>
         <li><strong>Read speech.</strong> Common Voice contributors read sentences aloud. Conversation has livelier rhythm, and reading style reflects each community's text collection.</li>
         <li><strong>Approximate rhythm measures.</strong> We find syllable-like beats from loudness peaks rather than from exact vowels and consonants, which would require transcripts.</li>
-        <li><strong>Few speakers.</strong> Some languages have only 26 speakers, so results may reflect a handful of people.</li>
+        <li><strong>Few speakers.</strong> Some languages have very few speakers (${PC.esc(fewest)}: ${minSpk}), so their results may reflect a handful of people.</li>
         <li><strong>Recording conditions.</strong> Background noise alone predicts the language almost as well as rhythm does. We correct for the part we can measure, but not for everything.</li>
-        <li><strong>Five languages.</strong> This is a proof of concept. Adding a new Common Voice language takes one command, and the map updates automatically.</li>
+        <li><strong>${nL} languages.</strong> This is a proof of concept. Adding a new Common Voice language takes one command, and the map updates automatically.</li>
       </ul>
 
       <h3>Roadmap</h3>

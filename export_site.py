@@ -33,11 +33,13 @@ F = prosody.FEATURES
 SEED = 0
 K_NN = 15
 SPEAKER_CLIPS = 5
-PALETTE = ["#2a78d6", "#eda100", "#008300", "#4a3aa7", "#e34948"]
-PALETTE_DARK = ["#3987e5", "#c98500", "#008300", "#9085e9", "#e66767"]
-MARKERS = ["circle", "square", "triangle", "diamond", "triangle-down"]
-FAMILY_PALETTE = ["#2a78d6", "#eb6834", "#1baf7a"]
-FAMILY_PALETTE_DARK = ["#3987e5", "#d95926", "#199e70"]
+PALETTE5 = ["#2a78d6", "#eda100", "#008300", "#4a3aa7", "#e34948"]
+PALETTE5_DARK = ["#3987e5", "#c98500", "#008300", "#9085e9", "#e66767"]
+PALETTE8 = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
+PALETTE8_DARK = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767"]
+MARKERS = ["circle", "square", "triangle", "diamond", "triangle-down", "star", "cross", "wye"]
+FAMILY_PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#4a3aa7"]
+FAMILY_PALETTE_DARK = ["#3987e5", "#d95926", "#199e70", "#9085e9"]
 
 cfg = load_config()
 LANGS = [L["name"] for L in cfg["languages"]]
@@ -164,13 +166,14 @@ clip_table = [{"l": LANGS.index(l), "file": f"{folder[l]}/{p}"} for l, p in need
 # ------------------------------------------------------------------ write
 os.makedirs(DATA, exist_ok=True)
 R = json.load(open(os.path.join(OUT, "results.json")))
+PALETTE, PALETTE_DARK = (PALETTE5, PALETTE5_DARK) if len(LANGS) <= 5 else (PALETTE8, PALETTE8_DARK)
 lang_info = []
 for i, l in enumerate(LANGS):
     s = next(x for x in R["speakers"] if x["language"] == l)
-    lang_info.append({"name": l, "family": FAMILY[l], "color": PALETTE[i % 5], "color_dark": PALETTE_DARK[i % 5],
-                      "marker": MARKERS[i % 5], "clips": s["clips"], "speakers": s["speakers"],
+    lang_info.append({"name": l, "family": FAMILY[l], "color": PALETTE[i % len(PALETTE)], "color_dark": PALETTE_DARK[i % len(PALETTE)],
+                      "marker": MARKERS[i % len(MARKERS)], "clips": s["clips"], "speakers": s["speakers"],
                       "panel_speakers": int((speakers.language == l).sum()), "caveat": s["caveat"]})
-fam_info = [{"name": f, "color": FAMILY_PALETTE[i % 3], "color_dark": FAMILY_PALETTE_DARK[i % 3]}
+fam_info = [{"name": f, "color": FAMILY_PALETTE[i % 4], "color_dark": FAMILY_PALETTE_DARK[i % 4]}
             for i, f in enumerate(FAMILIES)]
 
 feature_means = {l: clips[clips.language == l][F].mean().round(4).to_dict() for l in LANGS}

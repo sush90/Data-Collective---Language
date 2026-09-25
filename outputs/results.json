@@ -4,14 +4,18 @@
   "Bashkir",
   "Fang",
   "Ewondo",
-  "Torwali"
+  "Torwali",
+  "Hazargi (Dari)",
+  "Urdu"
  ],
  "families": {
   "Tatar": "Turkic",
   "Bashkir": "Turkic",
   "Fang": "Bantu",
   "Ewondo": "Bantu",
-  "Torwali": "Indo-Aryan (Dardic)"
+  "Torwali": "Indo-Aryan",
+  "Hazargi (Dari)": "Iranian",
+  "Urdu": "Indo-Aryan"
  },
  "features": [
   "f0_sd",
@@ -65,49 +69,65 @@
   },
   {
    "language": "Torwali",
-   "family": "Indo-Aryan (Dardic)",
+   "family": "Indo-Aryan",
    "clips": 291,
    "speakers": 26,
    "panel_speakers": 18,
    "caveat": true
+  },
+  {
+   "language": "Hazargi (Dari)",
+   "family": "Iranian",
+   "clips": 129,
+   "speakers": 7,
+   "panel_speakers": 7,
+   "caveat": true
+  },
+  {
+   "language": "Urdu",
+   "family": "Indo-Aryan",
+   "clips": 288,
+   "speakers": 288,
+   "panel_speakers": 40,
+   "caveat": false
   }
  ],
  "clip_classifier": {
-  "n": 1338,
-  "chance_majority": 0.21898355754857998,
-  "chance_balanced": 0.2,
+  "n": 1755,
+  "chance_majority": 0.16695156695156696,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.4476831091180867,
-   "balanced_accuracy": 0.4490891210345345,
-   "shuffled_accuracy_mean": 0.18609865470852016,
-   "shuffled_balanced_mean": 0.2161734832661389,
-   "shuffled_balanced_max": 0.2553666884834202
+   "accuracy": 0.4307692307692308,
+   "balanced_accuracy": 0.45277572107995656,
+   "shuffled_accuracy_mean": 0.11566951566951567,
+   "shuffled_balanced_mean": 0.1510375085013878,
+   "shuffled_balanced_max": 0.18766757290680045
   },
   "random_forest": {
-   "accuracy": 0.46860986547085204,
-   "balanced_accuracy": 0.47351631434029756,
-   "shuffled_accuracy_mean": 0.39424514200298943,
-   "shuffled_balanced_mean": 0.19982983095052562,
-   "shuffled_balanced_max": 0.21892388334219132
+   "accuracy": 0.44045584045584046,
+   "balanced_accuracy": 0.4585977111227123,
+   "shuffled_accuracy_mean": 0.27008547008547007,
+   "shuffled_balanced_mean": 0.13850259129767192,
+   "shuffled_balanced_max": 0.15278776436896788
   }
  },
  "speaker_classifier": {
-  "n": 143,
-  "chance_majority": 0.2727272727272727,
-  "chance_balanced": 0.2,
+  "n": 190,
+  "chance_majority": 0.21052631578947367,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.5944055944055944,
-   "balanced_accuracy": 0.5885225885225885,
-   "shuffled_accuracy_mean": 0.21328671328671328,
-   "shuffled_balanced_mean": 0.20831501831501834,
-   "shuffled_balanced_max": 0.24493284493284495
+   "accuracy": 0.5526315789473685,
+   "balanced_accuracy": 0.571070992499564,
+   "shuffled_accuracy_mean": 0.15789473684210525,
+   "shuffled_balanced_mean": 0.15851386708529563,
+   "shuffled_balanced_max": 0.233612419326705
   },
   "random_forest": {
-   "accuracy": 0.6153846153846154,
-   "balanced_accuracy": 0.578021978021978,
-   "shuffled_accuracy_mean": 0.21328671328671328,
-   "shuffled_balanced_mean": 0.19405372405372406,
-   "shuffled_balanced_max": 0.23479853479853477
+   "accuracy": 0.5421052631578948,
+   "balanced_accuracy": 0.5657858015000873,
+   "shuffled_accuracy_mean": 0.16,
+   "shuffled_balanced_mean": 0.14264477585906157,
+   "shuffled_balanced_max": 0.19819902319902322
   }
  },
  "confusion_clips": {
@@ -117,43 +137,73 @@
    "Bashkir",
    "Fang",
    "Ewondo",
-   "Torwali"
+   "Torwali",
+   "Hazargi (Dari)",
+   "Urdu"
   ],
   "matrix": [
    [
-    0.3206,
-    0.2786,
-    0.1031,
-    0.1336,
-    0.1641
+    0.1908,
+    0.229,
+    0.0878,
+    0.1069,
+    0.1641,
+    0.0611,
+    0.1603
    ],
    [
-    0.2454,
-    0.4498,
-    0.0558,
+    0.1524,
+    0.3866,
+    0.0372,
+    0.1078,
     0.1227,
-    0.1264
+    0.0223,
+    0.171
    ],
    [
-    0.0807,
-    0.0269,
-    0.6413,
-    0.1435,
-    0.1076
+    0.0314,
+    0.0179,
+    0.6054,
+    0.148,
+    0.0762,
+    0.0493,
+    0.0717
    ],
    [
-    0.116,
-    0.1331,
-    0.1911,
+    0.0546,
+    0.1195,
+    0.1741,
     0.4164,
-    0.1433
+    0.1263,
+    0.0307,
+    0.0785
    ],
    [
-    0.0928,
-    0.1753,
-    0.0653,
-    0.1271,
-    0.5395
+    0.0584,
+    0.1409,
+    0.0722,
+    0.1203,
+    0.5258,
+    0.0103,
+    0.0722
+   ],
+   [
+    0.0388,
+    0.0465,
+    0.0543,
+    0.031,
+    0.031,
+    0.6512,
+    0.1473
+   ],
+   [
+    0.0903,
+    0.1181,
+    0.066,
+    0.059,
+    0.1285,
+    0.1042,
+    0.434
    ]
   ]
  },
@@ -164,192 +214,364 @@
    "Bashkir",
    "Fang",
    "Ewondo",
-   "Torwali"
+   "Torwali",
+   "Hazargi (Dari)",
+   "Urdu"
   ],
   "matrix": [
    [
-    0.641,
-    0.2051,
+    0.4615,
+    0.1795,
     0.0513,
     0.0,
-    0.1026
+    0.1026,
+    0.0513,
+    0.1538
    ],
    [
-    0.2308,
-    0.5897,
+    0.1538,
+    0.6154,
     0.0,
     0.1538,
-    0.0256
+    0.0256,
+    0.0,
+    0.0513
    ],
    [
     0.0,
     0.0,
     0.5769,
-    0.3077,
-    0.1154
+    0.2692,
+    0.1154,
+    0.0,
+    0.0385
    ],
    [
-    0.0952,
-    0.0952,
+    0.0476,
+    0.0476,
     0.1429,
     0.5238,
-    0.1429
+    0.1429,
+    0.0,
+    0.0952
    ],
    [
     0.1111,
     0.0556,
-    0.1667,
+    0.1111,
     0.0556,
-    0.6111
+    0.5556,
+    0.0,
+    0.1111
+   ],
+   [
+    0.1429,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.7143,
+    0.1429
+   ],
+   [
+    0.125,
+    0.075,
+    0.075,
+    0.0,
+    0.025,
+    0.15,
+    0.55
    ]
   ]
  },
  "centroid_distances_clips": {
   "Tatar": {
    "Tatar": 0.0,
-   "Bashkir": 0.713,
-   "Fang": 2.2748,
-   "Ewondo": 1.7004,
-   "Torwali": 1.0747
+   "Bashkir": 0.7108,
+   "Fang": 2.3489,
+   "Ewondo": 1.732,
+   "Torwali": 1.0551,
+   "Hazargi (Dari)": 1.605,
+   "Urdu": 1.1343
   },
   "Bashkir": {
-   "Tatar": 0.713,
+   "Tatar": 0.7108,
    "Bashkir": 0.0,
-   "Fang": 2.6908,
-   "Ewondo": 1.8809,
-   "Torwali": 1.0212
+   "Fang": 2.7714,
+   "Ewondo": 1.9395,
+   "Torwali": 1.0367,
+   "Hazargi (Dari)": 2.0679,
+   "Urdu": 1.159
   },
   "Fang": {
-   "Tatar": 2.2748,
-   "Bashkir": 2.6908,
+   "Tatar": 2.3489,
+   "Bashkir": 2.7714,
    "Fang": 0.0,
-   "Ewondo": 1.3375,
-   "Torwali": 2.4203
+   "Ewondo": 1.3462,
+   "Torwali": 2.4848,
+   "Hazargi (Dari)": 2.8286,
+   "Urdu": 3.1059
   },
   "Ewondo": {
-   "Tatar": 1.7004,
-   "Bashkir": 1.8809,
-   "Fang": 1.3375,
+   "Tatar": 1.732,
+   "Bashkir": 1.9395,
+   "Fang": 1.3462,
    "Ewondo": 0.0,
-   "Torwali": 1.6507
+   "Torwali": 1.7108,
+   "Hazargi (Dari)": 2.7266,
+   "Urdu": 2.6201
   },
   "Torwali": {
-   "Tatar": 1.0747,
-   "Bashkir": 1.0212,
-   "Fang": 2.4203,
-   "Ewondo": 1.6507,
-   "Torwali": 0.0
+   "Tatar": 1.0551,
+   "Bashkir": 1.0367,
+   "Fang": 2.4848,
+   "Ewondo": 1.7108,
+   "Torwali": 0.0,
+   "Hazargi (Dari)": 2.2899,
+   "Urdu": 1.5313
+  },
+  "Hazargi (Dari)": {
+   "Tatar": 1.605,
+   "Bashkir": 2.0679,
+   "Fang": 2.8286,
+   "Ewondo": 2.7266,
+   "Torwali": 2.2899,
+   "Hazargi (Dari)": 0.0,
+   "Urdu": 1.5093
+  },
+  "Urdu": {
+   "Tatar": 1.1343,
+   "Bashkir": 1.159,
+   "Fang": 3.1059,
+   "Ewondo": 2.6201,
+   "Torwali": 1.5313,
+   "Hazargi (Dari)": 1.5093,
+   "Urdu": 0.0
   }
  },
  "neighbours_clips": {
   "Tatar": [
    {
     "language": "Bashkir",
-    "distance": 0.7129840310230157,
-    "similarity": 0.5837766038033567
+    "distance": 0.7108240558487235,
+    "similarity": 0.5845136421722277
    },
    {
     "language": "Torwali",
-    "distance": 1.074711942374884,
-    "similarity": 0.48199462275968713
+    "distance": 1.0550890481899236,
+    "similarity": 0.4865969194282737
+   },
+   {
+    "language": "Urdu",
+    "distance": 1.1343343932175796,
+    "similarity": 0.4685301437196386
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 1.6049522478963822,
+    "similarity": 0.38388419626791453
    },
    {
     "language": "Ewondo",
-    "distance": 1.700438306121171,
-    "similarity": 0.370310255832643
+    "distance": 1.7319929615129668,
+    "similarity": 0.366033153850515
    },
    {
     "language": "Fang",
-    "distance": 2.274821463933741,
-    "similarity": 0.30536015810730405
+    "distance": 2.3489013274669452,
+    "similarity": 0.2986053938938786
    }
   ],
   "Bashkir": [
    {
     "language": "Tatar",
-    "distance": 0.7129840310230157,
-    "similarity": 0.5837766038033567
+    "distance": 0.7108240558487235,
+    "similarity": 0.5845136421722277
    },
    {
     "language": "Torwali",
-    "distance": 1.021180429610522,
-    "similarity": 0.4947603812850584
+    "distance": 1.0366788101619406,
+    "similarity": 0.490995435809777
+   },
+   {
+    "language": "Urdu",
+    "distance": 1.1589536039926134,
+    "similarity": 0.4631873506455497
    },
    {
     "language": "Ewondo",
-    "distance": 1.8809099081368246,
-    "similarity": 0.34711255536856817
+    "distance": 1.9394784332698878,
+    "similarity": 0.340196406505897
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.0679213227043833,
+    "similarity": 0.32595360011334856
    },
    {
     "language": "Fang",
-    "distance": 2.690837869491178,
-    "similarity": 0.2709411887924139
+    "distance": 2.7714418942694166,
+    "similarity": 0.26515057848815526
    }
   ],
   "Fang": [
    {
     "language": "Ewondo",
-    "distance": 1.3374758220477359,
-    "similarity": 0.42781191170737076
+    "distance": 1.3461644651533826,
+    "similarity": 0.4262275790348842
    },
    {
     "language": "Tatar",
-    "distance": 2.274821463933741,
-    "similarity": 0.30536015810730405
+    "distance": 2.3489013274669452,
+    "similarity": 0.2986053938938786
    },
    {
     "language": "Torwali",
-    "distance": 2.4202516751819325,
-    "similarity": 0.2923761450820157
+    "distance": 2.484825580276483,
+    "similarity": 0.2869584078066429
    },
    {
     "language": "Bashkir",
-    "distance": 2.690837869491178,
-    "similarity": 0.2709411887924139
+    "distance": 2.7714418942694166,
+    "similarity": 0.26515057848815526
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.8286435790978484,
+    "similarity": 0.26118910766711595
+   },
+   {
+    "language": "Urdu",
+    "distance": 3.1059166675906087,
+    "similarity": 0.24355097313429147
    }
   ],
   "Ewondo": [
    {
     "language": "Fang",
-    "distance": 1.3374758220477359,
-    "similarity": 0.42781191170737076
+    "distance": 1.3461644651533826,
+    "similarity": 0.4262275790348842
    },
    {
     "language": "Torwali",
-    "distance": 1.6506543213021692,
-    "similarity": 0.3772653385858088
+    "distance": 1.7108255608335252,
+    "similarity": 0.36889131283405774
    },
    {
     "language": "Tatar",
-    "distance": 1.700438306121171,
-    "similarity": 0.370310255832643
+    "distance": 1.7319929615129668,
+    "similarity": 0.366033153850515
    },
    {
     "language": "Bashkir",
-    "distance": 1.8809099081368246,
-    "similarity": 0.34711255536856817
+    "distance": 1.9394784332698878,
+    "similarity": 0.340196406505897
+   },
+   {
+    "language": "Urdu",
+    "distance": 2.6200945343422894,
+    "similarity": 0.2762358801720307
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.726554558610981,
+    "similarity": 0.2683443873615889
    }
   ],
   "Torwali": [
    {
     "language": "Bashkir",
-    "distance": 1.021180429610522,
-    "similarity": 0.4947603812850584
+    "distance": 1.0366788101619406,
+    "similarity": 0.490995435809777
    },
    {
     "language": "Tatar",
-    "distance": 1.074711942374884,
-    "similarity": 0.48199462275968713
+    "distance": 1.0550890481899236,
+    "similarity": 0.4865969194282737
+   },
+   {
+    "language": "Urdu",
+    "distance": 1.531347914119512,
+    "similarity": 0.39504644716047804
    },
    {
     "language": "Ewondo",
-    "distance": 1.6506543213021692,
-    "similarity": 0.3772653385858088
+    "distance": 1.7108255608335252,
+    "similarity": 0.36889131283405774
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.289910812034925,
+    "similarity": 0.3039596077625779
    },
    {
     "language": "Fang",
-    "distance": 2.4202516751819325,
-    "similarity": 0.2923761450820157
+    "distance": 2.484825580276483,
+    "similarity": 0.2869584078066429
+   }
+  ],
+  "Hazargi (Dari)": [
+   {
+    "language": "Urdu",
+    "distance": 1.5093246197494938,
+    "similarity": 0.39851360486784293
+   },
+   {
+    "language": "Tatar",
+    "distance": 1.6049522478963822,
+    "similarity": 0.38388419626791453
+   },
+   {
+    "language": "Bashkir",
+    "distance": 2.0679213227043833,
+    "similarity": 0.32595360011334856
+   },
+   {
+    "language": "Torwali",
+    "distance": 2.289910812034925,
+    "similarity": 0.3039596077625779
+   },
+   {
+    "language": "Ewondo",
+    "distance": 2.726554558610981,
+    "similarity": 0.2683443873615889
+   },
+   {
+    "language": "Fang",
+    "distance": 2.8286435790978484,
+    "similarity": 0.26118910766711595
+   }
+  ],
+  "Urdu": [
+   {
+    "language": "Tatar",
+    "distance": 1.1343343932175796,
+    "similarity": 0.4685301437196386
+   },
+   {
+    "language": "Bashkir",
+    "distance": 1.1589536039926134,
+    "similarity": 0.4631873506455497
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 1.5093246197494938,
+    "similarity": 0.39851360486784293
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.531347914119512,
+    "similarity": 0.39504644716047804
+   },
+   {
+    "language": "Ewondo",
+    "distance": 2.6200945343422894,
+    "similarity": 0.2762358801720307
+   },
+   {
+    "language": "Fang",
+    "distance": 3.1059166675906087,
+    "similarity": 0.24355097313429147
    }
   ]
  },
@@ -375,160 +597,302 @@
  ],
  "siblings_bootstrap_clips": {
   "Tatar-Bashkir": {
-   "top2": 1.0,
-   "top1": 0.96
+   "top2": 0.998,
+   "top1": 0.958
   },
   "Fang-Ewondo": {
-   "top2": 0.858,
-   "top1": 0.736
+   "top2": 0.87,
+   "top1": 0.754
   }
  },
  "centroid_distances_speakers": {
   "Tatar": {
    "Tatar": 0.0,
-   "Bashkir": 1.1797,
-   "Fang": 2.7538,
-   "Ewondo": 2.0219,
-   "Torwali": 1.3094
+   "Bashkir": 1.1647,
+   "Fang": 2.8335,
+   "Ewondo": 2.0461,
+   "Torwali": 1.2885,
+   "Hazargi (Dari)": 1.4695,
+   "Urdu": 0.8485
   },
   "Bashkir": {
-   "Tatar": 1.1797,
+   "Tatar": 1.1647,
    "Bashkir": 0.0,
-   "Fang": 2.6152,
-   "Ewondo": 1.4535,
-   "Torwali": 1.1468
+   "Fang": 2.69,
+   "Ewondo": 1.4968,
+   "Torwali": 1.178,
+   "Hazargi (Dari)": 2.2771,
+   "Urdu": 1.3352
   },
   "Fang": {
-   "Tatar": 2.7538,
-   "Bashkir": 2.6152,
+   "Tatar": 2.8335,
+   "Bashkir": 2.69,
    "Fang": 0.0,
-   "Ewondo": 1.3675,
-   "Torwali": 2.4265
+   "Ewondo": 1.3934,
+   "Torwali": 2.5028,
+   "Hazargi (Dari)": 3.0109,
+   "Urdu": 2.8062
   },
   "Ewondo": {
-   "Tatar": 2.0219,
-   "Bashkir": 1.4535,
-   "Fang": 1.3675,
+   "Tatar": 2.0461,
+   "Bashkir": 1.4968,
+   "Fang": 1.3934,
    "Ewondo": 0.0,
-   "Torwali": 1.5211
+   "Torwali": 1.574,
+   "Hazargi (Dari)": 2.5864,
+   "Urdu": 2.0372
   },
   "Torwali": {
-   "Tatar": 1.3094,
-   "Bashkir": 1.1468,
-   "Fang": 2.4265,
-   "Ewondo": 1.5211,
-   "Torwali": 0.0
+   "Tatar": 1.2885,
+   "Bashkir": 1.178,
+   "Fang": 2.5028,
+   "Ewondo": 1.574,
+   "Torwali": 0.0,
+   "Hazargi (Dari)": 2.2065,
+   "Urdu": 1.4235
+  },
+  "Hazargi (Dari)": {
+   "Tatar": 1.4695,
+   "Bashkir": 2.2771,
+   "Fang": 3.0109,
+   "Ewondo": 2.5864,
+   "Torwali": 2.2065,
+   "Hazargi (Dari)": 0.0,
+   "Urdu": 1.3334
+  },
+  "Urdu": {
+   "Tatar": 0.8485,
+   "Bashkir": 1.3352,
+   "Fang": 2.8062,
+   "Ewondo": 2.0372,
+   "Torwali": 1.4235,
+   "Hazargi (Dari)": 1.3334,
+   "Urdu": 0.0
   }
  },
  "neighbours_speakers": {
   "Tatar": [
    {
+    "language": "Urdu",
+    "distance": 0.8484766378444659,
+    "similarity": 0.5409860095208527
+   },
+   {
     "language": "Bashkir",
-    "distance": 1.1796682522006465,
-    "similarity": 0.4587854133262598
+    "distance": 1.1647285726121976,
+    "similarity": 0.46195167960170214
    },
    {
     "language": "Torwali",
-    "distance": 1.3093598236524566,
-    "similarity": 0.433020436987776
+    "distance": 1.2884877966007617,
+    "similarity": 0.43696977606145176
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 1.4694995901950674,
+    "similarity": 0.404940338508422
    },
    {
     "language": "Ewondo",
-    "distance": 2.021886049880037,
-    "similarity": 0.3309191622363451
+    "distance": 2.04608335669308,
+    "similarity": 0.3282904250806945
    },
    {
     "language": "Fang",
-    "distance": 2.7537941292317427,
-    "similarity": 0.26639713462513764
+    "distance": 2.833535410533309,
+    "similarity": 0.2608558139967418
    }
   ],
   "Bashkir": [
    {
-    "language": "Torwali",
-    "distance": 1.146781370677625,
-    "similarity": 0.46581361924356224
+    "language": "Tatar",
+    "distance": 1.1647285726121976,
+    "similarity": 0.46195167960170214
    },
    {
-    "language": "Tatar",
-    "distance": 1.1796682522006465,
-    "similarity": 0.4587854133262598
+    "language": "Torwali",
+    "distance": 1.1780153109438478,
+    "similarity": 0.45913359514752344
+   },
+   {
+    "language": "Urdu",
+    "distance": 1.335175565713143,
+    "similarity": 0.4282333263000756
    },
    {
     "language": "Ewondo",
-    "distance": 1.4534939530503355,
-    "similarity": 0.40758201126060983
+    "distance": 1.4968263339155228,
+    "similarity": 0.40050843201088804
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.277124080390375,
+    "similarity": 0.3051456018964283
    },
    {
     "language": "Fang",
-    "distance": 2.6151587539020813,
-    "similarity": 0.2766130253396572
+    "distance": 2.6899629464137025,
+    "similarity": 0.271005431361284
    }
   ],
   "Fang": [
    {
     "language": "Ewondo",
-    "distance": 1.3675443659082793,
-    "similarity": 0.4223785684440014
+    "distance": 1.3934062877161009,
+    "similarity": 0.4178145620876789
    },
    {
     "language": "Torwali",
-    "distance": 2.426458231965604,
-    "similarity": 0.29184654599637283
+    "distance": 2.5028050499248957,
+    "similarity": 0.2854854854173061
    },
    {
     "language": "Bashkir",
-    "distance": 2.6151587539020813,
-    "similarity": 0.2766130253396572
+    "distance": 2.6899629464137025,
+    "similarity": 0.271005431361284
+   },
+   {
+    "language": "Urdu",
+    "distance": 2.8061565191160764,
+    "similarity": 0.262732232628267
    },
    {
     "language": "Tatar",
-    "distance": 2.7537941292317427,
-    "similarity": 0.26639713462513764
+    "distance": 2.833535410533309,
+    "similarity": 0.2608558139967418
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 3.010881635161187,
+    "similarity": 0.24932174293889692
    }
   ],
   "Ewondo": [
    {
     "language": "Fang",
-    "distance": 1.3675443659082793,
-    "similarity": 0.4223785684440014
+    "distance": 1.3934062877161009,
+    "similarity": 0.4178145620876789
    },
    {
     "language": "Bashkir",
-    "distance": 1.4534939530503355,
-    "similarity": 0.40758201126060983
+    "distance": 1.4968263339155228,
+    "similarity": 0.40050843201088804
    },
    {
     "language": "Torwali",
-    "distance": 1.5210795677972562,
-    "similarity": 0.39665546965410947
+    "distance": 1.5739624734930053,
+    "similarity": 0.3885060525544283
+   },
+   {
+    "language": "Urdu",
+    "distance": 2.037211094335487,
+    "similarity": 0.32924942288833253
    },
    {
     "language": "Tatar",
-    "distance": 2.021886049880037,
-    "similarity": 0.3309191622363451
+    "distance": 2.04608335669308,
+    "similarity": 0.3282904250806945
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.5863680387519064,
+    "similarity": 0.2788336247687537
    }
   ],
   "Torwali": [
    {
     "language": "Bashkir",
-    "distance": 1.146781370677625,
-    "similarity": 0.46581361924356224
+    "distance": 1.1780153109438478,
+    "similarity": 0.45913359514752344
    },
    {
     "language": "Tatar",
-    "distance": 1.3093598236524566,
-    "similarity": 0.433020436987776
+    "distance": 1.2884877966007617,
+    "similarity": 0.43696977606145176
+   },
+   {
+    "language": "Urdu",
+    "distance": 1.423547038860225,
+    "similarity": 0.41261835811954867
    },
    {
     "language": "Ewondo",
-    "distance": 1.5210795677972562,
-    "similarity": 0.39665546965410947
+    "distance": 1.5739624734930053,
+    "similarity": 0.3885060525544283
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 2.2064738406728672,
+    "similarity": 0.3118690654248885
    },
    {
     "language": "Fang",
-    "distance": 2.426458231965604,
-    "similarity": 0.29184654599637283
+    "distance": 2.5028050499248957,
+    "similarity": 0.2854854854173061
+   }
+  ],
+  "Hazargi (Dari)": [
+   {
+    "language": "Urdu",
+    "distance": 1.3333809476046887,
+    "similarity": 0.4285626832714739
+   },
+   {
+    "language": "Tatar",
+    "distance": 1.4694995901950674,
+    "similarity": 0.404940338508422
+   },
+   {
+    "language": "Torwali",
+    "distance": 2.2064738406728672,
+    "similarity": 0.3118690654248885
+   },
+   {
+    "language": "Bashkir",
+    "distance": 2.277124080390375,
+    "similarity": 0.3051456018964283
+   },
+   {
+    "language": "Ewondo",
+    "distance": 2.5863680387519064,
+    "similarity": 0.2788336247687537
+   },
+   {
+    "language": "Fang",
+    "distance": 3.010881635161187,
+    "similarity": 0.24932174293889692
+   }
+  ],
+  "Urdu": [
+   {
+    "language": "Tatar",
+    "distance": 0.8484766378444659,
+    "similarity": 0.5409860095208527
+   },
+   {
+    "language": "Hazargi (Dari)",
+    "distance": 1.3333809476046887,
+    "similarity": 0.4285626832714739
+   },
+   {
+    "language": "Bashkir",
+    "distance": 1.335175565713143,
+    "similarity": 0.4282333263000756
+   },
+   {
+    "language": "Torwali",
+    "distance": 1.423547038860225,
+    "similarity": 0.41261835811954867
+   },
+   {
+    "language": "Ewondo",
+    "distance": 2.037211094335487,
+    "similarity": 0.32924942288833253
+   },
+   {
+    "language": "Fang",
+    "distance": 2.8061565191160764,
+    "similarity": 0.262732232628267
    }
   ]
  },
@@ -537,8 +901,8 @@
    "pair": "Tatar-Bashkir",
    "a_in_b_top2": true,
    "b_in_a_top2": true,
-   "a_top1_is_b": true,
-   "b_top1_is_a": false,
+   "a_top1_is_b": false,
+   "b_top1_is_a": true,
    "pass_top2": true,
    "pass_top1": false
   },
@@ -554,26 +918,26 @@
  ],
  "siblings_bootstrap_speakers": {
   "Tatar-Bashkir": {
-   "top2": 0.842,
-   "top1": 0.428
+   "top2": 0.642,
+   "top1": 0.088
   },
   "Fang-Ewondo": {
-   "top2": 0.644,
-   "top1": 0.474
+   "top2": 0.684,
+   "top1": 0.526
   }
  },
  "confusion_neighbours_clips": {
   "Tatar": [
    "Bashkir",
-   "Torwali"
+   "Urdu"
   ],
   "Bashkir": [
    "Tatar",
-   "Torwali"
+   "Urdu"
   ],
   "Fang": [
    "Ewondo",
-   "Tatar"
+   "Torwali"
   ],
   "Ewondo": [
    "Fang",
@@ -582,157 +946,193 @@
   "Torwali": [
    "Bashkir",
    "Ewondo"
+  ],
+  "Hazargi (Dari)": [
+   "Urdu",
+   "Fang"
+  ],
+  "Urdu": [
+   "Bashkir",
+   "Hazargi (Dari)"
   ]
  },
  "sibling_chance": {
-  "top2_one_direction": 0.5,
-  "top1_one_direction": 0.25
+  "top2_one_direction": 0.3333333333333333,
+  "top1_one_direction": 0.16666666666666666
  },
  "dendrogram_clips": {
   "order": [
+   "Fang",
+   "Ewondo",
+   "Hazargi (Dari)",
+   "Urdu",
    "Torwali",
    "Tatar",
-   "Bashkir",
-   "Fang",
-   "Ewondo"
+   "Bashkir"
   ],
   "linkage": [
    [
     0.0,
     1.0,
-    0.713,
+    0.7108,
     2.0
    ],
    [
     4.0,
-    5.0,
-    1.048,
+    7.0,
+    1.0459,
     3.0
+   ],
+   [
+    6.0,
+    8.0,
+    1.2749,
+    4.0
    ],
    [
     2.0,
     3.0,
-    1.3375,
+    1.3462,
     2.0
    ],
    [
-    6.0,
-    7.0,
-    2.103,
+    5.0,
+    9.0,
+    1.868,
     5.0
+   ],
+   [
+    10.0,
+    11.0,
+    2.4269,
+    7.0
    ]
   ]
  },
  "dendrogram_speakers": {
   "order": [
-   "Tatar",
-   "Bashkir",
-   "Torwali",
    "Fang",
-   "Ewondo"
+   "Ewondo",
+   "Hazargi (Dari)",
+   "Tatar",
+   "Urdu",
+   "Bashkir",
+   "Torwali"
   ],
   "linkage": [
    [
-    1.0,
-    4.0,
-    1.1468,
+    0.0,
+    6.0,
+    0.8485,
     2.0
    ],
    [
-    0.0,
-    5.0,
-    1.2445,
-    3.0
+    1.0,
+    4.0,
+    1.178,
+    2.0
+   ],
+   [
+    7.0,
+    8.0,
+    1.303,
+    4.0
    ],
    [
     2.0,
     3.0,
-    1.3675,
+    1.3934,
     2.0
    ],
    [
-    6.0,
-    7.0,
-    2.132,
+    5.0,
+    9.0,
+    1.8216,
     5.0
+   ],
+   [
+    10.0,
+    11.0,
+    2.3584,
+    7.0
    ]
   ]
  },
  "feature_importance": [
   {
-   "feature": "int_peak_rate",
-   "permutation_importance": 0.0619,
-   "eta_squared_speakers": 0.5843
+   "feature": "f0_range",
+   "permutation_importance": 0.0493,
+   "eta_squared_speakers": 0.2792
   },
   {
    "feature": "nuclei_rate",
-   "permutation_importance": 0.0477,
-   "eta_squared_speakers": 0.4694
+   "permutation_importance": 0.048,
+   "eta_squared_speakers": 0.4192
   },
   {
-   "feature": "silence_prop",
-   "permutation_importance": 0.0306,
-   "eta_squared_speakers": 0.282
-  },
-  {
-   "feature": "f0_range",
-   "permutation_importance": 0.0238,
-   "eta_squared_speakers": 0.1584
-  },
-  {
-   "feature": "f0_final_slope",
-   "permutation_importance": 0.0167,
-   "eta_squared_speakers": 0.0582
+   "feature": "int_peak_rate",
+   "permutation_importance": 0.0469,
+   "eta_squared_speakers": 0.5359
   },
   {
    "feature": "f0_slope",
-   "permutation_importance": 0.0152,
-   "eta_squared_speakers": 0.1246
+   "permutation_importance": 0.0372,
+   "eta_squared_speakers": 0.1375
+  },
+  {
+   "feature": "silence_prop",
+   "permutation_importance": 0.0321,
+   "eta_squared_speakers": 0.2849
   },
   {
    "feature": "int_sd",
-   "permutation_importance": 0.0104,
-   "eta_squared_speakers": 0.1417
+   "permutation_importance": 0.0248,
+   "eta_squared_speakers": 0.1995
   },
   {
    "feature": "f0_sd",
-   "permutation_importance": 0.0103,
-   "eta_squared_speakers": 0.1577
+   "permutation_importance": 0.0132,
+   "eta_squared_speakers": 0.2683
+  },
+  {
+   "feature": "f0_final_slope",
+   "permutation_importance": 0.0113,
+   "eta_squared_speakers": 0.0586
   },
   {
    "feature": "pause_rate",
-   "permutation_importance": 0.0097,
-   "eta_squared_speakers": 0.2675
-  },
-  {
-   "feature": "pause_mean",
-   "permutation_importance": 0.0074,
-   "eta_squared_speakers": 0.2174
+   "permutation_importance": 0.0084,
+   "eta_squared_speakers": 0.2504
   },
   {
    "feature": "npvi_nuclei",
    "permutation_importance": 0.0068,
-   "eta_squared_speakers": 0.0849
-  },
-  {
-   "feature": "unvoiced_cv",
-   "permutation_importance": 0.0049,
-   "eta_squared_speakers": 0.1844
+   "eta_squared_speakers": 0.1509
   },
   {
    "feature": "f0_reversal_rate",
-   "permutation_importance": 0.0016,
-   "eta_squared_speakers": 0.0282
+   "permutation_importance": 0.005,
+   "eta_squared_speakers": 0.0643
+  },
+  {
+   "feature": "pause_mean",
+   "permutation_importance": 0.0019,
+   "eta_squared_speakers": 0.2019
+  },
+  {
+   "feature": "unvoiced_cv",
+   "permutation_importance": 0.0013,
+   "eta_squared_speakers": 0.1528
   },
   {
    "feature": "pct_voiced",
-   "permutation_importance": -0.0023,
-   "eta_squared_speakers": 0.1089
+   "permutation_importance": 0.0003,
+   "eta_squared_speakers": 0.114
   },
   {
    "feature": "voiced_cv",
-   "permutation_importance": -0.0058,
-   "eta_squared_speakers": 0.0373
+   "permutation_importance": -0.0083,
+   "eta_squared_speakers": 0.0437
   }
  ],
  "feature_labels": {
@@ -760,25 +1160,31 @@
    "nearest_full": "Fang",
    "nearest_2d": "Fang",
    "distances_full": {
-    "Tatar": 1.7066785672661358,
-    "Bashkir": 1.876918002561684,
-    "Fang": 1.3385090814920448,
-    "Torwali": 1.6537957066301745
+    "Tatar": 1.7593586552318778,
+    "Bashkir": 1.9644316125046075,
+    "Fang": 1.3589837819203199,
+    "Torwali": 1.7411020970912838,
+    "Hazargi (Dari)": 2.77479915233944,
+    "Urdu": 2.665775164224487
    },
    "distances_2d": {
-    "Tatar": 1.7259691953659058,
-    "Bashkir": 2.0608742237091064,
-    "Fang": 0.5057139992713928,
-    "Torwali": 2.0102434158325195
+    "Tatar": 1.8114292621612549,
+    "Bashkir": 2.1030423641204834,
+    "Fang": 0.4806581735610962,
+    "Torwali": 1.9745255708694458,
+    "Hazargi (Dari)": 2.866572856903076,
+    "Urdu": 3.154911756515503
    },
-   "knn_vote_share_expected": 0.2150170648464164,
+   "knn_vote_share_expected": 0.20136518771331058,
    "knn_vote_distribution": {
-    "Torwali": 0.416,
-    "Fang": 0.215,
-    "Bashkir": 0.208,
-    "Tatar": 0.16
+    "Torwali": 0.355,
+    "Fang": 0.201,
+    "Bashkir": 0.181,
+    "Tatar": 0.113,
+    "Urdu": 0.106,
+    "Hazargi (Dari)": 0.044
    },
-   "expected_share_of_training": 0.21339712918660286,
+   "expected_share_of_training": 0.15253077975376197,
    "pass": true
   },
   {
@@ -788,25 +1194,29 @@
    "nearest_full": "Fang",
    "nearest_2d": "Fang",
    "distances_full": {
-    "Tatar": 3.0510972425970095,
-    "Bashkir": 2.1010819671708183,
-    "Fang": 1.832772444868855,
-    "Torwali": 2.4634146161948114
+    "Tatar": 3.1273841715807746,
+    "Bashkir": 2.2187134939313196,
+    "Fang": 1.9130744571567868,
+    "Torwali": 2.5772341612424894,
+    "Hazargi (Dari)": 3.809249740709556,
+    "Urdu": 3.1220419312609162
    },
    "distances_2d": {
-    "Tatar": 2.127389669418335,
-    "Bashkir": 1.1184911727905273,
-    "Fang": 0.9733636975288391,
-    "Torwali": 1.97504460811615
+    "Tatar": 2.74180006980896,
+    "Bashkir": 1.3913553953170776,
+    "Fang": 0.6140754222869873,
+    "Torwali": 2.0390124320983887,
+    "Hazargi (Dari)": 4.083725452423096,
+    "Urdu": 2.718801259994507
    },
-   "knn_vote_share_expected": 0.23809523809523808,
+   "knn_vote_share_expected": 0.19047619047619047,
    "knn_vote_distribution": {
-    "Bashkir": 0.667,
-    "Fang": 0.238,
-    "Torwali": 0.048,
+    "Bashkir": 0.714,
+    "Fang": 0.19,
+    "Urdu": 0.048,
     "Tatar": 0.048
    },
-   "expected_share_of_training": 0.21311475409836064,
+   "expected_share_of_training": 0.15384615384615385,
    "pass": true
   },
   {
@@ -816,25 +1226,31 @@
    "nearest_full": "Tatar",
    "nearest_2d": "Tatar",
    "distances_full": {
-    "Tatar": 0.7090320588096908,
-    "Fang": 2.7035179899769433,
-    "Ewondo": 1.8724603922653604,
-    "Torwali": 1.027843050169047
+    "Tatar": 0.7057898248992629,
+    "Fang": 2.7636304545665813,
+    "Ewondo": 1.9253599569531745,
+    "Torwali": 1.0359711837157943,
+    "Hazargi (Dari)": 2.03892960307305,
+    "Urdu": 1.14224585438928
    },
    "distances_2d": {
-    "Tatar": 0.38411059975624084,
-    "Fang": 2.7392570972442627,
-    "Ewondo": 2.498385429382324,
-    "Torwali": 0.6561285257339478
+    "Tatar": 0.3925879895687103,
+    "Fang": 2.606949806213379,
+    "Ewondo": 2.4020509719848633,
+    "Torwali": 0.5435498952865601,
+    "Hazargi (Dari)": 1.7203083038330078,
+    "Urdu": 1.0033196210861206
    },
-   "knn_vote_share_expected": 0.4163568773234201,
+   "knn_vote_share_expected": 0.26394052044609667,
    "knn_vote_distribution": {
-    "Tatar": 0.416,
-    "Torwali": 0.297,
-    "Ewondo": 0.268,
-    "Fang": 0.019
+    "Tatar": 0.264,
+    "Ewondo": 0.23,
+    "Urdu": 0.227,
+    "Torwali": 0.212,
+    "Hazargi (Dari)": 0.045,
+    "Fang": 0.022
    },
-   "expected_share_of_training": 0.245088868101029,
+   "expected_share_of_training": 0.17631224764468373,
    "pass": true
   },
   {
@@ -842,27 +1258,32 @@
    "expect_nearest": "Tatar",
    "level": "speakers",
    "nearest_full": "Torwali",
-   "nearest_2d": "Tatar",
+   "nearest_2d": "Torwali",
    "distances_full": {
-    "Tatar": 1.7509987445473432,
-    "Fang": 3.4934968710105947,
-    "Ewondo": 2.0530970173891436,
-    "Torwali": 1.6151778389459308
+    "Tatar": 1.730692716901928,
+    "Fang": 3.67390550928279,
+    "Ewondo": 2.166686811239062,
+    "Torwali": 1.6872747108185597,
+    "Hazargi (Dari)": 3.3709220160702533,
+    "Urdu": 2.0320765800885243
    },
    "distances_2d": {
-    "Tatar": 1.0199289321899414,
-    "Fang": 2.4245831966400146,
-    "Ewondo": 1.6588153839111328,
-    "Torwali": 1.3737503290176392
+    "Tatar": 1.1805613040924072,
+    "Fang": 2.4720075130462646,
+    "Ewondo": 1.866746187210083,
+    "Torwali": 0.7656658291816711,
+    "Hazargi (Dari)": 2.758237838745117,
+    "Urdu": 1.4550737142562866
    },
-   "knn_vote_share_expected": 0.4358974358974359,
+   "knn_vote_share_expected": 0.38461538461538464,
    "knn_vote_distribution": {
-    "Ewondo": 0.487,
-    "Tatar": 0.436,
-    "Fang": 0.051,
-    "Torwali": 0.026
+    "Tatar": 0.385,
+    "Ewondo": 0.359,
+    "Urdu": 0.154,
+    "Torwali": 0.077,
+    "Fang": 0.026
    },
-   "expected_share_of_training": 0.375,
+   "expected_share_of_training": 0.2582781456953642,
    "pass": false
   }
  ],
@@ -872,60 +1293,60 @@
   "reason": "deferred until more families are present (set run_held_out_family: true in languages.yaml once Tajik and Balti are added)"
  },
  "silence_classifier": {
-  "n": 1337,
-  "chance_majority": 0.21914734480179507,
-  "chance_balanced": 0.2,
+  "n": 1752,
+  "chance_majority": 0.16723744292237444,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.4113687359760658,
-   "balanced_accuracy": 0.41419250826282816,
-   "shuffled_accuracy_mean": 0.19468960359012716,
-   "shuffled_balanced_mean": 0.21013288531966898,
-   "shuffled_balanced_max": 0.29087821246852724
+   "accuracy": 0.4018264840182648,
+   "balanced_accuracy": 0.4261811346045735,
+   "shuffled_accuracy_mean": 0.12043378995433789,
+   "shuffled_balanced_mean": 0.13856182343681955,
+   "shuffled_balanced_max": 0.17025543693543685
   },
   "random_forest": {
-   "accuracy": 0.44502617801047123,
-   "balanced_accuracy": 0.4489122586233131,
-   "shuffled_accuracy_mean": 0.3850411368735976,
-   "shuffled_balanced_mean": 0.19623395188572673,
-   "shuffled_balanced_max": 0.21159932383748434
+   "accuracy": 0.4235159817351598,
+   "balanced_accuracy": 0.4389274534252615,
+   "shuffled_accuracy_mean": 0.24971461187214614,
+   "shuffled_balanced_mean": 0.13745210979224376,
+   "shuffled_balanced_max": 0.1664376430042354
   }
  },
  "prosody_on_silence_subset": {
-  "n": 1337,
-  "chance_majority": 0.21914734480179507,
-  "chance_balanced": 0.2,
+  "n": 1752,
+  "chance_majority": 0.16723744292237444,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.45400149588631267,
-   "balanced_accuracy": 0.4571281699716655,
-   "shuffled_accuracy_mean": 0.1857142857142857,
-   "shuffled_balanced_mean": 0.21650027776413716,
-   "shuffled_balanced_max": 0.242450162435578
+   "accuracy": 0.4121004566210046,
+   "balanced_accuracy": 0.4353271319483102,
+   "shuffled_accuracy_mean": 0.12562785388127853,
+   "shuffled_balanced_mean": 0.14627922236592725,
+   "shuffled_balanced_max": 0.21460305297120014
   },
   "random_forest": {
-   "accuracy": 0.4779356768885565,
-   "balanced_accuracy": 0.48312220320702304,
-   "shuffled_accuracy_mean": 0.3931937172774869,
-   "shuffled_balanced_mean": 0.2028785836308681,
-   "shuffled_balanced_max": 0.2162353677280588
+   "accuracy": 0.4440639269406393,
+   "balanced_accuracy": 0.46159323538831204,
+   "shuffled_accuracy_mean": 0.26575342465753427,
+   "shuffled_balanced_mean": 0.14474803303022288,
+   "shuffled_balanced_max": 0.17366824554767743
   }
  },
  "prosody_no_pause_features": {
-  "n": 1338,
-  "chance_majority": 0.21898355754857998,
-  "chance_balanced": 0.2,
+  "n": 1755,
+  "chance_majority": 0.16695156695156696,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.3804185351270553,
-   "balanced_accuracy": 0.3891068533102895,
-   "shuffled_accuracy_mean": 0.1834828101644245,
-   "shuffled_balanced_mean": 0.20821826711431002,
-   "shuffled_balanced_max": 0.24073510313501628
+   "accuracy": 0.350997150997151,
+   "balanced_accuracy": 0.3855471727909897,
+   "shuffled_accuracy_mean": 0.10153846153846155,
+   "shuffled_balanced_mean": 0.14432662793932644,
+   "shuffled_balanced_max": 0.18237074447410903
   },
   "random_forest": {
-   "accuracy": 0.42152466367713004,
-   "balanced_accuracy": 0.42867756884788993,
-   "shuffled_accuracy_mean": 0.3758594917787743,
-   "shuffled_balanced_mean": 0.19798562093634625,
-   "shuffled_balanced_max": 0.22243192977235532
+   "accuracy": 0.40341880341880343,
+   "balanced_accuracy": 0.42657232295781594,
+   "shuffled_accuracy_mean": 0.2641595441595441,
+   "shuffled_balanced_mean": 0.13763400387673963,
+   "shuffled_balanced_max": 0.15516645612941835
   },
   "features": [
    "f0_sd",
@@ -942,95 +1363,123 @@
  },
  "confound_flag": true,
  "residual_r2_by_feature": {
-  "f0_sd": -0.007018237956547768,
-  "f0_range": 0.0028493772841108322,
-  "f0_slope": 0.0015185611441148605,
-  "f0_reversal_rate": -0.001311446500620761,
-  "f0_final_slope": -0.003759172490598317,
-  "int_sd": 0.1684632587940985,
-  "int_peak_rate": 0.09653888224517515,
-  "npvi_nuclei": -0.025714759229639617,
-  "pct_voiced": 0.09378007172547742,
-  "voiced_cv": 0.024667883163603466,
-  "unvoiced_cv": 0.012832481847226518,
-  "nuclei_rate": 0.07448380017801981,
-  "pause_rate": 0.2160990650903375,
-  "pause_mean": 0.13758973875096325,
-  "silence_prop": 0.39044085222300184
+  "f0_sd": 0.04757753580143265,
+  "f0_range": 0.05624129982827997,
+  "f0_slope": 0.008866946569134893,
+  "f0_reversal_rate": -0.013756728788346217,
+  "f0_final_slope": -0.009236553744556009,
+  "int_sd": 0.2200573743595443,
+  "int_peak_rate": 0.07743615469869036,
+  "npvi_nuclei": -0.005100870013864611,
+  "pct_voiced": 0.11916125462420324,
+  "voiced_cv": 0.024588632372649077,
+  "unvoiced_cv": 0.005899221504769625,
+  "nuclei_rate": 0.059730742319174635,
+  "pause_rate": 0.2150251745083569,
+  "pause_mean": 0.15809386517969948,
+  "silence_prop": 0.40032454789732763
  },
  "prosody_residual_classifier": {
-  "n": 1337,
-  "chance_majority": 0.21914734480179507,
-  "chance_balanced": 0.2,
+  "n": 1752,
+  "chance_majority": 0.16723744292237444,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.3612565445026178,
-   "balanced_accuracy": 0.3648809916518012,
-   "shuffled_accuracy_mean": 0.18646222887060587,
-   "shuffled_balanced_mean": 0.20909070577155,
-   "shuffled_balanced_max": 0.2398708695784944
+   "accuracy": 0.339041095890411,
+   "balanced_accuracy": 0.3606055217346039,
+   "shuffled_accuracy_mean": 0.11843607305936073,
+   "shuffled_balanced_mean": 0.14499851217533438,
+   "shuffled_balanced_max": 0.19360763855888216
   },
   "random_forest": {
-   "accuracy": 0.3994016454749439,
-   "balanced_accuracy": 0.4051352905802868,
-   "shuffled_accuracy_mean": 0.39633507853403144,
-   "shuffled_balanced_mean": 0.19958020412559568,
-   "shuffled_balanced_max": 0.22044448545745898
+   "accuracy": 0.3829908675799087,
+   "balanced_accuracy": 0.40058064727291126,
+   "shuffled_accuracy_mean": 0.2634132420091324,
+   "shuffled_balanced_mean": 0.14259511060693278,
+   "shuffled_balanced_max": 0.15573467258341547
   }
  },
  "prosody_plus_silence_classifier": {
-  "n": 1337,
-  "chance_majority": 0.21914734480179507,
-  "chance_balanced": 0.2,
+  "n": 1752,
+  "chance_majority": 0.16723744292237444,
+  "chance_balanced": 0.14285714285714285,
   "logistic_regression": {
-   "accuracy": 0.5018698578908003,
-   "balanced_accuracy": 0.5036814915025513,
-   "shuffled_accuracy_mean": 0.21877337322363505,
-   "shuffled_balanced_mean": 0.2159585573181812,
-   "shuffled_balanced_max": 0.29062718256551157
+   "accuracy": 0.4977168949771689,
+   "balanced_accuracy": 0.516918163579768,
+   "shuffled_accuracy_mean": 0.14377853881278538,
+   "shuffled_balanced_mean": 0.13025434516351037,
+   "shuffled_balanced_max": 0.15559919242037187
   },
   "random_forest": {
-   "accuracy": 0.5302916978309649,
-   "balanced_accuracy": 0.5339059856387911,
-   "shuffled_accuracy_mean": 0.4100972326103216,
-   "shuffled_balanced_mean": 0.19863324799853493,
-   "shuffled_balanced_max": 0.21331485052415283
+   "accuracy": 0.5251141552511416,
+   "balanced_accuracy": 0.539008318683816,
+   "shuffled_accuracy_mean": 0.2699771689497717,
+   "shuffled_balanced_mean": 0.14087095523125692,
+   "shuffled_balanced_max": 0.15973036908313312
   }
  },
  "centroid_distances_residual": {
   "Tatar": {
    "Tatar": 0.0,
-   "Bashkir": 0.6248,
-   "Fang": 1.4939,
-   "Ewondo": 1.2123,
-   "Torwali": 0.9898
+   "Bashkir": 0.655,
+   "Fang": 1.653,
+   "Ewondo": 1.2009,
+   "Torwali": 0.9784,
+   "Hazargi (Dari)": 1.406,
+   "Urdu": 0.8625
   },
   "Bashkir": {
-   "Tatar": 0.6248,
+   "Tatar": 0.655,
    "Bashkir": 0.0,
-   "Fang": 1.9217,
-   "Ewondo": 1.5427,
-   "Torwali": 1.1792
+   "Fang": 2.1232,
+   "Ewondo": 1.6075,
+   "Torwali": 1.1712,
+   "Hazargi (Dari)": 1.8316,
+   "Urdu": 0.7613
   },
   "Fang": {
-   "Tatar": 1.4939,
-   "Bashkir": 1.9217,
+   "Tatar": 1.653,
+   "Bashkir": 2.1232,
    "Fang": 0.0,
-   "Ewondo": 0.9466,
-   "Torwali": 1.2761
+   "Ewondo": 1.0091,
+   "Torwali": 1.5858,
+   "Hazargi (Dari)": 1.5434,
+   "Urdu": 2.0501
   },
   "Ewondo": {
-   "Tatar": 1.2123,
-   "Bashkir": 1.5427,
-   "Fang": 0.9466,
+   "Tatar": 1.2009,
+   "Bashkir": 1.6075,
+   "Fang": 1.0091,
    "Ewondo": 0.0,
-   "Torwali": 0.8916
+   "Torwali": 1.0422,
+   "Hazargi (Dari)": 1.709,
+   "Urdu": 1.8062
   },
   "Torwali": {
-   "Tatar": 0.9898,
-   "Bashkir": 1.1792,
-   "Fang": 1.2761,
-   "Ewondo": 0.8916,
-   "Torwali": 0.0
+   "Tatar": 0.9784,
+   "Bashkir": 1.1712,
+   "Fang": 1.5858,
+   "Ewondo": 1.0422,
+   "Torwali": 0.0,
+   "Hazargi (Dari)": 1.982,
+   "Urdu": 1.4824
+  },
+  "Hazargi (Dari)": {
+   "Tatar": 1.406,
+   "Bashkir": 1.8316,
+   "Fang": 1.5434,
+   "Ewondo": 1.709,
+   "Torwali": 1.982,
+   "Hazargi (Dari)": 0.0,
+   "Urdu": 1.3954
+  },
+  "Urdu": {
+   "Tatar": 0.8625,
+   "Bashkir": 0.7613,
+   "Fang": 2.0501,
+   "Ewondo": 1.8062,
+   "Torwali": 1.4824,
+   "Hazargi (Dari)": 1.3954,
+   "Urdu": 0.0
   }
  },
  "siblings_residual": [
@@ -1048,23 +1497,23 @@
    "a_in_b_top2": true,
    "b_in_a_top2": true,
    "a_top1_is_b": true,
-   "b_top1_is_a": false,
+   "b_top1_is_a": true,
    "pass_top2": true,
-   "pass_top1": false
+   "pass_top1": true
   }
  ],
  "siblings_bootstrap_residual": {
   "Tatar-Bashkir": {
-   "top2": 0.996,
-   "top1": 0.968
+   "top2": 0.982,
+   "top1": 0.694
   },
   "Fang-Ewondo": {
-   "top2": 0.768,
-   "top1": 0.376
+   "top2": 0.712,
+   "top1": 0.438
   }
  },
  "knn_placement_error": {
-  "clips": 0.11937084606874468,
-  "speakers": 0.22411484712582577
+  "clips": 0.11038978251327335,
+  "speakers": 0.2084765366410006
  }
 }

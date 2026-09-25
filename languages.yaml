@@ -22,7 +22,15 @@ languages:
   - name: Torwali
     code: trw
     folder: trw
-    family: Indo-Aryan (Dardic)
+    family: Indo-Aryan   # Dardic branch
+  - name: Hazargi (Dari)
+    code: haz
+    folder: haz
+    family: Iranian
+  - name: Urdu
+    code: ur
+    folder: ur
+    family: Indo-Aryan
 
 # Pairs linguists consider close. Used for the known-sibling validation.
 sibling_pairs:

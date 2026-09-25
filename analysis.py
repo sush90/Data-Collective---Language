@@ -42,9 +42,11 @@ SPEAKER_CLIPS = 5          # clips averaged per speaker
 
 # Validated categorical palette (dataviz validator, all-pairs, with marker shapes as
 # secondary encoding). Assigned in languages.yaml order, never cycled by rank.
-PALETTE = ["#2a78d6", "#eda100", "#008300", "#4a3aa7", "#e34948"]
-MARKERS = ["o", "s", "^", "D", "v"]
-FAMILY_PALETTE = ["#2a78d6", "#eb6834", "#1baf7a"]
+PALETTE5 = ["#2a78d6", "#eda100", "#008300", "#4a3aa7", "#e34948"]
+PALETTE8 = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
+MARKERS = ["o", "s", "^", "D", "v", "*", "P", "X"]
+# 4 family colours: validated all-pairs (dataviz validator)
+FAMILY_PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#4a3aa7"]
 INK, MUTED = "#0b0b0b", "#52514e"
 plt.rcParams.update({"font.size": 16, "axes.titlesize": 20, "axes.labelsize": 17,
                      "xtick.labelsize": 15, "ytick.labelsize": 15, "legend.fontsize": 15,
@@ -56,6 +58,9 @@ cfg = load_config()
 LANGS = [L["name"] for L in cfg["languages"]]
 FAMILY = {L["name"]: L["family"] for L in cfg["languages"]}
 FAMILIES = list(dict.fromkeys(FAMILY[l] for l in LANGS))
+# Up to 5 languages: a palette validated for scatter plots. Beyond 5 no palette separates
+# every pair, so each language also gets its own marker shape (secondary encoding).
+PALETTE = PALETTE5 if len(LANGS) <= 5 else PALETTE8
 COLOR = {l: PALETTE[i % len(PALETTE)] for i, l in enumerate(LANGS)}
 MARK = {l: MARKERS[i % len(MARKERS)] for i, l in enumerate(LANGS)}
 FCOLOR = {f: FAMILY_PALETTE[i % len(FAMILY_PALETTE)] for i, f in enumerate(FAMILIES)}
@@ -273,9 +278,12 @@ R["sibling_chance"] = {"top2_one_direction": 2 / (K - 1), "top1_one_direction": 
 for level in ["clips", "speakers"]:
     D = pd.DataFrame(R[f"centroid_distances_{level}"]).reindex(index=LANGS, columns=LANGS)
     Z = linkage(squareform(D.values, checks=False), method="average")
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(max(10, 1.6 * len(LANGS)), 6.5))
     dn = dendrogram(Z, labels=LANGS, ax=ax, color_threshold=0, above_threshold_color=MUTED,
-                    leaf_font_size=17)
+                    leaf_font_size=17, leaf_rotation=30 if len(LANGS) > 5 else 0)
+    if len(LANGS) > 5:
+        for t in ax.get_xticklabels():
+            t.set_ha("right")
     for t in ax.get_xticklabels():
         t.set_color(FCOLOR[FAMILY[t.get_text()]])
         t.set_fontweight("bold")
@@ -283,7 +291,8 @@ for level in ["clips", "speakers"]:
     ax.set_title(f"Languages clustered by rhythm ({'speaker averages' if level == 'speakers' else 'clips'})\n"
                  "label color = language family", loc="left")
     handles = [plt.Line2D([], [], color=FCOLOR[f], lw=6) for f in FAMILIES]
-    ax.legend(handles, FAMILIES, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=len(FAMILIES))
+    ax.legend(handles, FAMILIES, frameon=False, loc="upper center",
+              bbox_to_anchor=(0.5, -0.28 if len(LANGS) > 5 else -0.12), ncol=len(FAMILIES))
     ax.spines[["left"]].set_color(MUTED)
     savefig(fig, f"dendrogram_{level}.png")
     R[f"dendrogram_{level}"] = {"order": dn["ivl"], "linkage": Z.round(4).tolist()}
@@ -497,8 +506,8 @@ print("  share of each prosody feature predictable from noise (R2):",
 
 # accuracy summary figure
 fig, ax = plt.subplots(figsize=(12, 7))
-bars = [("Prosody, single clips", R["clip_classifier"][best_clip]["balanced_accuracy"], PALETTE[0]),
-        ("Prosody, speaker averages", R["speaker_classifier"][best_spk]["balanced_accuracy"], PALETTE[3]),
+bars = [("Prosody, single clips", R["clip_classifier"][best_clip]["balanced_accuracy"], "#2a78d6"),
+        ("Prosody, speaker averages", R["speaker_classifier"][best_spk]["balanced_accuracy"], "#184f95"),
         ("Prosody minus pause and\nloudness features (clips)", R["prosody_no_pause_features"][best_clip]["balanced_accuracy"], "#86b6ef"),
         ("Prosody with noise-predictable\npart removed (clips)", R["prosody_residual_classifier"][best_clip]["balanced_accuracy"], "#5598e7"),
         ("Background noise only\n(recording check)", sb, "#9a9890"),
