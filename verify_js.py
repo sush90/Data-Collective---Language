@@ -20,7 +20,7 @@ N = int(sys.argv[1]) if len(sys.argv) > 1 else 20
 TOL = 1e-6  # relative tolerance
 cfg = load_config()
 clips = []
-per = max(1, N // len(cfg["languages"]))
+per = -(-N // len(cfg["languages"]))  # ceil, then trim to N
 for L in cfg["languages"]:
     for _, p in choose_clips(L["folder"], 300)[:per]:
         clips.append(os.path.join(ROOT, "data", L["folder"], "clips", p))
