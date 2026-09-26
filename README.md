@@ -1,9 +1,16 @@
 # The Prosodic Commons
 
-Hearing the world's languages by their rhythm. An interactive cadence map that
-arranges languages by prosody (pitch movement, rhythm, pauses) instead of by
-family tree, built from Mozilla Common Voice. Prototype for Design for Justice
-(Mozilla Data Collective, Brown University).
+Hearing the world's languages by their rhythm. An interactive world map of
+10 languages from 6 families, linking each language to its closest rhythmic
+neighbours by prosody (pitch movement, rhythm, pauses) instead of by family
+tree, plus a sound map that places every recording by its prosody. Built from
+Mozilla Common Voice. Prototype for Design for Justice (Mozilla Data
+Collective, Brown University).
+
+Languages: Tatar, Bashkir (Turkic); Fang, Ewondo (Bantu); Torwali, Urdu,
+Kohistani Shina (Indo-Aryan); Hazaragi (Iranian); Rioplatense Spanish
+(Romance); Scottish English (Germanic). Kohistani Shina stands in for
+Kashmiri, which has no dataset on Mozilla Data Collective.
 
 * `results_summary.md`: every result, validation, limitations, draft submission answers
 * `features.md`: exact fingerprint specification (Python and browser implement it identically)
@@ -28,6 +35,10 @@ brew install ffmpeg node          # macOS; use your package manager elsewhere
 .venv/bin/python ingest.py path/to/cv-corpus-27.0-2026-09-11/tt
 #    speaker panels for speaker-level fingerprints (40 speakers x 8 clips):
 .venv/bin/python ingest.py --panel-code tt path/to/cv-corpus-27.0-2026-09-11/tt
+#    Common Voice 26.0 regional releases (Rioplatense Spanish, Scottish English)
+#    ship only train/dev/test; ingest.py uses their union as validated.tsv.
+#    If an archive has no language folder inside, name it in Python:
+#    ingest.ingest("archive.tar.gz", 300, 20, code="en-Scottish")
 
 # 3. Pipeline (about 5 minutes in total on a laptop)
 .venv/bin/python extract.py          # fingerprints, cached in outputs/features.csv (~20 s)
@@ -52,8 +63,10 @@ This samples clips, builds a speaker panel, appends the language to
 `languages.yaml`, extracts fingerprints, re-runs the analysis and re-exports
 the website data. The site reads its language list from `site/data/`, so the new
 language appears on the map automatically. To add known sibling pairs or
-held-out tests, edit `languages.yaml`. Once Tajik and Balti (or other families)
-are added, set `run_held_out_family: true` to run the held-out family test.
+held-out tests, edit `languages.yaml`; add `lat`, `lon`, `countries`, `where`,
+`speakers_est` and `about` there to place the language on the world map (see
+the comments at the top of the file). The held-out family test
+(`run_held_out_family`) is on now that 6 families are present.
 
 ## View the site locally
 
@@ -120,10 +133,12 @@ microphone works in mobile Chrome and Safari over HTTPS.
 | `build_local.py` | local demo build with audio |
 | `add_language.py` | one-command language addition |
 | `site/js/fingerprint.js` | browser port of prosody.py |
+| `site/js/world.js` | world map (country outlines in `site/data/world-50m.json`, Natural Earth via world-atlas) |
 
 ## Data and ethics
 
-Mozilla Common Voice Scripted Speech 27.0, CC0, via the Mozilla Data Collective.
+Mozilla Common Voice Scripted Speech 27.0, and the 26.0 regional releases for
+Rioplatense Spanish and Scottish English, CC0, via the Mozilla Data Collective.
 Only audio and anonymous contributor IDs are used; age, gender and accent
 fields are never read. We never attempt to identify speakers. Original audio
 is not redistributed. Try Your Voice processes audio entirely in the browser;

@@ -13,6 +13,7 @@ function showTab() {
     init();
   } else if (name === "map") {
     MapView.renderMap();
+    WorldView.render();
   } else if (name === "fingerprint" && window.FingerprintView) {
     FingerprintView.onShow();
   }

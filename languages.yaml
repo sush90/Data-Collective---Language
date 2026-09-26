@@ -1,41 +1,161 @@
 # The Prosodic Commons: language configuration.
 # Add a language with:  python add_language.py --path data/<folder> --family "<family>"
 # `folder` is the directory under data/ holding clips/ and validated.tsv.
+#
+# World map fields (optional; a language without lat/lon is left off the world map):
+#   lat, lon     where the dot goes (a representative point in the main speaking area)
+#   label        which side of the dot its name goes: left, right, top or bottom
+#   countries    ISO 3166 numeric codes of countries shaded when the language is selected
+#   where        one line: where it is spoken
+#   speakers_est one line: approximate number of speakers (estimates, not census counts)
+#   about        two or three sentences shown when the dot is clicked
 
 languages:
   - name: Tatar
     code: tt
     folder: tt
     family: Turkic
+    lat: 55.8
+    lon: 49.1
+    label: left
+    countries: ["643"]
+    where: Tatarstan and the wider Volga-Ural region of Russia
+    speakers_est: About 4 to 5 million
+    about: >-
+      A Kipchak Turkic language and, with Russian, an official language of the
+      Republic of Tatarstan. Its closest relative is Bashkir, spoken just to the east.
   - name: Bashkir
     code: ba
     folder: ba
     family: Turkic
+    lat: 54.7
+    lon: 56.0
+    label: right
+    countries: ["643"]
+    where: Bashkortostan, in the southern Ural mountains of Russia
+    speakers_est: About 1 million
+    about: >-
+      A Kipchak Turkic language, official in the Republic of Bashkortostan. It is
+      so close to Tatar that speakers of the two can largely follow each other.
   - name: Fang
     code: fan
     folder: fan
     family: Bantu
+    lat: 1.6
+    lon: 10.4
+    label: left
+    countries: ["226", "266", "120"]
+    where: Equatorial Guinea, northern Gabon and southern Cameroon
+    speakers_est: About 1 million
+    about: >-
+      A tonal Bantu language and the most widely spoken language of mainland
+      Equatorial Guinea. With Ewondo it belongs to the Beti-Fang group.
   - name: Ewondo
     code: ewo
     folder: ewo
     family: Bantu
+    lat: 3.9
+    lon: 11.5
+    label: right
+    countries: ["120"]
+    where: Central Cameroon, around the capital Yaoundé
+    speakers_est: Roughly half a million native speakers, and many more who use it as a second language
+    about: >-
+      A tonal Bantu language of the Beti-Fang group, closely related to Fang. It
+      is widely used as a common language in and around Yaoundé.
   - name: Torwali
     code: trw
     folder: trw
     family: Indo-Aryan   # Dardic branch
+    lat: 35.3
+    lon: 72.5
+    label: left
+    countries: ["586"]
+    where: The upper Swat valley, Khyber Pakhtunkhwa, Pakistan
+    speakers_est: Roughly 100,000
+    about: >-
+      A Dardic language of the mountains of northern Pakistan, considered
+      endangered. Local community groups have built schools and learning
+      materials in Torwali, and its Common Voice recordings are among the few
+      that exist.
   - name: Hazaragi
     code: haz
     folder: haz
     family: Iranian
+    lat: 34.6
+    lon: 66.8
+    label: left
+    countries: ["004", "586", "364"]
+    where: Central Afghanistan (Hazarajat), with communities in Quetta, Pakistan and in Iran
+    speakers_est: A few million; estimates vary widely
+    about: >-
+      A variety of Persian (Dari) spoken by the Hazara people. It has its own
+      pronunciation and vocabulary, including words borrowed from Turkic and
+      Mongolic languages. Common Voice lists it as "Hazargi".
   - name: Urdu
     code: ur
     folder: ur
     family: Indo-Aryan
+    lat: 31.0
+    lon: 73.0
+    label: bottom
+    countries: ["586", "356"]
+    where: Pakistan, where it is the national language, and India
+    speakers_est: About 70 million native speakers and over 200 million in total
+    about: >-
+      A major Indo-Aryan language, very close to Hindi in everyday speech and
+      written in a Perso-Arabic script. As the dominant language of the region,
+      it is often the base that voice tools for smaller Pakistani languages are
+      built on.
+  - name: Kohistani Shina
+    code: plk
+    folder: plk
+    family: Indo-Aryan   # Dardic branch
+    lat: 35.3
+    lon: 73.3
+    label: right
+    countries: ["586"]
+    where: The Indus valley in Kohistan, northern Pakistan
+    speakers_est: Estimates are uncertain; likely a few hundred thousand
+    about: >-
+      A Dardic language of the Shina group, a neighbour of Torwali in the
+      mountains of northern Pakistan. We use it in place of Kashmiri, its
+      better-known Dardic relative, which has no dataset on Mozilla Data
+      Collective yet.
+  - name: Rioplatense Spanish
+    code: es
+    folder: es-Rioplatense   # Common Voice 26.0 regional subset (train/dev/test only)
+    family: Romance
+    lat: -34.6
+    lon: -58.4
+    label: right
+    countries: ["032", "858"]
+    where: The Río de la Plata region, Argentina and Uruguay (Buenos Aires, Montevideo)
+    speakers_est: Tens of millions
+    about: >-
+      The Spanish of Argentina and Uruguay, known for "vos" in place of "tú" and
+      a "sh"-like sound for ll and y. Its melody is often said to sound Italian,
+      a legacy of large-scale Italian immigration.
+  - name: Scottish English
+    code: en
+    folder: en-Scottish   # Common Voice 26.0 regional subset (train/dev/test only)
+    family: Germanic
+    lat: 56.2
+    lon: -4.2
+    label: left
+    countries: ["826"]
+    where: Scotland, United Kingdom
+    speakers_est: About 5 million people in Scotland
+    about: >-
+      English as spoken in Scotland, with its own vowels and rhythm. English is
+      the language most voice technology is built for first, so it is a useful
+      reference point on the map.
 
 # Pairs linguists consider close. Used for the known-sibling validation.
 sibling_pairs:
   - [Tatar, Bashkir]
   - [Fang, Ewondo]
+  - [Torwali, Kohistani Shina]
 
 # Held-out sibling tests: fit the space without `held_out`, project it in,
 # and check whether its nearest language is `expect_nearest`.
@@ -48,4 +168,4 @@ held_out_sibling_tests:
 # Held-out family test: only run when the family has at least 2 languages
 # AND at least 2 other families are present.
 held_out_family: Turkic
-run_held_out_family: false   # set true once Tajik and Balti (more families) are added
+run_held_out_family: true

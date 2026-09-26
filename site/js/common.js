@@ -1,7 +1,7 @@
 // Shared data, state and helpers.
 const PC = {
   data: {},
-  state: { space: "controlled", level: "clips", color: "language", lang: 0 },
+  state: { mode: "world", space: "controlled", level: "clips", lang: 0 },
   listeners: {},
   on(evt, fn) { (this.listeners[evt] = this.listeners[evt] || []).push(fn); },
   emit(evt, arg) { (this.listeners[evt] || []).forEach(fn => fn(arg)); },

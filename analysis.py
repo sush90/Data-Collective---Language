@@ -40,13 +40,13 @@ K_NN = 15
 MIN_SPEAKERS = 30          # below this, a language gets a reliability caveat
 SPEAKER_CLIPS = 5          # clips averaged per speaker
 
-# Validated categorical palette (dataviz validator, all-pairs, with marker shapes as
-# secondary encoding). Assigned in languages.yaml order, never cycled by rank.
-PALETTE5 = ["#2a78d6", "#eda100", "#008300", "#4a3aa7", "#e34948"]
-PALETTE8 = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
-MARKERS = ["o", "s", "^", "D", "v", "*", "P", "X"]
-# 4 family colours: validated all-pairs (dataviz validator)
-FAMILY_PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#4a3aa7"]
+# Validated categorical palette (dataviz validator, adjacent pairs, light and dark).
+# Colour = language family, assigned in languages.yaml order, never cycled by rank.
+# Languages in the same family share the hue and differ by marker shape, so every
+# language stays distinguishable without a generated 9th+ hue.
+FAMILY_PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
+MARKERS = ["o", "s", "^", "D", "v", "*"]
+PALETTE = FAMILY_PALETTE
 INK, MUTED = "#0b0b0b", "#52514e"
 plt.rcParams.update({"font.size": 16, "axes.titlesize": 20, "axes.labelsize": 17,
                      "xtick.labelsize": 15, "ytick.labelsize": 15, "legend.fontsize": 15,
@@ -58,12 +58,11 @@ cfg = load_config()
 LANGS = [L["name"] for L in cfg["languages"]]
 FAMILY = {L["name"]: L["family"] for L in cfg["languages"]}
 FAMILIES = list(dict.fromkeys(FAMILY[l] for l in LANGS))
-# Up to 5 languages: a palette validated for scatter plots. Beyond 5 no palette separates
-# every pair, so each language also gets its own marker shape (secondary encoding).
-PALETTE = PALETTE5 if len(LANGS) <= 5 else PALETTE8
-COLOR = {l: PALETTE[i % len(PALETTE)] for i, l in enumerate(LANGS)}
-MARK = {l: MARKERS[i % len(MARKERS)] for i, l in enumerate(LANGS)}
-FCOLOR = {f: FAMILY_PALETTE[i % len(FAMILY_PALETTE)] for i, f in enumerate(FAMILIES)}
+if len(FAMILIES) > len(FAMILY_PALETTE):
+    raise SystemExit(f"{len(FAMILIES)} families but only {len(FAMILY_PALETTE)} validated family colours")
+FCOLOR = {f: FAMILY_PALETTE[i] for i, f in enumerate(FAMILIES)}
+COLOR = {l: FCOLOR[FAMILY[l]] for l in LANGS}
+MARK = {l: MARKERS[[m for m in LANGS if FAMILY[m] == FAMILY[l]].index(l)] for l in LANGS}
 R = {"languages": LANGS, "families": FAMILY, "features": F}
 
 

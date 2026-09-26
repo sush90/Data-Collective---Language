@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Prosodic Commons</title>
-<meta name="description" content="Hearing the world's languages by their rhythm: an interactive map of languages arranged by cadence, built from Mozilla Common Voice.">
+<meta name="description" content="Hearing the world's languages by their rhythm: an interactive world map of languages and their rhythmic neighbors, built from Mozilla Common Voice.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M2 16 Q6 4 10 16 T18 16 T26 16 T30 16' fill='none' stroke='%232a78d6' stroke-width='3'/></svg>">
 <link rel="stylesheet" href="css/style.css">
 <script src="config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="js/vendor/topojson-client.min.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -17,7 +18,7 @@
     <p class="tagline">Hearing the world's languages by their rhythm</p>
   </div>
   <nav class="tabs" role="tablist">
-    <a href="#map" data-tab="map">Cadence Map</a>
+    <a href="#map" data-tab="map">Map</a>
     <a href="#fingerprint" data-tab="fingerprint">Fingerprint</a>
     <a href="#voice" data-tab="voice">Try Your Voice</a>
     <a href="#validation" data-tab="validation">Validation</a>
@@ -43,6 +44,10 @@
     </aside>
     <div class="map-area">
       <div class="controls">
+        <div class="seg" role="group" aria-label="Map type">
+          <button data-mode="world" class="on" title="Where each language is spoken">World map</button>
+          <button data-mode="sound" title="Every clip placed by how its rhythm and melody sound">Sound map</button>
+        </div>
         <div class="seg" role="group" aria-label="Feature space">
           <button data-space="controlled" class="on" title="Prosody with the part predictable from background noise removed">Rhythm only</button>
           <button data-space="raw" title="Prosody features as measured, including recording effects">Raw</button>
@@ -51,12 +56,9 @@
           <button data-level="clips" class="on">Single clips</button>
           <button data-level="speakers">Speaker averages</button>
         </div>
-        <div class="seg" role="group" aria-label="Color by">
-          <button data-color="language" class="on">By language</button>
-          <button data-color="family">By family</button>
-        </div>
       </div>
-      <div id="map" class="map" aria-label="Map of clips arranged by prosodic similarity"></div>
+      <div id="world" class="map world" aria-label="World map of where each language is spoken"></div>
+      <div id="map" class="map" aria-label="Map of clips arranged by prosodic similarity" hidden></div>
       <div id="legend" class="legend"></div>
       <p class="hint" id="map-caption"></p>
       <div id="now-playing" class="now-playing" hidden></div>
@@ -109,7 +111,7 @@
 </main>
 
 <footer class="site-footer">
-  Data: Mozilla Common Voice Scripted Speech 27.0 (CC0) via Mozilla Data Collective. Original recordings are not redistributed here.
+  Data: Mozilla Common Voice Scripted Speech 27.0 and 26.0 (CC0) via Mozilla Data Collective. Original recordings are not redistributed here.
   Built for Design for Justice, Brown University.
 </footer>
 
@@ -117,6 +119,7 @@
 <script src="js/common.js"></script>
 <script src="js/player.js"></script>
 <script src="js/map.js"></script>
+<script src="js/world.js"></script>
 <script src="js/fingerprint_view.js"></script>
 <script src="js/fingerprint.js"></script>
 <script src="js/voice.js"></script>

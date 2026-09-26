@@ -39,19 +39,37 @@ def select_clips(df, n_total, per_speaker):
     return set(chosen)
 
 
-def ingest(archive, n_total, per_speaker):
-    m = re.search(r"cv-corpus-[\d.]+-[\d-]+-([A-Za-z-]+)\.tar\.gz", os.path.basename(archive))
-    code_hint = m.group(1) if m else None
+def splits_as_validated(tsvs):
+    """Regional-variant releases (e.g. Rioplatense Spanish) ship only train/dev/test.
+    Common Voice fills those splits from validated clips only, so their union stands in
+    for validated.tsv."""
+    parts = [tsvs[n] for n in ("train.tsv", "dev.tsv", "test.tsv") if n in tsvs]
+    if not parts:
+        raise RuntimeError("no validated.tsv and no train/dev/test splits found")
+    df = pd.concat([pd.read_csv(io.BytesIO(b), sep="\t", quoting=3, dtype=str) for b in parts])
+    buf = io.BytesIO()
+    df.drop_duplicates("path").to_csv(buf, sep="\t", index=False)
+    return buf.getvalue()
 
-    tsvs, code = {}, code_hint
+
+def ingest(archive, n_total, per_speaker, code=None):
+    """code names data/<code>; by default it is the archive's language folder."""
+    m = re.search(r"cv-corpus-[\d.]+-[\d-]+-([A-Za-z-]+)\.tar\.gz", os.path.basename(archive))
+    fixed = code
+    code = code or (m.group(1) if m else None)
+
+    tsvs = {}
     with tarfile.open(archive, "r|gz") as tf:
         for member in tf:
             if member.isfile() and member.name.endswith(".tsv"):
                 parts = member.name.split("/")
-                code = parts[-2]
+                if not fixed and len(parts) > 1:
+                    code = parts[-2]
                 tsvs[parts[-1]] = tf.extractfile(member).read()
+    if not code:
+        raise RuntimeError(f"{archive}: files are not in a language folder; pass code=")
     if "validated.tsv" not in tsvs:
-        raise RuntimeError(f"{archive}: no validated.tsv found")
+        tsvs["validated.tsv"] = splits_as_validated(tsvs)
 
     out = os.path.join(DATA, code)
     os.makedirs(os.path.join(out, "clips"), exist_ok=True)
@@ -87,7 +105,11 @@ def ingest_dir(src, n_total, per_speaker):
     for name in os.listdir(src):
         if name.endswith(".tsv"):
             shutil.copy(os.path.join(src, name), os.path.join(out, name))
-    val = pd.read_csv(os.path.join(src, "validated.tsv"), sep="\t", quoting=3,
+    if not os.path.exists(os.path.join(out, "validated.tsv")):
+        tsvs = {n: open(os.path.join(out, n), "rb").read() for n in os.listdir(out) if n.endswith(".tsv")}
+        with open(os.path.join(out, "validated.tsv"), "wb") as f:
+            f.write(splits_as_validated(tsvs))
+    val = pd.read_csv(os.path.join(out, "validated.tsv"), sep="\t", quoting=3,
                       usecols=["client_id", "path"], dtype=str)
     wanted = select_clips(val, n_total, per_speaker)
     got = 0

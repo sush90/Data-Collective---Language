@@ -4,225 +4,471 @@
    "Tatar": [
     {
      "language": "Bashkir",
-     "distance": 0.654,
-     "similarity": 0.605
+     "distance": 0.656,
+     "similarity": 0.604
     },
     {
-     "language": "Urdu",
-     "distance": 0.869,
-     "similarity": 0.535
+     "language": "Rioplatense Spanish",
+     "distance": 0.766,
+     "similarity": 0.566
     },
     {
      "language": "Torwali",
-     "distance": 0.954,
-     "similarity": 0.512
+     "distance": 0.945,
+     "similarity": 0.514
+    },
+    {
+     "language": "Urdu",
+     "distance": 0.946,
+     "similarity": 0.514
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.143,
+     "similarity": 0.467
     },
     {
      "language": "Ewondo",
-     "distance": 1.146,
-     "similarity": 0.466
+     "distance": 1.332,
+     "similarity": 0.429
     },
     {
      "language": "Hazaragi",
-     "distance": 1.401,
-     "similarity": 0.416
+     "distance": 1.468,
+     "similarity": 0.405
     },
     {
      "language": "Fang",
-     "distance": 1.522,
-     "similarity": 0.396
+     "distance": 1.664,
+     "similarity": 0.375
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.774,
+     "similarity": 0.36
     }
    ],
    "Bashkir": [
     {
      "language": "Tatar",
-     "distance": 0.654,
-     "similarity": 0.605
+     "distance": 0.656,
+     "similarity": 0.604
     },
     {
      "language": "Urdu",
-     "distance": 0.754,
-     "similarity": 0.57
+     "distance": 0.84,
+     "similarity": 0.543
     },
     {
      "language": "Torwali",
-     "distance": 1.166,
-     "similarity": 0.462
+     "distance": 1.154,
+     "similarity": 0.464
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.308,
+     "similarity": 0.433
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.655,
+     "similarity": 0.377
     },
     {
      "language": "Ewondo",
-     "distance": 1.551,
-     "similarity": 0.392
+     "distance": 1.719,
+     "similarity": 0.368
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.836,
+     "similarity": 0.353
     },
     {
      "language": "Hazaragi",
-     "distance": 1.815,
-     "similarity": 0.355
+     "distance": 1.914,
+     "similarity": 0.343
     },
     {
      "language": "Fang",
-     "distance": 1.988,
-     "similarity": 0.335
+     "distance": 2.147,
+     "similarity": 0.318
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 0.978,
-     "similarity": 0.506
+     "distance": 1.076,
+     "similarity": 0.482
     },
     {
-     "language": "Hazaragi",
-     "distance": 1.437,
-     "similarity": 0.41
+     "language": "Rioplatense Spanish",
+     "distance": 1.351,
+     "similarity": 0.425
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.488,
+     "similarity": 0.402
     },
     {
      "language": "Torwali",
-     "distance": 1.456,
-     "similarity": 0.407
+     "distance": 1.561,
+     "similarity": 0.391
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.612,
+     "similarity": 0.383
     },
     {
      "language": "Tatar",
-     "distance": 1.522,
-     "similarity": 0.396
+     "distance": 1.664,
+     "similarity": 0.375
     },
     {
-     "language": "Urdu",
-     "distance": 1.905,
-     "similarity": 0.344
+     "language": "Kohistani Shina",
+     "distance": 2.057,
+     "similarity": 0.327
     },
     {
      "language": "Bashkir",
-     "distance": 1.988,
-     "similarity": 0.335
+     "distance": 2.147,
+     "similarity": 0.318
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.153,
+     "similarity": 0.317
     }
    ],
    "Ewondo": [
     {
+     "language": "Rioplatense Spanish",
+     "distance": 1.04,
+     "similarity": 0.49
+    },
+    {
      "language": "Fang",
-     "distance": 0.978,
-     "similarity": 0.506
+     "distance": 1.076,
+     "similarity": 0.482
     },
     {
      "language": "Torwali",
-     "distance": 0.979,
-     "similarity": 0.505
+     "distance": 1.107,
+     "similarity": 0.475
     },
     {
      "language": "Tatar",
-     "distance": 1.146,
-     "similarity": 0.466
+     "distance": 1.332,
+     "similarity": 0.429
     },
     {
-     "language": "Bashkir",
-     "distance": 1.551,
-     "similarity": 0.392
+     "language": "Kohistani Shina",
+     "distance": 1.436,
+     "similarity": 0.41
     },
     {
-     "language": "Hazaragi",
-     "distance": 1.69,
-     "similarity": 0.372
-    },
-    {
-     "language": "Urdu",
-     "distance": 1.757,
-     "similarity": 0.363
-    }
-   ],
-   "Torwali": [
-    {
-     "language": "Tatar",
-     "distance": 0.954,
-     "similarity": 0.512
-    },
-    {
-     "language": "Ewondo",
-     "distance": 0.979,
-     "similarity": 0.505
-    },
-    {
-     "language": "Bashkir",
-     "distance": 1.166,
-     "similarity": 0.462
-    },
-    {
-     "language": "Fang",
-     "distance": 1.456,
-     "similarity": 0.407
-    },
-    {
-     "language": "Urdu",
+     "language": "Scottish English",
      "distance": 1.473,
      "similarity": 0.404
     },
     {
+     "language": "Bashkir",
+     "distance": 1.719,
+     "similarity": 0.368
+    },
+    {
      "language": "Hazaragi",
-     "distance": 1.953,
-     "similarity": 0.339
+     "distance": 1.927,
+     "similarity": 0.342
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.044,
+     "similarity": 0.329
+    }
+   ],
+   "Torwali": [
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.924,
+     "similarity": 0.52
+    },
+    {
+     "language": "Tatar",
+     "distance": 0.945,
+     "similarity": 0.514
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.044,
+     "similarity": 0.489
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.107,
+     "similarity": 0.475
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.154,
+     "similarity": 0.464
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.306,
+     "similarity": 0.434
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.533,
+     "similarity": 0.395
+    },
+    {
+     "language": "Fang",
+     "distance": 1.561,
+     "similarity": 0.391
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 2.0,
+     "similarity": 0.333
     }
    ],
    "Hazaragi": [
     {
-     "language": "Urdu",
-     "distance": 1.386,
-     "similarity": 0.419
+     "language": "Tatar",
+     "distance": 1.468,
+     "similarity": 0.405
     },
     {
-     "language": "Tatar",
-     "distance": 1.401,
-     "similarity": 0.416
+     "language": "Urdu",
+     "distance": 1.494,
+     "similarity": 0.401
     },
     {
      "language": "Fang",
-     "distance": 1.437,
-     "similarity": 0.41
+     "distance": 1.612,
+     "similarity": 0.383
     },
     {
-     "language": "Ewondo",
-     "distance": 1.69,
-     "similarity": 0.372
+     "language": "Rioplatense Spanish",
+     "distance": 1.666,
+     "similarity": 0.375
     },
     {
-     "language": "Bashkir",
-     "distance": 1.815,
+     "language": "Scottish English",
+     "distance": 1.816,
      "similarity": 0.355
     },
     {
+     "language": "Bashkir",
+     "distance": 1.914,
+     "similarity": 0.343
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.927,
+     "similarity": 0.342
+    },
+    {
      "language": "Torwali",
-     "distance": 1.953,
-     "similarity": 0.339
+     "distance": 2.0,
+     "similarity": 0.333
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.91,
+     "similarity": 0.256
     }
    ],
    "Urdu": [
     {
      "language": "Bashkir",
-     "distance": 0.754,
-     "similarity": 0.57
+     "distance": 0.84,
+     "similarity": 0.543
     },
     {
      "language": "Tatar",
-     "distance": 0.869,
-     "similarity": 0.535
+     "distance": 0.946,
+     "similarity": 0.514
     },
     {
      "language": "Hazaragi",
-     "distance": 1.386,
-     "similarity": 0.419
+     "distance": 1.494,
+     "similarity": 0.401
     },
     {
      "language": "Torwali",
+     "distance": 1.533,
+     "similarity": 0.395
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.628,
+     "similarity": 0.381
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.87,
+     "similarity": 0.348
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.044,
+     "similarity": 0.329
+    },
+    {
+     "language": "Fang",
+     "distance": 2.153,
+     "similarity": 0.317
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.405,
+     "similarity": 0.294
+    }
+   ],
+   "Kohistani Shina": [
+    {
+     "language": "Torwali",
+     "distance": 1.044,
+     "similarity": 0.489
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.436,
+     "similarity": 0.41
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.579,
+     "similarity": 0.388
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.774,
+     "similarity": 0.36
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.836,
+     "similarity": 0.353
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.89,
+     "similarity": 0.346
+    },
+    {
+     "language": "Fang",
+     "distance": 2.057,
+     "similarity": 0.327
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.405,
+     "similarity": 0.294
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 2.91,
+     "similarity": 0.256
+    }
+   ],
+   "Rioplatense Spanish": [
+    {
+     "language": "Scottish English",
+     "distance": 0.588,
+     "similarity": 0.63
+    },
+    {
+     "language": "Tatar",
+     "distance": 0.766,
+     "similarity": 0.566
+    },
+    {
+     "language": "Torwali",
+     "distance": 0.924,
+     "similarity": 0.52
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.04,
+     "similarity": 0.49
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.308,
+     "similarity": 0.433
+    },
+    {
+     "language": "Fang",
+     "distance": 1.351,
+     "similarity": 0.425
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.579,
+     "similarity": 0.388
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.628,
+     "similarity": 0.381
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.666,
+     "similarity": 0.375
+    }
+   ],
+   "Scottish English": [
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.588,
+     "similarity": 0.63
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.143,
+     "similarity": 0.467
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.306,
+     "similarity": 0.434
+    },
+    {
+     "language": "Ewondo",
      "distance": 1.473,
      "similarity": 0.404
     },
     {
-     "language": "Ewondo",
-     "distance": 1.757,
-     "similarity": 0.363
+     "language": "Fang",
+     "distance": 1.488,
+     "similarity": 0.402
     },
     {
-     "language": "Fang",
-     "distance": 1.905,
-     "similarity": 0.344
+     "language": "Bashkir",
+     "distance": 1.655,
+     "similarity": 0.377
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.816,
+     "similarity": 0.355
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.87,
+     "similarity": 0.348
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.89,
+     "similarity": 0.346
     }
    ]
   },
@@ -230,225 +476,471 @@
    "Tatar": [
     {
      "language": "Urdu",
-     "distance": 0.841,
-     "similarity": 0.543
+     "distance": 0.889,
+     "similarity": 0.529
     },
     {
      "language": "Bashkir",
-     "distance": 0.914,
-     "similarity": 0.523
+     "distance": 0.961,
+     "similarity": 0.51
+    },
+    {
+     "language": "Scottish English",
+     "distance": 0.985,
+     "similarity": 0.504
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.078,
+     "similarity": 0.481
     },
     {
      "language": "Torwali",
-     "distance": 1.276,
-     "similarity": 0.439
+     "distance": 1.306,
+     "similarity": 0.434
     },
     {
      "language": "Hazaragi",
-     "distance": 1.393,
-     "similarity": 0.418
+     "distance": 1.434,
+     "similarity": 0.411
     },
     {
      "language": "Ewondo",
-     "distance": 1.583,
-     "similarity": 0.387
+     "distance": 1.767,
+     "similarity": 0.361
     },
     {
      "language": "Fang",
-     "distance": 1.941,
-     "similarity": 0.34
+     "distance": 2.112,
+     "similarity": 0.321
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.609,
+     "similarity": 0.277
     }
    ],
    "Bashkir": [
     {
      "language": "Tatar",
-     "distance": 0.914,
-     "similarity": 0.523
+     "distance": 0.961,
+     "similarity": 0.51
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.987,
+     "similarity": 0.503
     },
     {
      "language": "Urdu",
-     "distance": 1.003,
-     "similarity": 0.499
+     "distance": 1.063,
+     "similarity": 0.485
     },
     {
      "language": "Torwali",
-     "distance": 1.291,
-     "similarity": 0.436
+     "distance": 1.297,
+     "similarity": 0.435
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.406,
+     "similarity": 0.416
     },
     {
      "language": "Ewondo",
-     "distance": 1.49,
-     "similarity": 0.402
+     "distance": 1.617,
+     "similarity": 0.382
     },
     {
      "language": "Hazaragi",
-     "distance": 1.982,
-     "similarity": 0.335
+     "distance": 2.04,
+     "similarity": 0.329
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.089,
+     "similarity": 0.324
     },
     {
      "language": "Fang",
-     "distance": 2.128,
-     "similarity": 0.32
+     "distance": 2.266,
+     "similarity": 0.306
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 0.858,
-     "similarity": 0.538
+     "distance": 0.914,
+     "similarity": 0.523
     },
     {
      "language": "Torwali",
-     "distance": 1.364,
-     "similarity": 0.423
+     "distance": 1.492,
+     "similarity": 0.401
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.58,
+     "similarity": 0.388
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.67,
+     "similarity": 0.375
     },
     {
      "language": "Hazaragi",
-     "distance": 1.587,
-     "similarity": 0.387
-    },
-    {
-     "language": "Urdu",
-     "distance": 1.875,
-     "similarity": 0.348
+     "distance": 1.737,
+     "similarity": 0.365
     },
     {
      "language": "Tatar",
-     "distance": 1.941,
-     "similarity": 0.34
+     "distance": 2.112,
+     "similarity": 0.321
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.12,
+     "similarity": 0.321
     },
     {
      "language": "Bashkir",
-     "distance": 2.128,
-     "similarity": 0.32
+     "distance": 2.266,
+     "similarity": 0.306
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.646,
+     "similarity": 0.274
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 0.858,
-     "similarity": 0.538
+     "distance": 0.914,
+     "similarity": 0.523
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.064,
+     "similarity": 0.484
     },
     {
      "language": "Torwali",
-     "distance": 1.031,
-     "similarity": 0.492
+     "distance": 1.141,
+     "similarity": 0.467
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.468,
+     "similarity": 0.405
     },
     {
      "language": "Bashkir",
-     "distance": 1.49,
-     "similarity": 0.402
+     "distance": 1.617,
+     "similarity": 0.382
     },
     {
      "language": "Urdu",
-     "distance": 1.494,
-     "similarity": 0.401
+     "distance": 1.75,
+     "similarity": 0.364
     },
     {
      "language": "Tatar",
-     "distance": 1.583,
-     "similarity": 0.387
+     "distance": 1.767,
+     "similarity": 0.361
     },
     {
      "language": "Hazaragi",
-     "distance": 1.666,
-     "similarity": 0.375
+     "distance": 1.818,
+     "similarity": 0.355
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.159,
+     "similarity": 0.317
     }
    ],
    "Torwali": [
     {
-     "language": "Ewondo",
-     "distance": 1.031,
-     "similarity": 0.492
+     "language": "Rioplatense Spanish",
+     "distance": 0.696,
+     "similarity": 0.589
     },
     {
-     "language": "Tatar",
-     "distance": 1.276,
-     "similarity": 0.439
+     "language": "Scottish English",
+     "distance": 1.07,
+     "similarity": 0.483
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.141,
+     "similarity": 0.467
     },
     {
      "language": "Bashkir",
-     "distance": 1.291,
-     "similarity": 0.436
+     "distance": 1.297,
+     "similarity": 0.435
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.306,
+     "similarity": 0.434
     },
     {
      "language": "Fang",
-     "distance": 1.364,
-     "similarity": 0.423
-    },
-    {
-     "language": "Urdu",
-     "distance": 1.491,
+     "distance": 1.492,
      "similarity": 0.401
     },
     {
+     "language": "Urdu",
+     "distance": 1.559,
+     "similarity": 0.391
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.723,
+     "similarity": 0.367
+    },
+    {
      "language": "Hazaragi",
-     "distance": 1.856,
-     "similarity": 0.35
+     "distance": 1.869,
+     "similarity": 0.348
     }
    ],
    "Hazaragi": [
     {
      "language": "Urdu",
-     "distance": 1.262,
-     "similarity": 0.442
+     "distance": 1.331,
+     "similarity": 0.429
     },
     {
      "language": "Tatar",
-     "distance": 1.393,
-     "similarity": 0.418
+     "distance": 1.434,
+     "similarity": 0.411
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.725,
+     "similarity": 0.367
     },
     {
      "language": "Fang",
-     "distance": 1.587,
-     "similarity": 0.387
+     "distance": 1.737,
+     "similarity": 0.365
     },
     {
      "language": "Ewondo",
-     "distance": 1.666,
-     "similarity": 0.375
+     "distance": 1.818,
+     "similarity": 0.355
     },
     {
      "language": "Torwali",
-     "distance": 1.856,
-     "similarity": 0.35
+     "distance": 1.869,
+     "similarity": 0.348
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.87,
+     "similarity": 0.348
     },
     {
      "language": "Bashkir",
-     "distance": 1.982,
-     "similarity": 0.335
+     "distance": 2.04,
+     "similarity": 0.329
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 3.46,
+     "similarity": 0.224
     }
    ],
    "Urdu": [
     {
      "language": "Tatar",
-     "distance": 0.841,
-     "similarity": 0.543
+     "distance": 0.889,
+     "similarity": 0.529
     },
     {
      "language": "Bashkir",
-     "distance": 1.003,
-     "similarity": 0.499
+     "distance": 1.063,
+     "similarity": 0.485
     },
     {
      "language": "Hazaragi",
-     "distance": 1.262,
-     "similarity": 0.442
+     "distance": 1.331,
+     "similarity": 0.429
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.457,
+     "similarity": 0.407
     },
     {
      "language": "Torwali",
-     "distance": 1.491,
-     "similarity": 0.401
+     "distance": 1.559,
+     "similarity": 0.391
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.583,
+     "similarity": 0.387
     },
     {
      "language": "Ewondo",
-     "distance": 1.494,
-     "similarity": 0.401
+     "distance": 1.75,
+     "similarity": 0.364
     },
     {
      "language": "Fang",
-     "distance": 1.875,
+     "distance": 2.12,
+     "similarity": 0.321
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.829,
+     "similarity": 0.261
+    }
+   ],
+   "Kohistani Shina": [
+    {
+     "language": "Torwali",
+     "distance": 1.723,
+     "similarity": 0.367
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.797,
+     "similarity": 0.358
+    },
+    {
+     "language": "Bashkir",
+     "distance": 2.089,
+     "similarity": 0.324
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.159,
+     "similarity": 0.317
+    },
+    {
+     "language": "Scottish English",
+     "distance": 2.343,
+     "similarity": 0.299
+    },
+    {
+     "language": "Tatar",
+     "distance": 2.609,
+     "similarity": 0.277
+    },
+    {
+     "language": "Fang",
+     "distance": 2.646,
+     "similarity": 0.274
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.829,
+     "similarity": 0.261
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 3.46,
+     "similarity": 0.224
+    }
+   ],
+   "Rioplatense Spanish": [
+    {
+     "language": "Torwali",
+     "distance": 0.696,
+     "similarity": 0.589
+    },
+    {
+     "language": "Scottish English",
+     "distance": 0.783,
+     "similarity": 0.561
+    },
+    {
+     "language": "Bashkir",
+     "distance": 0.987,
+     "similarity": 0.503
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.064,
+     "similarity": 0.484
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.078,
+     "similarity": 0.481
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.457,
+     "similarity": 0.407
+    },
+    {
+     "language": "Fang",
+     "distance": 1.58,
+     "similarity": 0.388
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.797,
+     "similarity": 0.358
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.87,
      "similarity": 0.348
+    }
+   ],
+   "Scottish English": [
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.783,
+     "similarity": 0.561
+    },
+    {
+     "language": "Tatar",
+     "distance": 0.985,
+     "similarity": 0.504
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.07,
+     "similarity": 0.483
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.406,
+     "similarity": 0.416
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.468,
+     "similarity": 0.405
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.583,
+     "similarity": 0.387
+    },
+    {
+     "language": "Fang",
+     "distance": 1.67,
+     "similarity": 0.375
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.725,
+     "similarity": 0.367
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.343,
+     "similarity": 0.299
     }
    ]
   },
@@ -456,225 +948,471 @@
    "Tatar": [
     {
      "language": "Bashkir",
-     "distance": 0.711,
-     "similarity": 0.584
+     "distance": 0.714,
+     "similarity": 0.583
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.751,
+     "similarity": 0.571
     },
     {
      "language": "Torwali",
-     "distance": 1.056,
-     "similarity": 0.486
+     "distance": 1.052,
+     "similarity": 0.487
     },
     {
      "language": "Urdu",
-     "distance": 1.136,
-     "similarity": 0.468
+     "distance": 1.161,
+     "similarity": 0.463
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.216,
+     "similarity": 0.451
     },
     {
      "language": "Hazaragi",
-     "distance": 1.609,
-     "similarity": 0.383
+     "distance": 1.587,
+     "similarity": 0.387
     },
     {
      "language": "Ewondo",
-     "distance": 1.733,
-     "similarity": 0.366
+     "distance": 1.784,
+     "similarity": 0.359
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.862,
+     "similarity": 0.349
     },
     {
      "language": "Fang",
-     "distance": 2.357,
-     "similarity": 0.298
+     "distance": 2.455,
+     "similarity": 0.289
     }
    ],
    "Bashkir": [
     {
      "language": "Tatar",
-     "distance": 0.711,
-     "similarity": 0.584
+     "distance": 0.714,
+     "similarity": 0.583
     },
     {
      "language": "Torwali",
-     "distance": 1.038,
-     "similarity": 0.491
+     "distance": 1.068,
+     "similarity": 0.484
     },
     {
      "language": "Urdu",
-     "distance": 1.154,
-     "similarity": 0.464
+     "distance": 1.165,
+     "similarity": 0.462
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.218,
+     "similarity": 0.451
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.722,
+     "similarity": 0.367
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.739,
+     "similarity": 0.365
     },
     {
      "language": "Ewondo",
-     "distance": 1.941,
-     "similarity": 0.34
+     "distance": 2.014,
+     "similarity": 0.332
     },
     {
      "language": "Hazaragi",
-     "distance": 2.072,
-     "similarity": 0.326
+     "distance": 2.044,
+     "similarity": 0.329
     },
     {
      "language": "Fang",
-     "distance": 2.777,
-     "similarity": 0.265
+     "distance": 2.884,
+     "similarity": 0.257
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 1.345,
-     "similarity": 0.426
+     "distance": 1.371,
+     "similarity": 0.422
+    },
+    {
+     "language": "Scottish English",
+     "distance": 2.191,
+     "similarity": 0.313
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 2.35,
+     "similarity": 0.299
     },
     {
      "language": "Tatar",
-     "distance": 2.357,
-     "similarity": 0.298
+     "distance": 2.455,
+     "similarity": 0.289
     },
     {
      "language": "Torwali",
-     "distance": 2.498,
-     "similarity": 0.286
+     "distance": 2.582,
+     "similarity": 0.279
     },
     {
-     "language": "Bashkir",
-     "distance": 2.777,
-     "similarity": 0.265
-    },
-    {
-     "language": "Hazaragi",
-     "distance": 2.838,
+     "language": "Kohistani Shina",
+     "distance": 2.825,
      "similarity": 0.261
     },
     {
+     "language": "Bashkir",
+     "distance": 2.884,
+     "similarity": 0.257
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 2.917,
+     "similarity": 0.255
+    },
+    {
      "language": "Urdu",
-     "distance": 3.121,
-     "similarity": 0.243
+     "distance": 3.246,
+     "similarity": 0.236
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 1.345,
-     "similarity": 0.426
+     "distance": 1.371,
+     "similarity": 0.422
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.726,
+     "similarity": 0.367
     },
     {
      "language": "Torwali",
-     "distance": 1.713,
-     "similarity": 0.369
+     "distance": 1.783,
+     "similarity": 0.359
     },
     {
      "language": "Tatar",
-     "distance": 1.733,
-     "similarity": 0.366
+     "distance": 1.784,
+     "similarity": 0.359
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.848,
+     "similarity": 0.351
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.989,
+     "similarity": 0.335
     },
     {
      "language": "Bashkir",
-     "distance": 1.941,
-     "similarity": 0.34
+     "distance": 2.014,
+     "similarity": 0.332
     },
     {
      "language": "Urdu",
-     "distance": 2.626,
-     "similarity": 0.276
+     "distance": 2.705,
+     "similarity": 0.27
     },
     {
      "language": "Hazaragi",
-     "distance": 2.728,
+     "distance": 2.738,
      "similarity": 0.268
     }
    ],
    "Torwali": [
     {
-     "language": "Bashkir",
-     "distance": 1.038,
-     "similarity": 0.491
+     "language": "Kohistani Shina",
+     "distance": 1.003,
+     "similarity": 0.499
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.026,
+     "similarity": 0.494
     },
     {
      "language": "Tatar",
-     "distance": 1.056,
-     "similarity": 0.486
+     "distance": 1.052,
+     "similarity": 0.487
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.068,
+     "similarity": 0.484
     },
     {
      "language": "Urdu",
-     "distance": 1.538,
+     "distance": 1.535,
      "similarity": 0.394
     },
     {
+     "language": "Scottish English",
+     "distance": 1.59,
+     "similarity": 0.386
+    },
+    {
      "language": "Ewondo",
-     "distance": 1.713,
-     "similarity": 0.369
+     "distance": 1.783,
+     "similarity": 0.359
     },
     {
      "language": "Hazaragi",
-     "distance": 2.295,
-     "similarity": 0.303
+     "distance": 2.234,
+     "similarity": 0.309
     },
     {
      "language": "Fang",
-     "distance": 2.498,
-     "similarity": 0.286
+     "distance": 2.582,
+     "similarity": 0.279
     }
    ],
    "Hazaragi": [
     {
      "language": "Urdu",
-     "distance": 1.518,
+     "distance": 1.52,
      "similarity": 0.397
     },
     {
      "language": "Tatar",
-     "distance": 1.609,
-     "similarity": 0.383
+     "distance": 1.587,
+     "similarity": 0.387
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.769,
+     "similarity": 0.361
+    },
+    {
+     "language": "Scottish English",
+     "distance": 2.039,
+     "similarity": 0.329
     },
     {
      "language": "Bashkir",
-     "distance": 2.072,
-     "similarity": 0.326
+     "distance": 2.044,
+     "similarity": 0.329
     },
     {
      "language": "Torwali",
-     "distance": 2.295,
-     "similarity": 0.303
+     "distance": 2.234,
+     "similarity": 0.309
     },
     {
      "language": "Ewondo",
-     "distance": 2.728,
+     "distance": 2.738,
      "similarity": 0.268
     },
     {
      "language": "Fang",
-     "distance": 2.838,
-     "similarity": 0.261
+     "distance": 2.917,
+     "similarity": 0.255
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 3.1,
+     "similarity": 0.244
     }
    ],
    "Urdu": [
     {
      "language": "Tatar",
-     "distance": 1.136,
-     "similarity": 0.468
+     "distance": 1.161,
+     "similarity": 0.463
     },
     {
      "language": "Bashkir",
-     "distance": 1.154,
-     "similarity": 0.464
+     "distance": 1.165,
+     "similarity": 0.462
     },
     {
      "language": "Hazaragi",
-     "distance": 1.518,
+     "distance": 1.52,
      "similarity": 0.397
     },
     {
+     "language": "Rioplatense Spanish",
+     "distance": 1.534,
+     "similarity": 0.395
+    },
+    {
      "language": "Torwali",
-     "distance": 1.538,
+     "distance": 1.535,
      "similarity": 0.394
     },
     {
+     "language": "Scottish English",
+     "distance": 2.06,
+     "similarity": 0.327
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.356,
+     "similarity": 0.298
+    },
+    {
      "language": "Ewondo",
-     "distance": 2.626,
-     "similarity": 0.276
+     "distance": 2.705,
+     "similarity": 0.27
     },
     {
      "language": "Fang",
-     "distance": 3.121,
-     "similarity": 0.243
+     "distance": 3.246,
+     "similarity": 0.236
+    }
+   ],
+   "Kohistani Shina": [
+    {
+     "language": "Torwali",
+     "distance": 1.003,
+     "similarity": 0.499
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.727,
+     "similarity": 0.367
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.739,
+     "similarity": 0.365
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.862,
+     "similarity": 0.349
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.989,
+     "similarity": 0.335
+    },
+    {
+     "language": "Scottish English",
+     "distance": 2.16,
+     "similarity": 0.316
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.356,
+     "similarity": 0.298
+    },
+    {
+     "language": "Fang",
+     "distance": 2.825,
+     "similarity": 0.261
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 3.1,
+     "similarity": 0.244
+    }
+   ],
+   "Rioplatense Spanish": [
+    {
+     "language": "Tatar",
+     "distance": 0.751,
+     "similarity": 0.571
+    },
+    {
+     "language": "Scottish English",
+     "distance": 0.775,
+     "similarity": 0.563
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.026,
+     "similarity": 0.494
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.218,
+     "similarity": 0.451
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.534,
+     "similarity": 0.395
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.726,
+     "similarity": 0.367
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.727,
+     "similarity": 0.367
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.769,
+     "similarity": 0.361
+    },
+    {
+     "language": "Fang",
+     "distance": 2.35,
+     "similarity": 0.299
+    }
+   ],
+   "Scottish English": [
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.775,
+     "similarity": 0.563
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.216,
+     "similarity": 0.451
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.59,
+     "similarity": 0.386
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.722,
+     "similarity": 0.367
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.848,
+     "similarity": 0.351
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 2.039,
+     "similarity": 0.329
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.06,
+     "similarity": 0.327
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.16,
+     "similarity": 0.316
+    },
+    {
+     "language": "Fang",
+     "distance": 2.191,
+     "similarity": 0.313
     }
    ]
   },
@@ -682,225 +1420,471 @@
    "Tatar": [
     {
      "language": "Urdu",
-     "distance": 0.906,
-     "similarity": 0.525
+     "distance": 0.907,
+     "similarity": 0.524
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.975,
+     "similarity": 0.506
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.057,
+     "similarity": 0.486
     },
     {
      "language": "Bashkir",
-     "distance": 1.165,
+     "distance": 1.166,
      "similarity": 0.462
     },
     {
      "language": "Torwali",
-     "distance": 1.29,
+     "distance": 1.286,
      "similarity": 0.437
     },
     {
      "language": "Hazaragi",
-     "distance": 1.472,
-     "similarity": 0.404
+     "distance": 1.461,
+     "similarity": 0.406
     },
     {
      "language": "Ewondo",
-     "distance": 2.048,
-     "similarity": 0.328
+     "distance": 2.095,
+     "similarity": 0.323
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.819,
+     "similarity": 0.262
     },
     {
      "language": "Fang",
-     "distance": 2.836,
-     "similarity": 0.261
+     "distance": 2.948,
+     "similarity": 0.253
     }
    ],
    "Bashkir": [
     {
+     "language": "Rioplatense Spanish",
+     "distance": 1.009,
+     "similarity": 0.498
+    },
+    {
      "language": "Tatar",
-     "distance": 1.165,
+     "distance": 1.166,
      "similarity": 0.462
     },
     {
      "language": "Torwali",
-     "distance": 1.179,
-     "similarity": 0.459
+     "distance": 1.227,
+     "similarity": 0.449
     },
     {
      "language": "Urdu",
-     "distance": 1.323,
+     "distance": 1.318,
      "similarity": 0.431
     },
     {
-     "language": "Ewondo",
-     "distance": 1.499,
+     "language": "Scottish English",
+     "distance": 1.501,
      "similarity": 0.4
     },
     {
+     "language": "Ewondo",
+     "distance": 1.555,
+     "similarity": 0.391
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.229,
+     "similarity": 0.31
+    },
+    {
      "language": "Hazaragi",
-     "distance": 2.28,
-     "similarity": 0.305
+     "distance": 2.257,
+     "similarity": 0.307
     },
     {
      "language": "Fang",
-     "distance": 2.693,
-     "similarity": 0.271
+     "distance": 2.796,
+     "similarity": 0.263
     }
    ],
    "Fang": [
     {
      "language": "Ewondo",
-     "distance": 1.395,
-     "similarity": 0.418
+     "distance": 1.435,
+     "similarity": 0.411
+    },
+    {
+     "language": "Scottish English",
+     "distance": 2.417,
+     "similarity": 0.293
     },
     {
      "language": "Torwali",
-     "distance": 2.506,
-     "similarity": 0.285
+     "distance": 2.605,
+     "similarity": 0.277
     },
     {
-     "language": "Bashkir",
-     "distance": 2.693,
+     "language": "Rioplatense Spanish",
+     "distance": 2.695,
      "similarity": 0.271
     },
     {
+     "language": "Bashkir",
+     "distance": 2.796,
+     "similarity": 0.263
+    },
+    {
      "language": "Tatar",
-     "distance": 2.836,
-     "similarity": 0.261
+     "distance": 2.948,
+     "similarity": 0.253
     },
     {
      "language": "Urdu",
-     "distance": 2.856,
-     "similarity": 0.259
+     "distance": 2.958,
+     "similarity": 0.253
     },
     {
      "language": "Hazaragi",
-     "distance": 3.012,
-     "similarity": 0.249
+     "distance": 3.081,
+     "similarity": 0.245
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 3.287,
+     "similarity": 0.233
     }
    ],
    "Ewondo": [
     {
      "language": "Fang",
-     "distance": 1.395,
-     "similarity": 0.418
+     "distance": 1.435,
+     "similarity": 0.411
     },
     {
      "language": "Bashkir",
-     "distance": 1.499,
-     "similarity": 0.4
+     "distance": 1.555,
+     "similarity": 0.391
     },
     {
      "language": "Torwali",
-     "distance": 1.577,
-     "similarity": 0.388
+     "distance": 1.639,
+     "similarity": 0.379
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.675,
+     "similarity": 0.374
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.784,
+     "similarity": 0.359
     },
     {
      "language": "Tatar",
-     "distance": 2.048,
-     "similarity": 0.328
+     "distance": 2.095,
+     "similarity": 0.323
     },
     {
      "language": "Urdu",
-     "distance": 2.06,
-     "similarity": 0.327
+     "distance": 2.099,
+     "similarity": 0.323
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.39,
+     "similarity": 0.295
     },
     {
      "language": "Hazaragi",
-     "distance": 2.587,
+     "distance": 2.582,
      "similarity": 0.279
     }
    ],
    "Torwali": [
     {
+     "language": "Rioplatense Spanish",
+     "distance": 0.675,
+     "similarity": 0.597
+    },
+    {
      "language": "Bashkir",
-     "distance": 1.179,
-     "similarity": 0.459
+     "distance": 1.227,
+     "similarity": 0.449
     },
     {
      "language": "Tatar",
-     "distance": 1.29,
+     "distance": 1.286,
      "similarity": 0.437
     },
     {
+     "language": "Scottish English",
+     "distance": 1.305,
+     "similarity": 0.434
+    },
+    {
      "language": "Urdu",
-     "distance": 1.481,
-     "similarity": 0.403
+     "distance": 1.466,
+     "similarity": 0.405
     },
     {
      "language": "Ewondo",
-     "distance": 1.577,
-     "similarity": 0.388
+     "distance": 1.639,
+     "similarity": 0.379
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 1.816,
+     "similarity": 0.355
     },
     {
      "language": "Hazaragi",
-     "distance": 2.211,
-     "similarity": 0.311
+     "distance": 2.152,
+     "similarity": 0.317
     },
     {
      "language": "Fang",
-     "distance": 2.506,
-     "similarity": 0.285
+     "distance": 2.605,
+     "similarity": 0.277
     }
    ],
    "Hazaragi": [
     {
      "language": "Urdu",
-     "distance": 1.38,
+     "distance": 1.383,
      "similarity": 0.42
     },
     {
      "language": "Tatar",
-     "distance": 1.472,
-     "similarity": 0.404
+     "distance": 1.461,
+     "similarity": 0.406
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.953,
+     "similarity": 0.339
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.981,
+     "similarity": 0.335
     },
     {
      "language": "Torwali",
-     "distance": 2.211,
-     "similarity": 0.311
+     "distance": 2.152,
+     "similarity": 0.317
     },
     {
      "language": "Bashkir",
-     "distance": 2.28,
-     "similarity": 0.305
+     "distance": 2.257,
+     "similarity": 0.307
     },
     {
      "language": "Ewondo",
-     "distance": 2.587,
+     "distance": 2.582,
      "similarity": 0.279
     },
     {
      "language": "Fang",
-     "distance": 3.012,
-     "similarity": 0.249
+     "distance": 3.081,
+     "similarity": 0.245
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 3.836,
+     "similarity": 0.207
     }
    ],
    "Urdu": [
     {
      "language": "Tatar",
-     "distance": 0.906,
-     "similarity": 0.525
+     "distance": 0.907,
+     "similarity": 0.524
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 1.253,
+     "similarity": 0.444
     },
     {
      "language": "Bashkir",
-     "distance": 1.323,
+     "distance": 1.318,
      "similarity": 0.431
     },
     {
      "language": "Hazaragi",
-     "distance": 1.38,
+     "distance": 1.383,
      "similarity": 0.42
     },
     {
      "language": "Torwali",
-     "distance": 1.481,
-     "similarity": 0.403
+     "distance": 1.466,
+     "similarity": 0.405
+    },
+    {
+     "language": "Scottish English",
+     "distance": 1.618,
+     "similarity": 0.382
     },
     {
      "language": "Ewondo",
-     "distance": 2.06,
-     "similarity": 0.327
+     "distance": 2.099,
+     "similarity": 0.323
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.95,
+     "similarity": 0.253
     },
     {
      "language": "Fang",
-     "distance": 2.856,
-     "similarity": 0.259
+     "distance": 2.958,
+     "similarity": 0.253
+    }
+   ],
+   "Kohistani Shina": [
+    {
+     "language": "Torwali",
+     "distance": 1.816,
+     "similarity": 0.355
+    },
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 2.053,
+     "similarity": 0.328
+    },
+    {
+     "language": "Bashkir",
+     "distance": 2.229,
+     "similarity": 0.31
+    },
+    {
+     "language": "Ewondo",
+     "distance": 2.39,
+     "similarity": 0.295
+    },
+    {
+     "language": "Scottish English",
+     "distance": 2.634,
+     "similarity": 0.275
+    },
+    {
+     "language": "Tatar",
+     "distance": 2.819,
+     "similarity": 0.262
+    },
+    {
+     "language": "Urdu",
+     "distance": 2.95,
+     "similarity": 0.253
+    },
+    {
+     "language": "Fang",
+     "distance": 3.287,
+     "similarity": 0.233
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 3.836,
+     "similarity": 0.207
+    }
+   ],
+   "Rioplatense Spanish": [
+    {
+     "language": "Torwali",
+     "distance": 0.675,
+     "similarity": 0.597
+    },
+    {
+     "language": "Tatar",
+     "distance": 0.975,
+     "similarity": 0.506
+    },
+    {
+     "language": "Scottish English",
+     "distance": 0.978,
+     "similarity": 0.506
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.009,
+     "similarity": 0.498
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.253,
+     "similarity": 0.444
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.675,
+     "similarity": 0.374
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.981,
+     "similarity": 0.335
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.053,
+     "similarity": 0.328
+    },
+    {
+     "language": "Fang",
+     "distance": 2.695,
+     "similarity": 0.271
+    }
+   ],
+   "Scottish English": [
+    {
+     "language": "Rioplatense Spanish",
+     "distance": 0.978,
+     "similarity": 0.506
+    },
+    {
+     "language": "Tatar",
+     "distance": 1.057,
+     "similarity": 0.486
+    },
+    {
+     "language": "Torwali",
+     "distance": 1.305,
+     "similarity": 0.434
+    },
+    {
+     "language": "Bashkir",
+     "distance": 1.501,
+     "similarity": 0.4
+    },
+    {
+     "language": "Urdu",
+     "distance": 1.618,
+     "similarity": 0.382
+    },
+    {
+     "language": "Ewondo",
+     "distance": 1.784,
+     "similarity": 0.359
+    },
+    {
+     "language": "Hazaragi",
+     "distance": 1.953,
+     "similarity": 0.339
+    },
+    {
+     "language": "Fang",
+     "distance": 2.417,
+     "similarity": 0.293
+    },
+    {
+     "language": "Kohistani Shina",
+     "distance": 2.634,
+     "similarity": 0.275
     }
    ]
   }

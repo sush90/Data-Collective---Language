@@ -45,7 +45,7 @@ def main():
         ingest.ingest(src, 300, 20)
         import tarfile
         with tarfile.open(src, "r|gz") as tf:
-            code = next(m.name.split("/")[-2] for m in tf if m.name.endswith("validated.tsv"))
+            code = next(m.name.split("/")[-2] for m in tf if m.name.endswith(".tsv"))
     elif os.path.dirname(src.rstrip("/")) == data_dir:
         code = os.path.basename(src.rstrip("/"))
     else:

@@ -135,11 +135,15 @@ const VoiceView = {
         <div class="nb-sub"><span>share of your ${PC.data.map.views[`${PC.state.space}_clips`].k} nearest clips (weighted by closeness)</span>
         <button class="btn small secondary" data-play="${li}">&#9654; Play a clip</button></div></li>`).join("")}</ol>
       <p class="hint">This compares only rhythm and melody with ${PC.data.languages.languages.length} languages in the map. If your language is not among them, it shows which of these your cadence resembles most.${noiseNote}</p>
-      <div class="controls"><a class="btn" href="#map">See yourself on the map</a> <audio controls src="${url}"></audio></div>
+      <div class="controls"><a class="btn" href="#map" id="voice-see">See yourself on the sound map</a> <audio controls src="${url}"></audio></div>
       <h3>Your melody</h3><div class="contour" id="voice-contour"></div>`;
     document.querySelectorAll("#voice-result [data-play]").forEach(b => b.addEventListener("click", () => Player.play(PC.randomClipOf(+b.dataset.play))));
+    document.getElementById("voice-see").addEventListener("click", () => {
+      PC.state.mode = "sound";
+      if (MapView.svg) MapView.setMode("sound");
+    });
     drawContour(document.getElementById("voice-contour"), c, "var(--ink)").full();
-    this.setStatus("Done. Your star is now on the Cadence Map.");
+    this.setStatus("Done. Your star is now on the sound map.");
   },
 };
 window.VoiceView = VoiceView;

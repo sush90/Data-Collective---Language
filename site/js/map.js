@@ -1,16 +1,25 @@
-// Cadence Map: neighbours panel first, scatter map second.
+// Map tab: neighbours panel, plus two views of the languages: the world map (where each
+// is spoken, js/world.js) and the sound map (every clip placed by its prosody).
 const MapView = {
   init() {
     const langs = PC.data.languages.languages;
     const sel = document.getElementById("lang-select");
     sel.innerHTML = langs.map((l, i) => `<option value="${i}">${PC.esc(l.name)} (${PC.esc(l.family)})</option>`).join("");
-    sel.addEventListener("change", () => { PC.state.lang = +sel.value; this.renderSide(); this.highlight(); });
+    sel.addEventListener("change", () => {
+      PC.state.lang = +sel.value;
+      this.renderSide();
+      this.highlight();
+      WorldView.render();
+      if (WorldView.card && !WorldView.card.hidden) WorldView.openCard(PC.state.lang);
+    });
     document.querySelectorAll(".map-area .seg button").forEach(b => b.addEventListener("click", () => {
       const key = Object.keys(b.dataset)[0];
+      if (key === "mode") return this.setMode(b.dataset.mode);
       PC.state[key] = b.dataset[key];
       b.parentElement.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b));
       this.renderSide();
       this.renderMap();
+      WorldView.render();
     }));
     document.getElementById("play-self").addEventListener("click", () => Player.play(PC.randomClipOf(PC.state.lang)));
     document.getElementById("audio-note").textContent = (window.PC_CONFIG && PC_CONFIG.audio)
@@ -19,10 +28,24 @@ const MapView = {
     this.buildSvg();
     this.renderSide();
     this.renderMap();
-    window.addEventListener("resize", () => this.renderMap());
+    WorldView.init().catch(e => {
+      document.getElementById("world").innerHTML = `<p class="error" style="padding:1rem">Could not load the world map (${PC.esc(e.message)}).</p>`;
+    });
+    window.addEventListener("resize", () => { this.renderMap(); WorldView.render(); });
+    this.setMode(PC.state.mode);
     PC.on("play", cur => this.showNowPlaying(cur));
     PC.on("tick", cur => this.np && this.np.at(cur.t));
     PC.on("userpoint", () => this.renderMap());
+  },
+
+  setMode(mode) {
+    PC.state.mode = mode;
+    document.querySelectorAll('.map-area [data-mode]').forEach(x => x.classList.toggle("on", x.dataset.mode === mode));
+    document.getElementById("world").hidden = mode !== "world";
+    document.getElementById("map").hidden = mode !== "sound";
+    if (mode !== "world") WorldView.closeCard();
+    this.renderSide();
+    if (mode === "world") WorldView.render(); else this.renderMap();
   },
 
   renderSide() {
@@ -52,8 +75,10 @@ const MapView = {
       ? "Rhythm only: the part of each feature that background noise can predict has been removed, so the map reflects speech rather than microphones."
       : "Raw: features as measured. Recording conditions (microphones, rooms) also shape this view.";
     const level = PC.state.level === "clips" ? "Each point is one clip." : "Each point is one speaker, averaged over 5 clips.";
-    document.getElementById("map-caption").textContent =
-      `${level} ${space} Nearby points have similar rhythm and melody. Hover to see the language, click to listen, scroll or pinch to zoom.`;
+    const nbBasis = PC.state.level === "clips" ? "single clips" : "speaker averages";
+    document.getElementById("map-caption").textContent = PC.state.mode === "sound"
+      ? `${level} ${space} Nearby points have similar rhythm and melody. Hover to see the language, click to listen, scroll or pinch to zoom.`
+      : `Each dot marks where a language is spoken; shaded countries show where the chosen language is used. Dashed lines join it to its 3 closest rhythmic neighbors (thicker = closer), measured on ${nbBasis}. Click a dot to read about the language, scroll or pinch to zoom.`;
   },
 
   buildSvg() {
@@ -75,6 +100,8 @@ const MapView = {
   renderMap() {
     const el = document.getElementById("map");
     const w = el.clientWidth, h = el.clientHeight;
+    this.renderLegend();
+    if (!w || !h) return;  // sound map hidden
     this.svg.attr("viewBox", `0 0 ${w} ${h}`);
     const view = PC.data.map.views[PC.viewKey()];
     const lvl = PC.state.level;
@@ -113,10 +140,9 @@ const MapView = {
     this.renderLegend();
   },
 
+  // Colour = family; marker shape tells languages of one family apart.
   colorPoints() {
-    const langs = PC.data.languages.languages;
-    this.g.selectAll(".pt").attr("fill", d => PC.state.color === "family"
-      ? PC.familyColor(langs[d.li].family) : PC.langColor(d.li));
+    this.g.selectAll(".pt").attr("fill", d => PC.langColor(d.li));
   },
 
   highlight() {
@@ -132,11 +158,13 @@ const MapView = {
 
   renderLegend() {
     const langs = PC.data.languages.languages;
-    const html = PC.state.color === "family"
-      ? PC.data.languages.families.map(f => `<span><span class="swatch" style="background:${PC.familyColor(f.name)};border-radius:3px"></span>${PC.esc(f.name)}</span>`).join("")
-      : langs.map((l, i) => `<span>${PC.swatchSVG(i)} ${PC.esc(l.name)}</span>`).join("");
-    document.getElementById("legend").innerHTML = html +
-      `<span style="color:var(--muted)">Bright: the chosen language and its nearest neighbor. Faded: the rest.</span>`;
+    const html = PC.data.languages.families.map(f =>
+      `<span class="lg-fam"><b>${PC.esc(f.name)}</b>${langs.map((l, i) => l.family === f.name
+        ? `<span>${PC.swatchSVG(i)} ${PC.esc(l.name)}</span>` : "").join("")}</span>`).join("");
+    const note = PC.state.mode === "sound"
+      ? "Colour shows the language family; shape tells its languages apart. Bright: the chosen language and its nearest neighbor. Faded: the rest."
+      : "Colour shows the language family; shape tells its languages apart.";
+    document.getElementById("legend").innerHTML = html + `<span class="lg-note">${note}</span>`;
   },
 
   tip(e, d) {
