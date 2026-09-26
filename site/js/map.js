@@ -78,7 +78,7 @@ const MapView = {
     const nbBasis = PC.state.level === "clips" ? "single clips" : "speaker averages";
     document.getElementById("map-caption").textContent = PC.state.mode === "sound"
       ? `${level} ${space} Nearby points have similar rhythm and melody. Hover to see the language, click to listen, scroll or pinch to zoom.`
-      : `Each dot marks where a language is spoken; shaded countries show where the chosen language is used. Dashed lines join it to its 3 closest rhythmic neighbors (thicker = closer), measured on ${nbBasis}. Click a dot to read about the language, scroll or pinch to zoom.`;
+      : `Each dot marks where a language is spoken; shaded countries show where the chosen language is used. Dashed lines join it to its 3 closest rhythmic neighbors (thicker = closer), measured on ${nbBasis}. Click a dot to read about the language. To zoom, pinch, hold Ctrl (⌘ on Mac) and scroll, or use the + and − buttons.`;
   },
 
   buildSvg() {

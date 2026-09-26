@@ -129,6 +129,9 @@ main { padding: 1.25rem 1.5rem 2rem; max-width: 1500px; margin: 0 auto; }
 .world .w-label { font-size: 13px; font-weight: 600; fill: var(--ink-2); paint-order: stroke; stroke: var(--surface); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
 .world .w-dot.sel .w-label, .world .w-dot.nb .w-label { fill: var(--ink); font-weight: 700; }
 .world-wrap { position: relative; }
+.w-hint { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--ink); color: var(--surface);
+  padding: .5rem .9rem; border-radius: 8px; font-size: .9rem; font-weight: 600; pointer-events: none; opacity: .92; }
+.w-reset { position: absolute; right: .6rem; bottom: .6rem; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
 .w-card.right { left: auto; right: 3.4rem; }
 .w-card { position: absolute; left: .6rem; top: .6rem; width: min(360px, calc(100% - 1.2rem)); max-height: calc(100% - 1.2rem); overflow-y: auto;
   background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: .8rem .9rem; box-shadow: 0 4px 16px rgba(0,0,0,.15); font-size: .88rem; }

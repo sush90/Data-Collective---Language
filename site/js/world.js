@@ -20,12 +20,27 @@ const WorldView = {
     this.gMap.append("path").attr("class", "w-borders");
     this.gMap.append("g").attr("class", "w-arcs");
 
-    this.zoom = d3.zoom().scaleExtent([1, 40]).on("zoom", e => {
-      this.t = e.transform;
-      this.gMap.attr("transform", this.t);
-      this.drawDots();
-    });
+    // Plain mouse-wheel scrolling scrolls the page; zooming needs Ctrl/Cmd + scroll
+    // (a trackpad pinch sends ctrlKey), a touch pinch, or the buttons.
+    this.zoom = d3.zoom().scaleExtent([1, 12])
+      .filter(e => e.type === "wheel" ? (e.ctrlKey || e.metaKey) : (!e.ctrlKey && !e.button))
+      .on("zoom", e => {
+        this.t = e.transform;
+        this.gMap.attr("transform", this.t);
+        this.drawDots();
+        this.resetBtn.hidden = this.t.k <= this.fitK * 1.05;
+      });
     this.svg.call(this.zoom).on("dblclick.zoom", null);
+    this.hint = d3.select(el).append("div").attr("class", "w-hint").attr("hidden", true)
+      .text(`Hold ${/Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Ctrl"} and scroll to zoom the map`).node();
+    this.svg.on("wheel.hint", e => {
+      if (e.ctrlKey || e.metaKey) return;
+      this.hint.hidden = false;
+      clearTimeout(this.hintTimer);
+      this.hintTimer = setTimeout(() => (this.hint.hidden = true), 1500);
+    });
+    this.resetBtn = d3.select(el).append("button").attr("class", "btn small w-reset").attr("hidden", true)
+      .text("Show whole world").on("click", () => this.fitAll(true)).node();
     this.svg.on("click", e => { if (e.target === this.svg.node() || e.target.closest(".w-countries, .w-sphere")) this.closeCard(); });
     const zb = d3.select(el).append("div").attr("class", "zoom-btns");
     zb.append("button").attr("aria-label", "Zoom in").text("+").on("click", () => this.svg.transition().call(this.zoom.scaleBy, 1.6));
@@ -39,6 +54,7 @@ const WorldView = {
     wrap.appendChild(el);
     this.card = d3.select(wrap).append("div").attr("class", "w-card").attr("hidden", true).node();
     this.t = d3.zoomIdentity;
+    this.fitK = 1;
     this.ready = true;
     this.render(true);
   },
@@ -77,6 +93,7 @@ const WorldView = {
     const pad = 70;
     const k = Math.max(1, Math.min(8, 0.95 / Math.max((x1 - x0 + 2 * pad) / this.w, (y1 - y0 + 2 * pad) / this.h)));
     const t = d3.zoomIdentity.translate(this.w / 2, this.h / 2).scale(k).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+    this.fitK = k;
     (animate ? this.svg.transition().duration(600) : this.svg).call(this.zoom.transform, t);
   },
 
