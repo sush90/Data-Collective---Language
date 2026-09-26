@@ -11,3 +11,30 @@ outputs/analysis_log.txt
 .tools/
 site_local/
 .netlify/
+
+# Secrets (keep the template)
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+env/
+.python-version
+
+# Audio — never commit (Mozilla Data Collective terms forbid re-hosting)
+*.wav
+*.mp3
+*.ogg
+*.oga
+*.opus
+*.flac
+*.m4a
+*.aac
+*.aif
+*.aiff
+*.webm
+*.wma
+*.amr
+
+# OS cruft
+.DS_Store
