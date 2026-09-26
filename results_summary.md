@@ -92,6 +92,12 @@ alone, so this result is not interpretable.
   centroids in the standardized 15-feature space (each speaker counts once).
   Similarity shown on the site is 1 / (1 + distance). Stability by bootstrap
   over speakers (500 resamples).
+* **Noise features** use only 0 to 7 kHz of the noise spectrum. Resamplers
+  differ near the 8 kHz Nyquist limit: with the full range, noise flatness
+  from the browser's decode-and-resample path differed from librosa's by up
+  to 0.9 standard deviations on the same file, which shifted every live
+  recording's noise-controlled fingerprint. With the 7 kHz limit, 8 of 10
+  test speakers get the same top three in the browser as in Python.
 * **Noise control:** each prosody feature has the part predictable from the
   16 background-noise features removed by linear regression (never using
   language labels). The website map uses these noise-controlled features by
@@ -100,6 +106,16 @@ alone, so this result is not interpretable.
   recordings by weighted k-nearest-neighbour averaging (k = 15) of exported
   positions; leave-one-out placement error is 10% of the map's average spread
   for clips and 18% for speaker averages.
+* **Try Your Voice:** the visitor reads 3 sentences of about 5 seconds.
+  For each, the 15 nearest dataset clips vote (weighted by 1 / distance),
+  each language's vote is divided by its share of the clips so that
+  languages with more clips do not win by default, and the 3 results are
+  averaged. In a speaker-disjoint test on the dataset (GroupKFold by
+  speaker), this puts the right language first 40% of the time and in the
+  top 3 72% of the time, against 30% and 60% for the previous method (one
+  clip, unadjusted votes). Rioplatense Spanish stays hard to recognise
+  (first 15%, top 3 69%); logistic regression and nearest-centroid scoring
+  were also tested and were no better overall and worse for Spanish.
 * **World map:** each language is drawn at a representative point of its
   speaking area (hand-entered in `languages.yaml` with the countries where it
   is spoken, a short description and a rough speaker estimate). Lines join the
@@ -165,16 +181,16 @@ Noise-controlled ("Rhythm only", the site default), similarity scores:
 
 | Language | Clips: 1st, 2nd | Speaker averages: 1st, 2nd |
 |---|---|---|
-| Tatar | Bashkir 0.60, Rioplatense Spanish 0.57 | Urdu 0.53, Bashkir 0.51 |
-| Bashkir | Tatar 0.60, Urdu 0.54 | Tatar 0.51, Rioplatense Spanish 0.50 |
-| Fang | Ewondo 0.48, Rioplatense Spanish 0.42 | Ewondo 0.52, Torwali 0.40 |
-| Ewondo | Rioplatense Spanish 0.49, Fang 0.48 | Fang 0.52, Rioplatense Spanish 0.48 |
-| Torwali | Rioplatense Spanish 0.52, Tatar 0.51 | Rioplatense Spanish 0.59, Scottish English 0.48 |
-| Hazaragi | Tatar 0.41, Urdu 0.40 | Urdu 0.43, Tatar 0.41 |
-| Urdu | Bashkir 0.54, Tatar 0.51 | Tatar 0.53, Bashkir 0.48 |
-| Kohistani Shina | Torwali 0.49, Ewondo 0.41 | Torwali 0.37, Rioplatense Spanish 0.36 |
-| Rioplatense Spanish | Scottish English 0.63, Tatar 0.57 | Torwali 0.59, Scottish English 0.56 |
-| Scottish English | Rioplatense Spanish 0.63, Tatar 0.47 | Rioplatense Spanish 0.56, Tatar 0.50 |
+| Tatar | Bashkir 0.60, Rioplatense Spanish 0.56 | Urdu 0.53, Bashkir 0.51 |
+| Bashkir | Tatar 0.60, Urdu 0.55 | Tatar 0.51, Rioplatense Spanish 0.50 |
+| Fang | Ewondo 0.49, Rioplatense Spanish 0.43 | Ewondo 0.53, Torwali 0.40 |
+| Ewondo | Fang 0.49, Rioplatense Spanish 0.49 | Fang 0.53, Rioplatense Spanish 0.47 |
+| Torwali | Rioplatense Spanish 0.52, Tatar 0.52 | Rioplatense Spanish 0.59, Scottish English 0.48 |
+| Hazaragi | Tatar 0.40, Urdu 0.40 | Urdu 0.43, Tatar 0.41 |
+| Urdu | Bashkir 0.55, Tatar 0.52 | Tatar 0.53, Bashkir 0.49 |
+| Kohistani Shina | Torwali 0.48, Ewondo 0.40 | Torwali 0.37, Rioplatense Spanish 0.35 |
+| Rioplatense Spanish | Scottish English 0.63, Tatar 0.56 | Torwali 0.59, Scottish English 0.56 |
+| Scottish English | Rioplatense Spanish 0.63, Tatar 0.46 | Rioplatense Spanish 0.56, Tatar 0.50 |
 
 **Rioplatense Spanish as a hub.** Spanish is the nearest neighbour of 1 to 3
 other languages depending on the view. With 285 speakers recorded on many
@@ -223,13 +239,13 @@ With 10 languages, a given language is another's single nearest by chance
 | Tatar-Bashkir | Speaker averages | FAIL | FAIL (Tatar's nearest is Urdu) | 14% | 2% |
 | Fang-Ewondo | Speaker averages | PASS | PASS | 60% | 46% |
 | Torwali-Kohistani Shina | Speaker averages | FAIL | FAIL (Torwali's nearest is Spanish) | 1% | 0% |
-| Tatar-Bashkir | Noise-controlled clips | PASS | PASS | 92% | 60% |
-| Fang-Ewondo | Noise-controlled clips | PASS | FAIL (Ewondo's nearest is Spanish) | 49% | 23% |
-| Torwali-Kohistani Shina | Noise-controlled clips | FAIL | FAIL (Torwali's nearest is Spanish) | 21% | 13% |
+| Tatar-Bashkir | Noise-controlled clips | PASS | PASS | 91% | 58% |
+| Fang-Ewondo | Noise-controlled clips | PASS | PASS | 65% | 35% |
+| Torwali-Kohistani Shina | Noise-controlled clips | FAIL | FAIL (Torwali's nearest is Spanish) | 19% | 11% |
 
-All three pairs pass at the clip level. Speaker averages weaken the Turkic
-and Dardic pairs, as before; adding Spanish pulls several languages toward
-the centre.
+All three pairs pass at the clip level, and the Turkic and Bantu pairs also
+pass after the noise control. Speaker averages weaken the Turkic and Dardic
+pairs, as before; adding Spanish pulls several languages toward the centre.
 
 ## 5. Held-out sibling and family tests
 
@@ -262,10 +278,10 @@ leading and trailing silence):
 | Features | Balanced accuracy (random forest, clips) |
 |---|---|
 | Prosody (same 2,434 clips) | 40.2% |
-| **Background noise only** | **34.7%** |
-| Prosody with everything noise can predict removed | 37.2% |
+| **Background noise only** | **35.3%** |
+| Prosody with everything noise can predict removed | 37.0% |
 | Prosody without pause, silence and loudness-spread features | 36.6% |
-| Prosody plus noise | 47.0% |
+| Prosody plus noise | 47.2% |
 | Chance | 10.0% |
 
 **Flag: recording conditions are a strong confound.** Each language was
@@ -276,8 +292,8 @@ rooms, so language and recording setup are tangled together.
   of silence, 0.25 for loudness spread, 0.24 for pause rate, 0.16 for pause
   length) and almost none of the pitch features (R² at most 0.02).
 * With the noise-predictable part removed, prosody still separates languages
-  at almost 4 times chance (37.2%), and prosody plus noise (47.0%) beats noise
-  alone (34.7%), so prosody carries information the recording setup does not.
+  at almost 4 times chance (37.0%), and prosody plus noise (47.2%) beats noise
+  alone (35.3%), so prosody carries information the recording setup does not.
 * **Spanish and English are the closest pair of all on noise alone**
   (distance 0.59). Both come from the same Common Voice 26.0 regional
   releases, recorded by many contributors on similar equipment. Their

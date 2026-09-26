@@ -223,12 +223,14 @@
       }
     }
     for (let f = 0; f < nb; f++) p[f] /= silIdx.length;
-    const freqs = Array.from({ length: nb }, (_, f) => f * SR / WIN);
+    // Only the bins up to 7 kHz (the mel matrix's width), as in silence.py: resamplers differ above that.
+    const nk = mel[0].length;
+    const freqs = Array.from({ length: nk }, (_, f) => f * SR / WIN);
     let tot = 0, cen = 0, logm = 0;
-    for (let f = 0; f < nb; f++) { tot += p[f]; cen += freqs[f] * p[f]; logm += Math.log(p[f]); }
-    let cum = 0, roll = freqs[nb - 1];
-    for (let f = 0; f < nb; f++) { cum += p[f]; if (cum / tot >= 0.95) { roll = freqs[f]; break; } }
-    const bands = mel.map(row => { let s = 0; for (let f = 0; f < nb; f++) s += row[f] * p[f]; return 10 * Math.log10(s + 1e-12); });
+    for (let f = 0; f < nk; f++) { tot += p[f]; cen += freqs[f] * p[f]; logm += Math.log(p[f]); }
+    let cum = 0, roll = freqs[nk - 1];
+    for (let f = 0; f < nk; f++) { cum += p[f]; if (cum / tot >= 0.95) { roll = freqs[f]; break; } }
+    const bands = mel.map(row => { let s = 0; for (let f = 0; f < nk; f++) s += row[f] * p[f]; return 10 * Math.log10(s + 1e-12); });
     const bm = mean(bands);
     const sdb = silIdx.map(i => db[i]);
     const out = {
@@ -236,7 +238,7 @@
       lead_sil_s: loud.length ? loud[0] * HOP / SR : 0,
       trail_sil_s: loud.length ? (n - 1 - loud[loud.length - 1]) * HOP / SR : 0,
       sil_frac: silIdx.length / n,
-      noise_flatness: Math.exp(logm / nb) / (tot / nb),
+      noise_flatness: Math.exp(logm / nk) / (tot / nk),
       noise_centroid_hz: cen / tot, noise_rolloff_hz: roll,
     };
     bands.forEach((v, k) => (out[`noise_band${k}`] = v - bm));

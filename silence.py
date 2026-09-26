@@ -27,6 +27,18 @@ def silence_features(path):
     return silence_features_array(y)
 
 
+# Noise-spectrum features use only 0 to 7 kHz. Resamplers (librosa's soxr vs the browser's)
+# disagree near the 8 kHz Nyquist limit, which made the browser's noise features, and so the
+# noise-controlled fingerprint of live recordings, drift from the dataset's.
+NOISE_FMAX = 7000
+
+
+def noise_mel():
+    """8 mel bands up to NOISE_FMAX, restricted to the FFT bins at or below it."""
+    freqs = np.fft.rfftfreq(prosody.WIN, 1 / prosody.SR)
+    return librosa.filters.mel(sr=prosody.SR, n_fft=prosody.WIN, n_mels=8, fmax=NOISE_FMAX)[:, freqs <= NOISE_FMAX]
+
+
 def silence_features_array(y):
     y = np.asarray(y, dtype=np.float64)
     x = y - y.mean()
@@ -41,10 +53,11 @@ def silence_features_array(y):
     frames = np.stack([x[i * prosody.HOP: i * prosody.HOP + prosody.WIN] for i in np.where(sil)[0]])
     spec = np.abs(np.fft.rfft(frames * np.hanning(prosody.WIN), axis=1)) ** 2 + 1e-12
     freqs = np.fft.rfftfreq(prosody.WIN, 1 / prosody.SR)
-    p = spec.mean(axis=0)
+    keep = freqs <= NOISE_FMAX
+    freqs = freqs[keep]
+    p = spec.mean(axis=0)[keep]
     cum = np.cumsum(p) / p.sum()
-    mel = librosa.filters.mel(sr=prosody.SR, n_fft=prosody.WIN, n_mels=8)
-    bands = 10 * np.log10(mel @ p + 1e-12)
+    bands = 10 * np.log10(noise_mel() @ p + 1e-12)
     return {
         "noise_db_mean": float(db[sil].mean()),     # absolute dBFS: mic gain and room noise
         "noise_db_sd": float(db[sil].std()),

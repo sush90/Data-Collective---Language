@@ -191,7 +191,7 @@ json.dump({"clips": {"lang": clip_lang, "ref": [clip_id[(r.language, r.path)] fo
           open(os.path.join(DATA, "map.json"), "w"), separators=(",", ":"))
 json.dump({"clips": clip_table, "contours": cons}, open(os.path.join(DATA, "contours.json"), "w"),
           separators=(",", ":"))
-mel = librosa.filters.mel(sr=prosody.SR, n_fft=prosody.WIN, n_mels=8)
+mel = silence.noise_mel()  # its width tells the browser how many FFT bins (0 to 7 kHz) to use
 json.dump({"features": F, "p_mean": pscaler.mean_.tolist(), "p_scale": pscaler.scale_.tolist(),
            "sil_features": S, "s_mean": sscaler.mean_.tolist(), "s_scale": sscaler.scale_.tolist(),
            "reg_coef": reg.coef_.round(6).tolist(), "reg_intercept": reg.intercept_.round(6).tolist(),

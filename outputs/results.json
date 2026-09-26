@@ -2192,18 +2192,18 @@
   "chance_majority": 0.12037797863599015,
   "chance_balanced": 0.1,
   "logistic_regression": {
-   "accuracy": 0.32046014790468363,
-   "balanced_accuracy": 0.3396843831514264,
-   "shuffled_accuracy_mean": 0.0794987674609696,
-   "shuffled_balanced_mean": 0.09967020549020512,
-   "shuffled_balanced_max": 0.12807226891429102
+   "accuracy": 0.3052588331963845,
+   "balanced_accuracy": 0.3244127286070489,
+   "shuffled_accuracy_mean": 0.0781429745275267,
+   "shuffled_balanced_mean": 0.10113274094282172,
+   "shuffled_balanced_max": 0.14488946540556902
   },
   "random_forest": {
-   "accuracy": 0.34141331142152836,
-   "balanced_accuracy": 0.3472962172503221,
-   "shuffled_accuracy_mean": 0.1672555464256368,
-   "shuffled_balanced_mean": 0.0956307157212126,
-   "shuffled_balanced_max": 0.11534042230845035
+   "accuracy": 0.3442892358258012,
+   "balanced_accuracy": 0.35319408488802473,
+   "shuffled_accuracy_mean": 0.16606409202958095,
+   "shuffled_balanced_mean": 0.09441041766409894,
+   "shuffled_balanced_max": 0.10164037996830304
   }
  },
  "prosody_on_silence_subset": {
@@ -2258,39 +2258,39 @@
  },
  "confound_flag": true,
  "residual_r2_by_feature": {
-  "f0_sd": 0.007186560649996565,
-  "f0_range": 0.009730638505910494,
-  "f0_slope": 0.016619894020632797,
-  "f0_reversal_rate": -0.0129255602502234,
-  "f0_final_slope": -0.007109202875551279,
-  "int_sd": 0.2472899483245471,
-  "int_peak_rate": 0.10111430656353793,
-  "npvi_nuclei": -0.002899550615447666,
-  "pct_voiced": 0.0951600486337969,
-  "voiced_cv": 0.023320899343672874,
-  "unvoiced_cv": 0.020317406071203248,
-  "nuclei_rate": 0.07134170486629066,
-  "pause_rate": 0.23688112313338394,
-  "pause_mean": 0.1616872056582439,
-  "silence_prop": 0.4375618234887618
+  "f0_sd": 0.007533716325184958,
+  "f0_range": 0.010861708680218185,
+  "f0_slope": 0.01528521252029813,
+  "f0_reversal_rate": -0.00430684346247423,
+  "f0_final_slope": -0.007609501668528251,
+  "int_sd": 0.2507497147608049,
+  "int_peak_rate": 0.10507282495413217,
+  "npvi_nuclei": 0.00010714737449113443,
+  "pct_voiced": 0.10101283674801187,
+  "voiced_cv": 0.025516258348958987,
+  "unvoiced_cv": 0.02616380059333956,
+  "nuclei_rate": 0.07292165131553363,
+  "pause_rate": 0.23670174528359544,
+  "pause_mean": 0.16069622548601026,
+  "silence_prop": 0.43817798497084426
  },
  "prosody_residual_classifier": {
   "n": 2434,
   "chance_majority": 0.12037797863599015,
   "chance_balanced": 0.1,
   "logistic_regression": {
-   "accuracy": 0.29868529170090385,
-   "balanced_accuracy": 0.33724558166719687,
-   "shuffled_accuracy_mean": 0.07982744453574363,
-   "shuffled_balanced_mean": 0.09800695307190238,
-   "shuffled_balanced_max": 0.12348939260874392
+   "accuracy": 0.30238290879211177,
+   "balanced_accuracy": 0.3410230669866282,
+   "shuffled_accuracy_mean": 0.07945768282662284,
+   "shuffled_balanced_mean": 0.09797304284576094,
+   "shuffled_balanced_max": 0.11988705279519318
   },
   "random_forest": {
-   "accuracy": 0.3447000821692687,
-   "balanced_accuracy": 0.37196708486158997,
-   "shuffled_accuracy_mean": 0.1653656532456861,
-   "shuffled_balanced_mean": 0.09628538173030685,
-   "shuffled_balanced_max": 0.10792151656428409
+   "accuracy": 0.3422350041084634,
+   "balanced_accuracy": 0.3700232938477269,
+   "shuffled_accuracy_mean": 0.16380443714050943,
+   "shuffled_balanced_mean": 0.09548487957534499,
+   "shuffled_balanced_max": 0.10731856973077325
   }
  },
  "prosody_plus_silence_classifier": {
@@ -2298,139 +2298,139 @@
   "chance_majority": 0.12037797863599015,
   "chance_balanced": 0.1,
   "logistic_regression": {
-   "accuracy": 0.4293344289235826,
-   "balanced_accuracy": 0.45617330239830334,
-   "shuffled_accuracy_mean": 0.09815119145439606,
-   "shuffled_balanced_mean": 0.09567386647832771,
-   "shuffled_balanced_max": 0.12157633518001268
+   "accuracy": 0.4227608874281019,
+   "balanced_accuracy": 0.4499679529751511,
+   "shuffled_accuracy_mean": 0.0994658997534922,
+   "shuffled_balanced_mean": 0.09990355020782217,
+   "shuffled_balanced_max": 0.12260550100728122
   },
   "random_forest": {
-   "accuracy": 0.45439605587510273,
-   "balanced_accuracy": 0.4703058769484817,
-   "shuffled_accuracy_mean": 0.17432210353327854,
-   "shuffled_balanced_mean": 0.09695835586636169,
-   "shuffled_balanced_max": 0.10760099536603929
+   "accuracy": 0.45480690221857023,
+   "balanced_accuracy": 0.47203095541807727,
+   "shuffled_accuracy_mean": 0.1723089564502876,
+   "shuffled_balanced_mean": 0.09578882771442135,
+   "shuffled_balanced_max": 0.10364998825636682
   }
  },
  "centroid_distances_residual": {
   "Tatar": {
    "Tatar": 0.0,
-   "Bashkir": 0.6578,
-   "Fang": 1.7614,
-   "Ewondo": 1.3718,
-   "Torwali": 0.9503,
-   "Hazaragi": 1.5373,
-   "Urdu": 0.9439,
-   "Kohistani Shina": 1.877,
-   "Rioplatense Spanish": 0.7653,
-   "Scottish English": 1.1543
+   "Bashkir": 0.6679,
+   "Fang": 1.7652,
+   "Ewondo": 1.4201,
+   "Torwali": 0.9429,
+   "Hazaragi": 1.5537,
+   "Urdu": 0.9264,
+   "Kohistani Shina": 1.9057,
+   "Rioplatense Spanish": 0.7914,
+   "Scottish English": 1.1797
   },
   "Bashkir": {
-   "Tatar": 0.6578,
+   "Tatar": 0.6679,
    "Bashkir": 0.0,
-   "Fang": 2.2492,
-   "Ewondo": 1.7597,
-   "Torwali": 1.1578,
-   "Hazaragi": 1.9856,
-   "Urdu": 0.842,
-   "Kohistani Shina": 1.9158,
-   "Rioplatense Spanish": 1.3049,
-   "Scottish English": 1.6649
+   "Fang": 2.2641,
+   "Ewondo": 1.8444,
+   "Torwali": 1.1654,
+   "Hazaragi": 2.0122,
+   "Urdu": 0.8259,
+   "Kohistani Shina": 1.9671,
+   "Rioplatense Spanish": 1.3477,
+   "Scottish English": 1.7124
   },
   "Fang": {
-   "Tatar": 1.7614,
-   "Bashkir": 2.2492,
+   "Tatar": 1.7652,
+   "Bashkir": 2.2641,
    "Fang": 0.0,
-   "Ewondo": 1.1139,
-   "Torwali": 1.6304,
-   "Hazaragi": 1.7037,
-   "Urdu": 2.2616,
-   "Kohistani Shina": 2.1921,
-   "Rioplatense Spanish": 1.4209,
-   "Scottish English": 1.5467
+   "Ewondo": 1.0549,
+   "Torwali": 1.6363,
+   "Hazaragi": 1.7287,
+   "Urdu": 2.2625,
+   "Kohistani Shina": 2.1754,
+   "Rioplatense Spanish": 1.4001,
+   "Scottish English": 1.5042
   },
   "Ewondo": {
-   "Tatar": 1.3718,
-   "Bashkir": 1.7597,
-   "Fang": 1.1139,
+   "Tatar": 1.4201,
+   "Bashkir": 1.8444,
+   "Fang": 1.0549,
    "Ewondo": 0.0,
-   "Torwali": 1.1285,
-   "Hazaragi": 2.0035,
-   "Urdu": 2.0858,
-   "Kohistani Shina": 1.5204,
-   "Rioplatense Spanish": 1.0676,
-   "Scottish English": 1.4921
+   "Torwali": 1.18,
+   "Hazaragi": 2.007,
+   "Urdu": 2.1225,
+   "Kohistani Shina": 1.5689,
+   "Rioplatense Spanish": 1.0817,
+   "Scottish English": 1.4878
   },
   "Torwali": {
-   "Tatar": 0.9503,
-   "Bashkir": 1.1578,
-   "Fang": 1.6304,
-   "Ewondo": 1.1285,
+   "Tatar": 0.9429,
+   "Bashkir": 1.1654,
+   "Fang": 1.6363,
+   "Ewondo": 1.18,
    "Torwali": 0.0,
-   "Hazaragi": 2.0623,
-   "Urdu": 1.5348,
-   "Kohistani Shina": 1.1568,
-   "Rioplatense Spanish": 0.9245,
-   "Scottish English": 1.3096
+   "Hazaragi": 2.0888,
+   "Urdu": 1.5399,
+   "Kohistani Shina": 1.1741,
+   "Rioplatense Spanish": 0.9235,
+   "Scottish English": 1.3106
   },
   "Hazaragi": {
-   "Tatar": 1.5373,
-   "Bashkir": 1.9856,
-   "Fang": 1.7037,
-   "Ewondo": 2.0035,
-   "Torwali": 2.0623,
+   "Tatar": 1.5537,
+   "Bashkir": 2.0122,
+   "Fang": 1.7287,
+   "Ewondo": 2.007,
+   "Torwali": 2.0888,
    "Hazaragi": 0.0,
-   "Urdu": 1.5554,
-   "Kohistani Shina": 3.0818,
-   "Rioplatense Spanish": 1.7279,
-   "Scottish English": 1.8725
+   "Urdu": 1.5699,
+   "Kohistani Shina": 3.1187,
+   "Rioplatense Spanish": 1.7332,
+   "Scottish English": 1.8511
   },
   "Urdu": {
-   "Tatar": 0.9439,
-   "Bashkir": 0.842,
-   "Fang": 2.2616,
-   "Ewondo": 2.0858,
-   "Torwali": 1.5348,
-   "Hazaragi": 1.5554,
+   "Tatar": 0.9264,
+   "Bashkir": 0.8259,
+   "Fang": 2.2625,
+   "Ewondo": 2.1225,
+   "Torwali": 1.5399,
+   "Hazaragi": 1.5699,
    "Urdu": 0.0,
-   "Kohistani Shina": 2.5019,
-   "Rioplatense Spanish": 1.6234,
-   "Scottish English": 1.8754
+   "Kohistani Shina": 2.5374,
+   "Rioplatense Spanish": 1.6299,
+   "Scottish English": 1.8777
   },
   "Kohistani Shina": {
-   "Tatar": 1.877,
-   "Bashkir": 1.9158,
-   "Fang": 2.1921,
-   "Ewondo": 1.5204,
-   "Torwali": 1.1568,
-   "Hazaragi": 3.0818,
-   "Urdu": 2.5019,
+   "Tatar": 1.9057,
+   "Bashkir": 1.9671,
+   "Fang": 2.1754,
+   "Ewondo": 1.5689,
+   "Torwali": 1.1741,
+   "Hazaragi": 3.1187,
+   "Urdu": 2.5374,
    "Kohistani Shina": 0.0,
-   "Rioplatense Spanish": 1.6816,
-   "Scottish English": 1.9895
+   "Rioplatense Spanish": 1.7042,
+   "Scottish English": 2.0238
   },
   "Rioplatense Spanish": {
-   "Tatar": 0.7653,
-   "Bashkir": 1.3049,
-   "Fang": 1.4209,
-   "Ewondo": 1.0676,
-   "Torwali": 0.9245,
-   "Hazaragi": 1.7279,
-   "Urdu": 1.6234,
-   "Kohistani Shina": 1.6816,
+   "Tatar": 0.7914,
+   "Bashkir": 1.3477,
+   "Fang": 1.4001,
+   "Ewondo": 1.0817,
+   "Torwali": 0.9235,
+   "Hazaragi": 1.7332,
+   "Urdu": 1.6299,
+   "Kohistani Shina": 1.7042,
    "Rioplatense Spanish": 0.0,
-   "Scottish English": 0.5896
+   "Scottish English": 0.5927
   },
   "Scottish English": {
-   "Tatar": 1.1543,
-   "Bashkir": 1.6649,
-   "Fang": 1.5467,
-   "Ewondo": 1.4921,
-   "Torwali": 1.3096,
-   "Hazaragi": 1.8725,
-   "Urdu": 1.8754,
-   "Kohistani Shina": 1.9895,
-   "Rioplatense Spanish": 0.5896,
+   "Tatar": 1.1797,
+   "Bashkir": 1.7124,
+   "Fang": 1.5042,
+   "Ewondo": 1.4878,
+   "Torwali": 1.3106,
+   "Hazaragi": 1.8511,
+   "Urdu": 1.8777,
+   "Kohistani Shina": 2.0238,
+   "Rioplatense Spanish": 0.5927,
    "Scottish English": 0.0
   }
  },
@@ -2449,9 +2449,9 @@
    "a_in_b_top2": true,
    "b_in_a_top2": true,
    "a_top1_is_b": true,
-   "b_top1_is_a": false,
+   "b_top1_is_a": true,
    "pass_top2": true,
-   "pass_top1": false
+   "pass_top1": true
   },
   {
    "pair": "Torwali-Kohistani Shina",
@@ -2465,16 +2465,16 @@
  ],
  "siblings_bootstrap_residual": {
   "Tatar-Bashkir": {
-   "top2": 0.922,
-   "top1": 0.602
+   "top2": 0.914,
+   "top1": 0.584
   },
   "Fang-Ewondo": {
-   "top2": 0.49,
-   "top1": 0.228
+   "top2": 0.654,
+   "top1": 0.348
   },
   "Torwali-Kohistani Shina": {
-   "top2": 0.214,
-   "top1": 0.134
+   "top2": 0.188,
+   "top1": 0.114
   }
  },
  "knn_placement_error": {
